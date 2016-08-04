@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Floating FreeBSD bobble
+Comment=Bubbles the FreeBSD bobble logo around the screen
+Exec=/usr/local/libexec/mate-screensaver/floaters /usr/local/share/pixmaps/bobble.svg
+TryExec=/usr/local/libexec/mate-screensaver/floaters
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Screensaver;
