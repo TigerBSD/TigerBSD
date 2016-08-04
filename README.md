@@ -9,7 +9,7 @@ Configuration for FreeBSD 11 on Lenovo ThinkPad T520.
 Perform the following commands as root.
 
 ```bash
-poudriere jail -c -j 11amd64 -v 11.0-STABLE
+poudriere jail -c -j 11amd64 -v 11.0-ALPHA6
 
 poudriere ports -c -p local -m git
 
