@@ -18,16 +18,17 @@ swpr()
   success=1
   name='Erik Nordstrøm'
   case "$1" in
-    hig.no)
-      email="erik.nordstrom@$1"
-      ;;
     nordstroem.no)
       email="erik@$1"
       ;;
+    ntnu.no)
+      email="eriknstr@$1"
+      ;;
+    hig.no)
+      email="erik.nordstrom@$1"
+      ;;
     ict-infer.no \
     | LoBSD.org \
-    | HELLBYTE.is \
-    | livedemohub.com \
     | whatis.re)
       email="erikn@$1"
       ;;
@@ -51,7 +52,7 @@ swpr()
 _swpr()
 {
   local cur=${COMP_WORDS[COMP_CWORD]}
-  COMPREPLY=( $(compgen -W "hig.no nordstroem.no ict-infer.no LoBSD.org HELLBYTE.is livedemohub.com whatis.re" -- "$cur") )
+  COMPREPLY=( $(compgen -W "nordstroem.no ntnu.no ict-infer.no LoBSD.org whatis.re hig.no" -- "$cur") )
 }
  
 complete -F _swpr swpr
@@ -96,10 +97,10 @@ alias www="sudo jexec www0 tcsh"
 alias non="swpr nordstroem.no"
 alias jc="swpr ict-infer.no && cd ~/src/int/jail-conf/"
 alias dof="swpr nordstroem.no && cd ~/src/config/dotfiles/"
-alias hig='swpr hig.no && cd ~/HiG/'
-alias ele='swpr hig.no && cd ~/HiG/ELE1071-S1/'
-alias rea='swpr hig.no && cd ~/HiG/REA1141/'
-alias imt='swpr hig.no && cd ~/HiG/IMT1031/'
+alias ntnu='swpr ntnu.no && cd ~/NTNU/'
+alias rea='swpr ntnu.no && cd ~/NTNU/REA2101/'
+alias ele1='swpr ntnu.no && cd ~/NTNU/ELE1051/'
+alias ele2='swpr ntnu.no && cd ~/NTNU/ELE2131/'
 alias bsd='swpr LoBSD.org && cd ~/src/github.com/LoBSD/LoBSD/'
 
 alias rp='ping $( echo $SSH_CLIENT | cut -d" " -f1 )'
