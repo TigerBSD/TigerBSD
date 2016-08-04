@@ -6,10 +6,18 @@ Configuration for FreeBSD 11 on Lenovo ThinkPad T520.
 
 ## Poudriere
 
+Perform the following commands as root.
+
 ```bash
-sudo poudriere options -j 11amd64 -p local -z default_python \
+poudriere jail -c -j 11amd64 -v 11.0-STABLE
+
+poudriere ports -c -p local -m git
+
+poudriere options -j 11amd64 -p local -z default_python \
   -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
 
-sudo poudriere bulk -j 11amd64 -p local -z default_python \
+poudriere bulk -j 11amd64 -p local -z default_python \
   -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
 ```
+
+See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
