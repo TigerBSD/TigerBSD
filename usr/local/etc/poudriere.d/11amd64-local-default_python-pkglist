@@ -1,4 +1,5 @@
 ports-mgmt/pkg
+security/fprint_demo
 security/doas
 mail/postfix
 mail/mutt
