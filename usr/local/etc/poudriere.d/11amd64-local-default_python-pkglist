@@ -1,8 +1,12 @@
 ports-mgmt/pkg
-security/fprint_demo
+ports-mgmt/dialog4ports
+ports-mgmt/poudriere
 security/doas
+sysutils/screen
 mail/postfix
 mail/mutt
+x11-drivers/xf86-input-keyboard
+x11-drivers/xf86-input-mouse
 x11/slim
 x11-themes/slim-themes
 x11/nvidia-driver
@@ -13,6 +17,7 @@ databases/pypy-sqlite3
 shells/bash
 shells/bash-completion
 x11/rxvt-unicode
+devel/git
 editors/vim
 x11/mate-base
 devel/dconf-editor
