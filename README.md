@@ -1,6 +1,6 @@
 # ThinkPad-FreeBSD-config
 
-Configuration for FreeBSD 11 on Lenovo ThinkPad T520.
+Configuration for FreeBSD 11 on Lenovo ThinkPad T520. Work in progress.
 
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
