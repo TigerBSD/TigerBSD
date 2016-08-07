@@ -103,6 +103,8 @@ alias ele1='swpr ntnu.no && cd ~/NTNU/ELE1051/'
 alias ele2='swpr ntnu.no && cd ~/NTNU/ELE2131/'
 alias bsd='swpr LoBSD.org && cd ~/src/github.com/LoBSD/LoBSD/'
 
+alias ports='cd /usr/local/poudriere/ports/local/'
+
 alias rp='ping $( echo $SSH_CLIENT | cut -d" " -f1 )'
 
 alias HEAD='curl -I'
