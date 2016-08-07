@@ -19,7 +19,7 @@ Reboot into single user mode, then
 
 TODO: Describe the rest. Don't have time now.
 
-## Poudriere
+## Poudriere package builds
 
 Perform the following commands as root.
 
