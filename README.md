@@ -11,7 +11,7 @@ cd /usr
 git clone -b stable/11 git@github.com:eriknstr/freebsd.git
 cd src
 git remote add upstream git@github.com:freebsd/freebsd.git
-cp ~/src/github.com/eriknstr/freebsd-config/usr/src/sys/amd64/conf/T520 sys/amd64/conf/
+cp ~erikn/src/github.com/eriknstr/freebsd-config/usr/src/sys/amd64/conf/T520 sys/amd64/conf/
 sudo make buildworld buildkernel installkernel KERN_CONF=T520
 ```
 
