@@ -20,6 +20,12 @@ x11/rxvt-unicode
 devel/git
 editors/vim
 x11/mate-base
+x11/mate-screensaver
+graphics/eom
+audio/mate-media
+sysutils/mate-power-manager
+deskutils/caja-extensions
+x11/mate-applets
 devel/dconf-editor
 audio/pavucontrol
 multimedia/vlc
