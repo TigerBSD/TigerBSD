@@ -117,3 +117,5 @@ export PAGER=less
 swpr nordstroem.no
 
 alias ls='ls -GF'
+
+export PROMPT_DIRTRIM=2
