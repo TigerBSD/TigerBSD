@@ -4,7 +4,17 @@ Configuration for FreeBSD 11 on Lenovo ThinkPad T520. Work in progress.
 
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
-## /usr/src
+## Compile system from source using custom kernel config
+
+First as your own regular user, do
+
+```bash
+cd
+git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-config.git
+```
+
+Next, perform the following steps as root. Replace ~erikn with
+the path to the home dir of your own regular user.
 
 ```bash
 cd /usr
