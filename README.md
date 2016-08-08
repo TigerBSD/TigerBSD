@@ -37,7 +37,7 @@ poudriere bulk -j 11amd64 -p local -z default_python \
 
 See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
 
-### Updating poudriere ports tree
+### Updating poudriere ports tree and packages
 
 Perform the following commands as root.
 
@@ -47,5 +47,8 @@ cd /usr/local/poudriere/ports/local/
 git pull
 
 poudriere options -j 11amd64 -p local -z default_python \
+  -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
+
+poudriere bulk -j 11amd64 -p local -z default_python \
   -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
 ```
