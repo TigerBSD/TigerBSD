@@ -3,6 +3,7 @@ ports-mgmt/dialog4ports
 ports-mgmt/poudriere
 security/doas
 sysutils/screen
+sysutils/tree
 mail/postfix
 mail/mutt
 x11-drivers/xf86-input-keyboard
