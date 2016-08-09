@@ -29,7 +29,7 @@ link_file () {
 	if [ $? -ne 0 ] ; then
 		echo "Creating new link \`$tgt'."
 	else
-		echo "Replacing \`$tgt'."
+		echo "Replacing \`$tgt' with link."
 	fi
 
 	ln "$src" "$tgt"
@@ -50,25 +50,44 @@ link_file etc/skel/.vimrc
 link_file etc/skel/.Xdefaults
 link_file etc/sysctl.conf
 link_file singleuser.sh
-link_file usr/local/etc/doas.conf
-link_file usr/local/etc/pkg/repos/custom-python27.conf
-link_file usr/local/etc/pkg/repos/custom-python34.conf
-link_file usr/local/etc/pkg/repos/custom-python35.conf
-link_file usr/local/etc/pkg/repos/FreeBSD.conf
-link_file usr/local/etc/pkg.conf
-link_file usr/local/etc/poudriere.conf
-link_file usr/local/etc/poudriere.d/11amd64-local-python27-make.conf
-link_file usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
-link_file usr/local/etc/poudriere.d/11amd64-local-python34-make.conf
-link_file usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
-link_file usr/local/etc/poudriere.d/11amd64-local-python35-make.conf
-link_file usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
-link_file usr/local/etc/slim.conf
-link_file usr/local/etc/X11/xorg.conf.d/10-nvidia.conf
-link_file usr/local/etc/X11/xorg.conf.d/20-dvorak.conf
-link_file usr/local/share/applications/screensavers/freebsd-floaters.desktop
-link_file usr/local/share/pixmaps/bobble.png
-link_file usr/local/share/pixmaps/bobble.svg
+
+copy_file () {
+	src="$owndir/zroot/$1"
+	tgt="/$1"
+	tgt_parent="$( dirname "$tgt" )"
+
+	mkdir -p "$tgt_parent" 2>/dev/null
+
+	rm "$tgt" 2>/dev/null
+
+	if [ $? -ne 0 ] ; then
+		echo "Creating new copy \`$tgt'."
+	else
+		echo "Replacing \`$tgt' with copy."
+	fi
+
+	cp "$src" "$tgt"
+}
+
+copy_file usr/local/etc/doas.conf
+copy_file usr/local/etc/pkg/repos/custom-python27.conf
+copy_file usr/local/etc/pkg/repos/custom-python34.conf
+copy_file usr/local/etc/pkg/repos/custom-python35.conf
+copy_file usr/local/etc/pkg/repos/FreeBSD.conf
+copy_file usr/local/etc/pkg.conf
+copy_file usr/local/etc/poudriere.conf
+copy_file usr/local/etc/poudriere.d/11amd64-local-python27-make.conf
+copy_file usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
+copy_file usr/local/etc/poudriere.d/11amd64-local-python34-make.conf
+copy_file usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
+copy_file usr/local/etc/poudriere.d/11amd64-local-python35-make.conf
+copy_file usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
+copy_file usr/local/etc/slim.conf
+copy_file usr/local/etc/X11/xorg.conf.d/10-nvidia.conf
+copy_file usr/local/etc/X11/xorg.conf.d/20-dvorak.conf
+copy_file usr/local/share/applications/screensavers/freebsd-floaters.desktop
+copy_file usr/local/share/pixmaps/bobble.png
+copy_file usr/local/share/pixmaps/bobble.svg
 
 link_dir () {
 	src="$owndir/zroot/$1"
