@@ -53,7 +53,7 @@ Perform the following command as root.
 
 ```bash
 cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist \
-  xargs -L1 pkg install
+  | xargs -L1 pkg install
 ```
 
 (We run the install one package at a time so that a missing package
