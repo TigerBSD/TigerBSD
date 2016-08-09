@@ -32,13 +32,12 @@ link_file () {
 		echo "Replacing \`$tgt'."
 	fi
 
-	ln -s "$src" "$tgt"
+	ln "$src" "$tgt"
 }
 
-link_file boot/loader.conf
 link_file etc/devd.conf
-#link_file etc/login.conf
-#link_file etc/pam.d/system
+link_file etc/login.conf
+link_file etc/pam.d/system
 link_file etc/rc.conf
 link_file etc/skel/.bashrc
 link_file etc/skel/.icons/mate/16x16/places/start-here.png
@@ -51,7 +50,7 @@ link_file etc/skel/.vimrc
 link_file etc/skel/.Xdefaults
 link_file etc/sysctl.conf
 link_file singleuser.sh
-#link_file usr/local/etc/doas.conf
+link_file usr/local/etc/doas.conf
 link_file usr/local/etc/pkg/repos/custom-python27.conf
 link_file usr/local/etc/pkg/repos/custom-python34.conf
 link_file usr/local/etc/pkg/repos/custom-python35.conf

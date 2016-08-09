@@ -27,7 +27,7 @@ git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-config.git
 
 cd ThinkPad-FreeBSD-config
 
-./symlink.sh
+./link.sh
 ```
 
 ## Compile system from source using custom kernel config
