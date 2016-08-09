@@ -16,13 +16,13 @@ TODO: Document choices made.
 
 Finally, set the hostname in file `/etc/rc.conf.local`, e.g.:
 
-```bash
+```sh
 echo 'hostname="liberation"' > /etc/rc.conf.local
 ```
 
 ## Install custom configuration files
 
-```bash
+```sh
 pkg bootstrap
 
 pkg install git
@@ -42,7 +42,7 @@ cd ThinkPad-FreeBSD-config
 
 First time, do the following. Subsequent times, skip this step.
 
-```bash
+```sh
 cd /usr
 
 git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-src.git src
@@ -60,7 +60,7 @@ If this step says that you are up to date then there is no point
 in rebuilding everything since you'd end up with the same thing
 you already had.
 
-```bash
+```sh
 cd /usr/src
 
 git pull
@@ -68,7 +68,7 @@ git pull
 
 Reboot into single user mode, then
 
-```bash
+```sh
 /singleuser.sh
 
 make buildworld buildkernel installkernel KERN_CONF=T520
@@ -88,7 +88,7 @@ reboot
 
 Finally, do
 
-```bash
+```sh
 make delete-old-libs
 ```
 
@@ -98,7 +98,7 @@ See also: https://www.freebsd.org/doc/handbook/makeworld.html
 
 ## Poudriere package builds
 
-```bash
+```sh
 pkg install poudriere
 
 poudriere jail -c -j 11amd64 -v 11.0-ALPHA6
@@ -134,7 +134,7 @@ See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
 
 ### Installing the packages
 
-```bash
+```sh
 cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
   | xargs -L1 pkg install
 ```
@@ -144,7 +144,7 @@ cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
 
 ### Updating poudriere ports tree and packages
 
-```bash
+```sh
 cd /usr/local/poudriere/ports/local/
 
 git pull
