@@ -49,7 +49,29 @@ make buildworld buildkernel installkernel KERN_CONF=T520
 
 Reboot into single user mode, then
 
-TODO: Describe the rest. Don't have time now.
+```bash
+/singleuser.sh
+
+mergemaster -p
+
+cd /usr/src
+
+make installworld
+
+mergemaster -iF
+
+make delete-old
+
+reboot
+```
+
+Finally, do
+
+```bash
+make delete-old-libs
+```
+
+TODO: Package rebuilding in relation to delete-old-libs
 
 See also: https://www.freebsd.org/doc/handbook/makeworld.html
 
