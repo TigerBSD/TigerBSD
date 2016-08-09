@@ -14,7 +14,7 @@ fi
 spath="$( readlink -f "$0" )"
 owndir="$( dirname "$spath" )"
 cd "$owndir" || exit_error "$err_invdir" 1
-test -f symlink.sh || exit_error "$err_invdir" 1
+test -f install.sh || exit_error "$err_invdir" 1
 test -d zroot || exit_error "$err_invdir" 1
 
 link_file () {
@@ -35,10 +35,6 @@ link_file () {
 	ln "$src" "$tgt"
 }
 
-link_file etc/devd.conf
-link_file etc/login.conf
-link_file etc/pam.d/system
-link_file etc/rc.conf
 link_file etc/skel/.bashrc
 link_file etc/skel/.icons/mate/16x16/places/start-here.png
 link_file etc/skel/.icons/mate/22x22/places/start-here.png
@@ -48,7 +44,6 @@ link_file etc/skel/.icons/mate/48x48/places/start-here.png
 link_file etc/skel/.icons/mate/scalable/places/start-here-symbolic.svg
 link_file etc/skel/.vimrc
 link_file etc/skel/.Xdefaults
-link_file etc/sysctl.conf
 link_file singleuser.sh
 
 copy_file () {
@@ -68,6 +63,12 @@ copy_file () {
 
 	cp "$src" "$tgt"
 }
+
+copy_file etc/devd.conf
+copy_file etc/login.conf
+copy_file etc/pam.d/system
+copy_file etc/rc.conf
+copy_file etc/sysctl.conf
 
 copy_file usr/local/etc/doas.conf
 copy_file usr/local/etc/pkg/repos/custom-python27.conf
