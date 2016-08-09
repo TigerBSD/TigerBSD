@@ -14,6 +14,12 @@ All commands in this README are to be performed as root unless otherwise noted.
 
 TODO: Document choices made.
 
+Finally, set the hostname in file `/etc/rc.conf.local`, e.g.:
+
+```bash
+echo 'hostname="liberation"' > /etc/rc.conf.local
+```
+
 ## Install custom configuration files
 
 ```bash
