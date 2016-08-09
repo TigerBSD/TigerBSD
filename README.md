@@ -37,7 +37,7 @@ cd src
 
 git remote add upstream git@github.com:freebsd/freebsd.git
 
-ln -s /root/src/github.com/eriknstr/freebsd-config/usr/src/sys/amd64/conf/T520 sys/amd64/conf/T520
+ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-config/zroot/usr/src/sys/amd64/conf/T520 sys/amd64/conf/T520
 
 make buildworld buildkernel installkernel KERN_CONF=T520
 ```
