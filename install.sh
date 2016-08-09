@@ -102,7 +102,7 @@ link_dir () {
 	if [ $? -ne 0 ] ; then
 		echo "Creating new link \`$tgt'."
 	else
-		echo "Replacing \`$tgt'."
+		echo "Replacing \`$tgt' with link."
 	fi
 
 	ln -s "$src" "$tgt"
