@@ -32,6 +32,8 @@ cd ThinkPad-FreeBSD-config
 
 ## Compile system from source using custom kernel config
 
+First time, do the following. Subsequent times, skip this step.
+
 ```bash
 cd /usr
 
@@ -43,14 +45,25 @@ git remote add upstream git@github.com:freebsd/freebsd.git
 
 ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-config/zroot/usr/src/sys/amd64/conf/T520 \
   sys/amd64/conf/T520
+```
 
-make buildworld buildkernel installkernel KERN_CONF=T520
+First time, skip this step. Subsequent times, start with this step.
+If this step says that you are up to date then there is no point
+in rebuilding everything since you'd end up with the same thing
+you already had.
+
+```bash
+cd /usr/src
+
+git pull
 ```
 
 Reboot into single user mode, then
 
 ```bash
 /singleuser.sh
+
+make buildworld buildkernel installkernel KERN_CONF=T520
 
 mergemaster -p
 
