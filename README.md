@@ -39,7 +39,7 @@ First time, do the following. Subsequent times, skip this step.
 ```bash
 cd /usr
 
-git clone -b stable/11 git@github.com:eriknstr/freebsd.git src
+git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-src.git src
 
 cd src
 
@@ -99,7 +99,7 @@ poudriere jail -c -j 11amd64 -v 11.0-ALPHA6
 
 cd /usr/local/poudriere/ports/
 
-git clone git@github.com:eriknstr/freebsd-ports.git local
+git clone git@github.com:eriknstr/ThinkPad-FreeBSD-ports.git local
 
 cd local
 
