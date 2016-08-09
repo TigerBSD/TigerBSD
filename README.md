@@ -2,6 +2,8 @@
 
 Configuration for FreeBSD 11 on Lenovo ThinkPad T520. Work in progress.
 
+All commands in this README are to be performed as root unless otherwise noted.
+
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
 ## Install FreeBSD 11
@@ -9,8 +11,6 @@ Configuration for FreeBSD 11 on Lenovo ThinkPad T520. Work in progress.
 TODO: Document choices made.
 
 ## Install custom configuration files
-
-Perform the following as the root user.
 
 ```bash
 pkg bootstrap
@@ -43,8 +43,6 @@ TODO: Describe the rest. Don't have time now.
 
 ## Poudriere package builds
 
-Perform the following commands as root.
-
 ```bash
 pkg install poudriere
 
@@ -63,8 +61,6 @@ See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
 
 ### Installing the packages
 
-Perform the following command as root.
-
 ```bash
 cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist \
   | xargs -L1 pkg install
@@ -74,8 +70,6 @@ cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist \
  won't stop the installation of all the other, unrelated packages.)
 
 ### Updating poudriere ports tree and packages
-
-Perform the following commands as root.
 
 ```bash
 cd /usr/local/poudriere/ports/local/
