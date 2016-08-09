@@ -64,11 +64,23 @@ cd local
 
 git remote add upstream git@github.com:freebsd/freebsd-ports.git
 
-poudriere options -j 11amd64 -p local -z default_python \
-  -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
+poudriere options -j 11amd64 -p local -z python35 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
 
-poudriere bulk -j 11amd64 -p local -z default_python \
-  -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
+poudriere bulk -j 11amd64 -p local -z python35 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
+
+poudriere options -j 11amd64 -p local -z python34 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
+
+poudriere bulk -j 11amd64 -p local -z python34 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
+
+poudriere options -j 11amd64 -p local -z python27 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
+
+poudriere bulk -j 11amd64 -p local -z python27 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
 ```
 
 See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
@@ -76,7 +88,7 @@ See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
 ### Installing the packages
 
 ```bash
-cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist \
+cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
   | xargs -L1 pkg install
 ```
 
@@ -90,9 +102,21 @@ cd /usr/local/poudriere/ports/local/
 
 git pull
 
-poudriere options -j 11amd64 -p local -z default_python \
-  -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
+poudriere options -j 11amd64 -p local -z python35 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
 
-poudriere bulk -j 11amd64 -p local -z default_python \
-  -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
+poudriere bulk -j 11amd64 -p local -z python35 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
+
+poudriere options -j 11amd64 -p local -z python34 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
+
+poudriere bulk -j 11amd64 -p local -z python34 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
+
+poudriere options -j 11amd64 -p local -z python27 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
+
+poudriere bulk -j 11amd64 -p local -z python27 \
+  -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
 ```
