@@ -4,25 +4,35 @@ Configuration for FreeBSD 11 on Lenovo ThinkPad T520. Work in progress.
 
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
-## Compile system from source using custom kernel config
+## Install FreeBSD 11
 
-First as your own regular user, do
+TODO: Document choices made.
+
+## Install customizations
+
+Perform the following as the root user.
 
 ```bash
-cd
+pkg bootstrap
+
+pkg install git
+
+mkdir -p /root/src/github.com/eriknstr/
+
+cd /root/src/github.com/eriknstr/
+
 git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-config.git
 ```
 
-Next, perform the following steps as root. Replace ~erikn with
-the path to the home dir of your own regular user.
+## Compile system from source using custom kernel config
 
 ```bash
 cd /usr
-git clone -b stable/11 git@github.com:eriknstr/freebsd.git
+git clone -b stable/11 git@github.com:eriknstr/freebsd.git src
 cd src
 git remote add upstream git@github.com:freebsd/freebsd.git
-cp ~erikn/src/github.com/eriknstr/freebsd-config/usr/src/sys/amd64/conf/T520 sys/amd64/conf/
-sudo make buildworld buildkernel installkernel KERN_CONF=T520
+ln -s /root/src/github.com/eriknstr/freebsd-config/usr/src/sys/amd64/conf/T520 sys/amd64/conf/T520
+make buildworld buildkernel installkernel KERN_CONF=T520
 ```
 
 Reboot into single user mode, then
