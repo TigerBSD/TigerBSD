@@ -47,6 +47,18 @@ poudriere bulk -j 11amd64 -p local -z default_python \
 
 See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
 
+### Installing the packages
+
+Perform the following command as root.
+
+```bash
+cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist \
+  xargs -L1 pkg install
+```
+
+(We run the install one package at a time so that a missing package
+ won't stop the installation of all the other, unrelated packages.)
+
 ### Updating poudriere ports tree and packages
 
 Perform the following commands as root.
