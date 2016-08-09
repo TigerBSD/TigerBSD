@@ -56,7 +56,13 @@ pkg install poudriere
 
 poudriere jail -c -j 11amd64 -v 11.0-ALPHA6
 
-poudriere ports -c -p local -m git
+cd /usr/local/poudriere/ports/
+
+git clone git@github.com:eriknstr/freebsd-ports.git local
+
+cd local
+
+git remote add upstream git@github.com:freebsd/freebsd-ports.git
 
 poudriere options -j 11amd64 -p local -z default_python \
   -f /usr/local/etc/poudriere.d/11amd64-local-default_python-pkglist
