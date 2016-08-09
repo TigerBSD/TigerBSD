@@ -30,10 +30,15 @@ TODO: All the symlinks.
 
 ```bash
 cd /usr
+
 git clone -b stable/11 git@github.com:eriknstr/freebsd.git src
+
 cd src
+
 git remote add upstream git@github.com:freebsd/freebsd.git
+
 ln -s /root/src/github.com/eriknstr/freebsd-config/usr/src/sys/amd64/conf/T520 sys/amd64/conf/T520
+
 make buildworld buildkernel installkernel KERN_CONF=T520
 ```
 
