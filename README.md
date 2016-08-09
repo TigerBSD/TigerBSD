@@ -1,6 +1,8 @@
 # ThinkPad-FreeBSD-config
 
 Configuration for FreeBSD 11 on Lenovo ThinkPad T520. Work in progress.
+Please have a look at the list of
+[open issues](https://github.com/eriknstr/ThinkPad-FreeBSD-config/issues).
 
 All commands in this README are to be performed as root unless otherwise noted.
 
