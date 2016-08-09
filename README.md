@@ -46,6 +46,8 @@ TODO: Describe the rest. Don't have time now.
 Perform the following commands as root.
 
 ```bash
+pkg install poudriere
+
 poudriere jail -c -j 11amd64 -v 11.0-ALPHA6
 
 poudriere ports -c -p local -m git
