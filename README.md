@@ -8,7 +8,7 @@ Configuration for FreeBSD 11 on Lenovo ThinkPad T520. Work in progress.
 
 TODO: Document choices made.
 
-## Install customizations
+## Install custom configuration files
 
 Perform the following as the root user.
 
