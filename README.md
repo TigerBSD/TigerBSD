@@ -51,6 +51,8 @@ Reboot into single user mode, then
 
 TODO: Describe the rest. Don't have time now.
 
+See also: https://www.freebsd.org/doc/handbook/makeworld.html
+
 ## Poudriere package builds
 
 ```bash
