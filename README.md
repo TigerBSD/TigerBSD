@@ -24,6 +24,8 @@ cd /root/src/github.com/eriknstr/
 git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-config.git
 ```
 
+TODO: All the symlinks.
+
 ## Compile system from source using custom kernel config
 
 ```bash
