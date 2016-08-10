@@ -71,11 +71,19 @@ Reboot into single user mode, then
 ```sh
 /singleuser.sh
 
-make buildworld buildkernel installkernel KERN_CONF=T520
+cd /usr/src
 
-mergemaster -p
+make buildworld buildkernel installkernel KERN_CONF=T520
+```
+
+Reboot into single user mode again and then
+
+```sh
+/singleuser.sh
 
 cd /usr/src
+
+mergemaster -p
 
 make installworld
 
