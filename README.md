@@ -80,6 +80,9 @@ cd /usr/src
 make buildworld buildkernel installkernel KERN_CONF=T520
 ```
 
+A full buildworld buildkernel takes about five hours
+on my ThinkPad T520 at the time of this writing.
+
 Reboot into single user mode again and then
 
 ```sh
