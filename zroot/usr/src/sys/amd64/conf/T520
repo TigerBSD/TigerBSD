@@ -17,8 +17,7 @@ nooptions NFSD
 nooptions NFSLOCKD
 nooptions NFS_ROOT
 
-# Disable backwards compatibility
-nooptions COMPAT_FREEBSD32
+# Disable some of the backwards compatibility
 nooptions COMPAT_FREEBSD4
 nooptions COMPAT_FREEBSD5
 nooptions COMPAT_FREEBSD6
