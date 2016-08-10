@@ -8,9 +8,9 @@ that are broken or incomplete still.
 
 All commands in this README are to be performed as root unless otherwise noted.
 
-TODO: Create branch stable/11+sysconf of src and maintain system config there.
+TODO: Create branch stable/11+sysconf of src and maintain system configs there.
 
-TODO: Create branch master+conf of ports and maintain config there.
+TODO: Create branch master+conf of ports and maintain package configs there.
 
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
