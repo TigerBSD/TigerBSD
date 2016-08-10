@@ -107,7 +107,10 @@ make delete-old-libs
 
 TODO: Package rebuilding in relation to delete-old-libs
 
-See also: https://www.freebsd.org/doc/handbook/makeworld.html
+See also:
+
+ * https://www.freebsd.org/doc/handbook/kernelconfig-building.html
+ * https://www.freebsd.org/doc/handbook/makeworld.html
 
 ## Poudriere package builds
 
