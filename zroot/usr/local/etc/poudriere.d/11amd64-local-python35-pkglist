@@ -26,7 +26,6 @@ x11/mate-applets
 devel/dconf-editor
 audio/pavucontrol
 multimedia/vlc
-databases/py35-sqlite3
 devel/py-qt5
 lang/pypy3
 emulators/virtualbox-ose
