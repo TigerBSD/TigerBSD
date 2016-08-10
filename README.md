@@ -116,10 +116,13 @@ See also:
 
 ## Poudriere package builds
 
+TODO: Create jail from customized FreeBSD build
+instead of using the official release files.
+
 ```sh
 pkg install poudriere
 
-poudriere jail -c -j 11amd64 -v 11.0-ALPHA6
+poudriere jail -c -j 11amd64 -v 11.0-BETA4
 
 cd /usr/local/poudriere/ports/
 
