@@ -186,7 +186,7 @@ poudriere bulk -j 11amd64 -p local -z python27 \
   -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
 ```
 
-### Keeping an eye poudriere builds from other computers
+### Keeping an on eye poudriere builds from other computers
 
 ```sh
 cd /usr/local/poudriere/data/logs/bulk
