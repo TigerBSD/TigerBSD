@@ -10,6 +10,8 @@ All commands in this README are to be performed as root unless otherwise noted.
 
 TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
 
+TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
+
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
 ## Install FreeBSD 11
