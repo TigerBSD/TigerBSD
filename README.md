@@ -42,7 +42,7 @@ cd ThinkPad-FreeBSD-setup
 ./install.sh
 ```
 
-## Compile system from source using custom kernel config
+## Compile customized system from source
 
 First time, do the following. Subsequent times, skip this step.
 
