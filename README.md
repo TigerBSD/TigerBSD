@@ -114,7 +114,7 @@ See also:
  * https://www.freebsd.org/doc/handbook/kernelconfig-building.html
  * https://www.freebsd.org/doc/handbook/makeworld.html
 
-## Poudriere package builds
+## Custom package builds using Poudriere
 
 TODO: Create jail from customized FreeBSD build
 instead of using the official release files.
@@ -163,7 +163,7 @@ cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
 (We run the install one package at a time so that a missing package
  won't stop the installation of all the other, unrelated packages.)
 
-### Updating poudriere ports tree and packages
+### Updating Poudriere ports tree and packages
 
 ```sh
 cd /usr/local/poudriere/ports/local/
@@ -189,7 +189,7 @@ poudriere bulk -j 11amd64 -p local -z python27 \
   -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
 ```
 
-### Keeping an eye on poudriere builds from other computers
+### Keeping an eye on Poudriere builds from other computers
 
 ```sh
 cd /usr/local/poudriere/data/logs/bulk
