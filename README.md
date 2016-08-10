@@ -1,8 +1,8 @@
-# ThinkPad-FreeBSD-config
+# ThinkPad-FreeBSD-setup
 
 Configuration for FreeBSD 11 on Lenovo ThinkPad T520. Work in progress.
 Please have a look at the list of
-[open issues](https://github.com/eriknstr/ThinkPad-FreeBSD-config/issues),
+[open issues](https://github.com/eriknstr/ThinkPad-FreeBSD-setup/issues),
 but do also be aware that even if none are open, there could be things
 that are broken or incomplete still.
 
@@ -35,9 +35,9 @@ mkdir -p /root/src/github.com/eriknstr/
 
 cd /root/src/github.com/eriknstr/
 
-git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-config.git
+git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
 
-cd ThinkPad-FreeBSD-config
+cd ThinkPad-FreeBSD-setup
 
 ./install.sh
 ```
@@ -55,7 +55,7 @@ cd src
 
 git remote add upstream git@github.com:freebsd/freebsd.git
 
-ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-config/zroot/usr/src/sys/amd64/conf/T520 \
+ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/usr/src/sys/amd64/conf/T520 \
   sys/amd64/conf/T520
 ```
 
