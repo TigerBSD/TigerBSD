@@ -90,11 +90,9 @@ make installworld
 mergemaster -iF
 
 make delete-old
-
-reboot
 ```
 
-Finally, do
+Finally, reboot into multi user mode and then do
 
 ```sh
 make delete-old-libs
