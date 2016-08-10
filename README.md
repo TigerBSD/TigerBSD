@@ -8,9 +8,7 @@ that are broken or incomplete still.
 
 All commands in this README are to be performed as root unless otherwise noted.
 
-TODO: Create branch stable/11+local of src and maintain system configs there.
-
-TODO: Create branch master+local of ports and maintain package configs there.
+TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
 
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
