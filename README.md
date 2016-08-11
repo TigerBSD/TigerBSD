@@ -118,6 +118,10 @@ See also:
  * https://www.freebsd.org/doc/handbook/kernelconfig-building.html
  * https://www.freebsd.org/doc/handbook/makeworld.html
 
+### Compare changes upstream not yet in ThinkPad-FreeBSD-src
+
+https://github.com/eriknstr/ThinkPad-FreeBSD-src/compare/stable/11...freebsd:stable/11
+
 ## Custom package builds using Poudriere
 
 TODO: Create jail from customized FreeBSD build
@@ -199,3 +203,7 @@ poudriere bulk -j 11amd64 -p local -z python27 \
 cd /usr/local/poudriere/data/logs/bulk
 doas -u www python3.5 -m http.server
 ```
+
+### Compare changes upstream not yet in ThinkPad-FreeBSD-ports
+
+https://github.com/eriknstr/ThinkPad-FreeBSD-ports/compare/master...freebsd:master
