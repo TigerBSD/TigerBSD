@@ -29,7 +29,6 @@ multimedia/vlc
 devel/py-qt5
 lang/pypy3
 emulators/virtualbox-ose
-www/npapi-vlc
 databases/pgadmin3
 databases/sqlitebrowser
 www/nginx
