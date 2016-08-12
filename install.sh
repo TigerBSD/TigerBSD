@@ -35,6 +35,7 @@ link_file () {
 	ln "$src" "$tgt"
 }
 
+link_file etc/skel/.bash_profile
 link_file etc/skel/.bashrc
 link_file etc/skel/.icons/mate/16x16/places/start-here.png
 link_file etc/skel/.icons/mate/22x22/places/start-here.png
