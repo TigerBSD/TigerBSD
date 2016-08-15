@@ -90,12 +90,175 @@ Press Enter again to test the keymap. Type in some letters, numbers
 and symbols. Then press Enter, press Enter again to select it and then
 use the up keyboard arrow to continue with the keymap you have selected.
 
-TODO: Remainder.
+Next, enter the hostname you want to use for your computer.
+I think one is supposed to enter only the hostname here,
+not the fully qualified domain name. I enter just the hostname.
 
-Finally, set the hostname in file `/etc/rc.conf.local`, e.g.:
+Next it's time to select which optional system components to install.
+Select *doc* and unselect *ports*. We'll be using my custom ports tree later.
+
+Next it'll tell us that "Your model of Lenovo is known to have a BIOS
+bug that prevents it booting from GPT partitions without UEFI. Would you
+like the installer to apply a workaround for you?" Actually, most of all
+we would like to boot using UEFI, so just say *No* here, I guess.
+
+Now it's time to partition our disk. We'll select *Auto (ZFS)*, aka.
+*Guided Root-on-ZFS*. It will tell us the choices it has made for us
+and most of it is good. It has selected not to encrypt disks, which is
+fine with me. It says that the *Partition Scheme* will be *GPT (BIOS+UEFI)*,
+but we don't want that -- we change the *Partition Scheme* to *GPT (UEFI)*.
+For *Swap Size*, we change it from *2g* to *8g* to match our amount of RAM.
+All of the rest looks good for now, so we select *Install* to proceed
+with the installation.
+
+For *ZFS Configuration* of *Virtual Device type*, we select *stripe*,
+since we only have one storage drive.
+
+Next for *ZFS Configuration* it will ask for the devices to use.
+Here we select our SSD. For me, it is named *ada0*. Use space to
+select it and then press Enter to OK it.
+
+Finally, it will give us one last chance to change our mind.
+Why would we? Go ahead and destroy the current contents of
+our selected disks. YES!
+
+Then we wait for a while while it partitions the drive
+and installs base, kernel, doc and lib32.
+
+Next, enter a password for root. Well, our disk is unencrypted
+anyway, so pick something simple like *hest123* and press Enter,
+I guess.  (*Hest* is the Norwegian word for horse.)
+
+Enter the password followed by Enter again.
+
+Next, it wants us to configure a network interface.
+I usually just go with a wired connection during installs,
+so we select the "em0" interface.
+
+Would we like to configure IPv4 for this interface. Yes.
+
+Would we like to use DHCP to configure this interface? Sure.
+
+It acquires DHCP lease.
+
+Would we like to configure IPv6 for this interface? Well,
+my current network does not support IPv6 but we'll say yes anyway.
+
+Would we like to try stateless address autoconfiguration (SLAAC)?
+Ok. It won't work on this network which does not support IPv6, though.
+
+*Network Configuration* -- *Resolver Configuration* is next.
+Since this is a laptop and will thus be on different networks
+at various times, we're not going to bother with entering
+any search domains. We just press Enter.
+
+Is this machine's CMOS clock set to UTC? Yes, it is,
+or at least it will be, so, yes.
+
+Select a region. Probably you don't live the same place I do,
+since the country I live in is so small. I select *Europe*
+and then *Norway*.
+
+It will ask if some time zone abbreviation looks reasonable.
+For me at the current time of the year, this is *CEST*.
+Yes, it looks reasonable.
+
+Next, *Time & Date*, date part. The date is already set correctly
+so I press Enter to accept that without changing it.
+
+Next, *Time & Date*, time part. My clock is off by a couple of hours
+so I attempted to choose *set time* but I guess I should have entered
+a different value for it first. Oh well, I'll set it later.
+
+Now it's time to choose the services we would like to be started
+at boot. The default selection is *sshd* (good) and *dumpdev*.
+I never inspected kernel crash dumps yet, so it is tempting to
+uncheck that, but then again, if I ever need to have a look at it
+in the future, the benefit of it being enabled so I don't have to
+try and replicate the issue outweighs the cost of the disk space,
+so we'll leave that selected as well. I am tempted to enable
+the local caching validating resolver *local_unbound*. Sometimes
+it can be a bit of a pain having one while changing DNS settings
+for some domain but I think it's worth it, so I'll select that as well.
+Next we'll select *ntpd* to synchronize system and network time
+and I'll select *powerd* to adjust CPU frequency dynamically,
+hoping that my hardware is supported. We leave *moused* unchecked
+and then press Enter to continue.
+
+TODO: Investigate powerd support for my CPU.
+
+Next up is the security hardening options. The ones we'll enable are:
+
+ * *Randomize the PID of newly created processes*
+ * *Insert stack guard page ahead of the growable segments*
+ * *Clean the /tmp filesystem on system startup*
+ * *Disable Sendmail service*
+
+The remainder of the options seem to add nothing for a personal laptop.
+As for our disabling the Sendmail service, that's actually just
+because we want to install Postfix instead, not for security.
+
+Select the options above using space and press Enter to continue.
+
+Would we like to add users to the installed system now? Yes!
+
+We type in the username. I call my user *erikn*.
+
+We enter our full name. Mine is Erik Nordstrøm, but I'll enter Erik Nordstroem.
+
+When prompted for a Uid, we'll just leave that empty for default.
+
+Login group is named the same as your user, that's what we want.
+
+Would we like to invite our user into other groups? Yes, we'll enter *wheel*.
+
+Login class default is fine.
+
+Our shell can be sh for now. One of the first things we'll do
+post-install is to install bash and change our shell to that.
+
+Home directory default is fine as well.
+
+Home directory permissions default is fine.
+
+Use password-based authentication? Yes.
+
+Use an empty password? No.
+
+Use a random password? No.
+
+Enter password. Pick something decent.
+
+Enter the same password again.
+
+Lock out the account after creation? No.
+
+OK? Yes.
+
+Add another user? No.
+
+*Final configuration*. *Exit* -- apply configuration and exit installer.
+
+Wait a little while for the configuration to be applied.
+
+*Manual configuration*. "The installation is now finished. Before exiting
+the installer, would you like to open a shell in the new system to make
+any final manual modifications?" No, we'll take care of the rest on the
+live system after reboot.
+
+Installation of FreeBSD complete! Would we like to reboot
+into the installed system now? Yes, please :)
+
+### Initial post-install configuration
+
+The system reboots. Log in as `root` using the password you selected.
+
+We are eventually going to overwrite `/etc/rc.conf` but would like
+to preserve the options we selected during bsdinstall. In order to do this,
+we move our current `/etc/rc.conf` to `/etc/rc.conf.local`.
 
 ```sh
-echo 'hostname="liberation"' > /etc/rc.conf.local
+mv /etc/rc.conf /etc/rc.conf.local
 ```
 
 ## Install custom configuration files
