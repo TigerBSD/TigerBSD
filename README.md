@@ -292,6 +292,10 @@ using `fetch`, or just run `sh` and type in the following manually
 or copy-paste it or whatever:
 
 ```sh
+# You must use sh for this because the default shell
+# for root on FreeBSD is csh and it has a different
+# syntax for declaring variables.
+
 snapname="$( date +%Y-%m-%d )-$( freebsd-version )-$( date +%s )"
 
 zfs snapshot -r zroot@$snapname
