@@ -54,10 +54,12 @@ sudo sync
 ```
 
 Unplug the USB memory stick, plug it into your ThinkPad T520 and power on
-the machine. Press the blue "ThinkVantage"-button, causing it to show
-a menu of options (it might also beep at this point).
+the machine.
 
 ### ThinkPad T520 BIOS Setup Utility
+
+At boot, press the blue "ThinkVantage"-button, causing it to show
+a menu of options (it might also beep at this point).
 
 Press F1 to enter the BIOS Setup Utility.
 
@@ -85,11 +87,11 @@ but I won't list all of them here.
 
 Press F10 to Save and Exit.
 
-Press the blue "ThinkVantage"-button again.
+### Boot from the FreeBSD 11.0-RC1 install media
+
+At boot, press the blue "ThinkVantage"-button again.
 
 Press F12 to select temporary startup device.
-
-### Boot from the FreeBSD 11.0-RC1 install media
 
 From the Boot Menu, select your USB memory stick.
 In my case, it is called "USB HDD".
