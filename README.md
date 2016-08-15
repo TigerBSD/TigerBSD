@@ -13,7 +13,11 @@ that are broken or incomplete still.
 This guide assumes that your Lenovo ThinkPad T520 has a minimum of 8GB RAM,
 and that it has a single storage drive; an SSD of at least 120GB in size.
 Note that this is different from the factory configuration which has
-4GB RAM and a 7200-rpm 500GB HDD.
+4GB RAM and a 7200-rpm 500GB HDD. The assumption of the storage medium
+being an SSD and not a HDD, in particular, is important, since it will
+affect choices about how the OS is to treat the drive. Things which
+make sense for a HDD might be slow for a SSD and vice versa.
+Things which optimize the usage of a HDD might hurt an SSD and vice versa.
 
 All commands in this README are to be performed as root unless otherwise noted.
 
