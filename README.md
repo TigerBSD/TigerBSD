@@ -23,6 +23,21 @@ TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch mas
 
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
+## Table of Contents
+
+* [Install FreeBSD 11](#install-freebsd-11)
+  + [ThinkPad T520 BIOS Setup Utility](#thinkpad-t520-bios-setup-utility)
+  + [Boot from the FreeBSD 11.0-RC1 install media](#boot-from-the-freebsd-110-rc1-install-media)
+  + [Initial post-install configuration](#initial-post-install-configuration)
+* [Install custom configuration files](#install-custom-configuration-files)
+* [Compile customized system from source](#compile-customized-system-from-source)
+  + [Compare changes upstream not yet in ThinkPad-FreeBSD-src](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-src)
+* [Custom package builds using Poudriere](#custom-package-builds-using-poudriere)
+  + [Installing the packages](#installing-the-packages)
+  + [Updating Poudriere ports tree and packages](#updating-poudriere-ports-tree-and-packages)
+  + [Keeping an eye on Poudriere builds from other computers](#keeping-an-eye-onpoudriere-builds-from-other-computers)
+  + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
+
 ## Install FreeBSD 11
 
 Download the official FreeBSD 11.0-RC1 memory stick image [FreeBSD-11.0-RC1-amd64-memstick.img.xz](http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC1-amd64-memstick.img.xz) and write it on a USB memory stick. Replace `/dev/xxx` below with the path of the path to the block device for the physical "drive" of your USB memory stick.
