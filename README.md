@@ -441,6 +441,8 @@ cd local
 
 git remote add upstream git@github.com:freebsd/freebsd-ports.git
 
+mkdir /usr/ports/distfiles
+
 poudriere bulk -j 11amd64 -p local -z python35 \
   -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
 
