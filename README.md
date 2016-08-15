@@ -31,11 +31,13 @@ TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch mas
   + [Initial post-install configuration](#initial-post-install-configuration)
 * [Install custom configuration files](#install-custom-configuration-files)
 * [Compile customized system from source](#compile-customized-system-from-source)
+  + [Compare changes local to ThinkPad-FreeBSD-src](#compare-changes-local-to-thinkpad-freebsd-src)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-src](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-src)
 * [Custom package builds using Poudriere](#custom-package-builds-using-poudriere)
   + [Installing the packages](#installing-the-packages)
   + [Updating Poudriere ports tree and packages](#updating-poudriere-ports-tree-and-packages)
   + [Keeping an eye on Poudriere builds from other computers](#keeping-an-eye-on-poudriere-builds-from-other-computers)
+  + [Compare changes local to ThinkPad-FreeBSD-ports](#compare-changes-local-to-thinkpad-freebsd-ports)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 
 ## Install FreeBSD 11
@@ -296,7 +298,7 @@ cd ThinkPad-FreeBSD-setup
 
 ## Compile customized system from source
 
-NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources, so there is no point in recompiling from source yet.
+NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources, so there is no point in recompiling from source yet. [Compare changes local to ThinkPad-FreeBSD-src](https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11).
 
 First time, do the following. Subsequent times, skip this step.
 
@@ -368,6 +370,10 @@ See also:
  * https://www.freebsd.org/doc/handbook/kernelconfig-building.html
  * https://www.freebsd.org/doc/handbook/makeworld.html
 
+### Compare changes local to ThinkPad-FreeBSD-src
+
+https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11
+
 ### Compare changes upstream not yet in ThinkPad-FreeBSD-src
 
 https://github.com/eriknstr/ThinkPad-FreeBSD-src/compare/stable/11...freebsd:stable/11
@@ -435,6 +441,10 @@ poudriere bulk -j 11amd64 -p local -z python27 \
 cd /usr/local/poudriere/data/logs/bulk
 doas -u www python3.5 -m http.server
 ```
+
+### Compare changes local to ThinkPad-FreeBSD-ports
+
+https://github.com/freebsd/freebsd-ports/compare/master...eriknstr:master
 
 ### Compare changes upstream not yet in ThinkPad-FreeBSD-ports
 
