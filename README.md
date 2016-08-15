@@ -20,7 +20,7 @@ TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch mas
 
 ## Install FreeBSD 11
 
-Download the official FreeBSD 11.0-RC1 memory stick image [FreeBSD-11.0-RC1-amd64-memstick.img.xz](ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC1-amd64-memstick.img.xz) and put it on a USB memory stick. Insert the USB memory stick into your ThinkPad T520 and boot from it.
+Download the official FreeBSD 11.0-RC1 memory stick image [FreeBSD-11.0-RC1-amd64-memstick.img.xz](ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC1-amd64-memstick.img.xz) and write it on a USB memory stick using `dd` or similar. Insert the USB memory stick into your ThinkPad T520 and boot from it.
 
 TODO: Document choices made.
 
