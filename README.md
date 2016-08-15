@@ -277,6 +277,14 @@ we move our current `/etc/rc.conf` to `/etc/rc.conf.local`.
 mv /etc/rc.conf /etc/rc.conf.local
 ```
 
+Install `pkg`, `git` and `poudriere`.
+
+```sh
+pkg bootstrap
+
+pkg install git poudriere
+```
+
 Snapshot your freshly installed system. Download and run the script
 https://raw.githubusercontent.com/eriknstr/utils/master/snap.sh
 using `fetch`, or just run `sh` and type in the following manually
@@ -306,10 +314,6 @@ TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
 TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
 
 ```sh
-pkg bootstrap
-
-pkg install git
-
 mkdir -p /root/src/github.com/eriknstr/
 
 cd /root/src/github.com/eriknstr/
@@ -425,8 +429,6 @@ TODO: Create jail from customized FreeBSD build
 instead of using the official release files.
 
 ```sh
-pkg install poudriere
-
 poudriere jail -c -j 11amd64 -v 11.0-RC1
 
 cd /usr/local/poudriere/ports/
