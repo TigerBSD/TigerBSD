@@ -300,6 +300,19 @@ cd ThinkPad-FreeBSD-setup
 ./install.sh
 ```
 
+Configure WLAN. Most of it is taken care of by the installed files,
+but you'll need to enter information about network SSID and PSK.
+
+If your SSID was *mysweetwifi* and your PSK was *supersecret*,
+then you'd add the following contents to the file `/etc/wpa_supplicant.conf`:
+
+```
+network={
+	ssid="mysweetwifi"
+	psk="supersecret"
+}
+```
+
 Reboot.
 
 ## Compile customized system from source
