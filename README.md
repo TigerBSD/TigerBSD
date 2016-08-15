@@ -193,14 +193,11 @@ I never inspected kernel crash dumps yet, so it is tempting to
 uncheck that, but then again, if I ever need to have a look at it
 in the future, the benefit of it being enabled so I don't have to
 try and replicate the issue outweighs the cost of the disk space,
-so we'll leave that selected as well. I am tempted to enable
-the local caching validating resolver *local_unbound*. Sometimes
-it can be a bit of a pain having one while changing DNS settings
-for some domain but I think it's worth it, so I'll select that as well.
-Next we'll select *ntpd* to synchronize system and network time
-and I'll select *powerd* to adjust CPU frequency dynamically,
-hoping that my hardware is supported. We leave *moused* unchecked
-and then press Enter to continue.
+so we'll leave that selected as well. Next we'll select *ntpd*
+to synchronize system and network time and I'll select *powerd*
+to adjust CPU frequency dynamically, hoping that my hardware
+is supported. We leave *moused* unchecked and then press
+Enter to continue.
 
 TODO: Investigate powerd support for my CPU.
 
@@ -276,16 +273,6 @@ we move our current `/etc/rc.conf` to `/etc/rc.conf.local`.
 
 ```sh
 mv /etc/rc.conf /etc/rc.conf.local
-```
-
-Next, disable unbound for now until I can figure out
-how to have it not use the incorrect upstream name server.
-To disable unbound, outcomment `local_unbound_enable="YES"`
-by prepending a hash character (`#`) to the line in question
-in `/etc/rc.conf.local`. With that done, stop the service.
-
-```sh
-service local_unbound stop
 ```
 
 Snapshot your freshly installed system. Download and run the script
