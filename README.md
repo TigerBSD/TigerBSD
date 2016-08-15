@@ -400,6 +400,7 @@ make delete-old
 Finally, reboot into multi user mode and then do
 
 ```sh
+cd /usr/src/
 make delete-old-libs
 ```
 
