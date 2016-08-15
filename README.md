@@ -278,6 +278,23 @@ we move our current `/etc/rc.conf` to `/etc/rc.conf.local`.
 mv /etc/rc.conf /etc/rc.conf.local
 ```
 
+Snapshot your freshly installed system. Download and run the script
+https://raw.githubusercontent.com/eriknstr/utils/master/snap.sh
+or just run `sh` and type in the following manually:
+
+```sh
+snapname="$( date +%Y-%m-%d )-$( freebsd-version )-$( date +%s )"
+
+zfs snapshot -r zroot@$snapname
+
+zfs destroy -r zroot/tmp@$snapname
+zfs destroy -r zroot/var/log@$snapname
+zfs destroy -r zroot/var/crash@$snapname
+zfs destroy -r zroot/usr/ports@$snapname
+
+exit
+```
+
 ## Install custom configuration files
 
 TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
