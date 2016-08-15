@@ -296,6 +296,8 @@ cd ThinkPad-FreeBSD-setup
 
 ## Compile customized system from source
 
+NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources, so there is no point in recompiling from source yet.
+
 First time, do the following. Subsequent times, skip this step.
 
 ```sh
