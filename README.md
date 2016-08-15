@@ -21,10 +21,6 @@ Things which optimize the usage of a HDD might hurt an SSD and vice versa.
 
 All commands in this README are to be performed as root unless otherwise noted.
 
-TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
-
-TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
-
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
 
 ## Table of Contents
@@ -283,6 +279,10 @@ mv /etc/rc.conf /etc/rc.conf.local
 ```
 
 ## Install custom configuration files
+
+TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
+
+TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
 
 ```sh
 pkg bootstrap
