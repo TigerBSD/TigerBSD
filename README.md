@@ -288,8 +288,8 @@ service local_unbound restart
 
 Snapshot your freshly installed system. Download and run the script
 https://raw.githubusercontent.com/eriknstr/utils/master/snap.sh
-or just run `sh` and type in the following manually or copy-paste it
-or whatever:
+using `fetch`, or just run `sh` and type in the following manually
+or copy-paste it or whatever:
 
 ```sh
 snapname="$( date +%Y-%m-%d )-$( freebsd-version )-$( date +%s )"
