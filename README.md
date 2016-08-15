@@ -431,9 +431,9 @@ instead of using the official release files.
 ```sh
 poudriere jail -c -j 11amd64 -v 11.0-RC1
 
-cd /usr/local/poudriere/
-mkdir ports
-cd ports/
+poudriere ports -c -F -p local
+
+cd /usr/local/poudriere/ports/
 
 git clone git@github.com:eriknstr/ThinkPad-FreeBSD-ports.git local
 
