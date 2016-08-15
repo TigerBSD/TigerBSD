@@ -281,8 +281,8 @@ mv /etc/rc.conf /etc/rc.conf.local
 Next, disable unbound for now until I can figure out
 how to have it not use the incorrect upstream name server.
 To disable unbound, outcomment `local_unbound_enable="YES"`
-by prepending a hash character (`#`) to the line in question.
-With that done, stop the service.
+by prepending a hash character (`#`) to the line in question
+in `/etc/rc.conf.local`. With that done, stop the service.
 
 ```sh
 service local_unbound stop
