@@ -278,6 +278,14 @@ we move our current `/etc/rc.conf` to `/etc/rc.conf.local`.
 mv /etc/rc.conf /etc/rc.conf.local
 ```
 
+Next, ensure that local unbound server is not tied to the current network.
+
+```sh
+mv /var/unbound/forward.conf /var/unbound/_forward.conf
+touch /var/unbound/forward.conf
+service local_unbound restart
+```
+
 Snapshot your freshly installed system. Download and run the script
 https://raw.githubusercontent.com/eriknstr/utils/master/snap.sh
 or just run `sh` and type in the following manually or copy-paste it
