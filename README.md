@@ -278,12 +278,14 @@ we move our current `/etc/rc.conf` to `/etc/rc.conf.local`.
 mv /etc/rc.conf /etc/rc.conf.local
 ```
 
-Next, ensure that local unbound server is not tied to the current network.
+Next, disable unbound for now until I can figure out
+how to have it not use the incorrect upstream name server.
+To disable unbound, outcomment `local_unbound_enable="YES"`
+by prepending a hash character (`#`) to the line in question.
+With that done, stop the service.
 
 ```sh
-mv /var/unbound/forward.conf /var/unbound/_forward.conf
-touch /var/unbound/forward.conf
-service local_unbound restart
+service local_unbound stop
 ```
 
 Snapshot your freshly installed system. Download and run the script
