@@ -10,6 +10,11 @@ and
 but do also be aware that even if none are open, there could be things
 that are broken or incomplete still.
 
+This guide assumes that your Lenovo ThinkPad T520 has a minimum of 8GB RAM,
+and that it has a single storage drive; an SSD of at least X GB in size.
+Note that this is different from the factory configuration which has
+4GB RAM and a 7200-rpm 500GB HDD.
+
 All commands in this README are to be performed as root unless otherwise noted.
 
 TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
@@ -31,7 +36,43 @@ xzcat ~/Downloads/FreeBSD-11.0-RC1-amd64-memstick.img.xz \
 sudo sync
 ```
 
-Unplug the USB memory stick, plug it into your ThinkPad T520 and boot from it.
+Unplug the USB memory stick, plug it into your ThinkPad T520 and power on
+the machine. Press the blue "ThinkVantage"-button, causing it to show
+a menu of options (it might also beep at this point).
+
+### ThinkPad T520 BIOS Setup Utility
+
+Press F1 to enter the BIOS Setup Utility.
+
+Navigate to the *Security* menu using the left and right arrow keys
+of your keyborad. Select *Virtualization*. Ensure that
+*Intel (R) Virtualization Technology* is set to *Enabled* and that
+*Intel (R) VT-d Feature* is set to *Enabled*. Press Esc on your
+keyboard to accept and go back to the previous menu. Under
+*Memory Protection*, ensure *Execution Prevention* is *Enabled*.
+Press Esc on your keyboard to go back to *Security* main menu.
+
+TODO: Make use of the Security Chip. Google FreeBSD ThinkPad Security Chip.
+
+Navigate to *Startup*. *Ensure UEFI/Legacy Boot* is set to *Both*
+and that *UEFI/Legacy Boot Priority* is set to *UEFI First*.
+Ensure *Boot device List F12 Option* is set to *Enabled*.
+Next, go into the *Boot* section and ensure that the
+*Boot Priority Order* list includes *USB FDD*, *USB HDD*
+and *USB CD* somewhere in the list, as well as
+*ATA HDD0* and *ATAPI CD0*. Any of these not in the list
+must be moved up from *Excluded from boot priority order*.
+
+There are a bunch of other settings worth checking out as well
+but I won't list all of them here.
+
+Press F10 to Save and Exit.
+
+Press the blue "ThinkVantage"-button again.
+
+Press F12 to select temporary startup device.
+
+### Boot from the FreeBSD 11.0-RC1 install media
 
 TODO: Document choices made.
 
