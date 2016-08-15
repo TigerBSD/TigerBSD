@@ -20,6 +20,8 @@ TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch mas
 
 ## Install FreeBSD 11
 
+Download the official FreeBSD 11.0-RC1 memory stick image [FreeBSD-11.0-RC1-amd64-memstick.img.xz](ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC1-amd64-memstick.img.xz) and put it on a USB memory stick. Insert the USB memory stick into your ThinkPad T520 and boot from it.
+
 TODO: Document choices made.
 
 Finally, set the hostname in file `/etc/rc.conf.local`, e.g.:
@@ -130,7 +132,7 @@ instead of using the official release files.
 ```sh
 pkg install poudriere
 
-poudriere jail -c -j 11amd64 -v 11.0-BETA4
+poudriere jail -c -j 11amd64 -v 11.0-RC1
 
 cd /usr/local/poudriere/ports/
 
