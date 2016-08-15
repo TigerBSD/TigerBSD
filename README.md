@@ -35,7 +35,7 @@ TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch mas
 * [Custom package builds using Poudriere](#custom-package-builds-using-poudriere)
   + [Installing the packages](#installing-the-packages)
   + [Updating Poudriere ports tree and packages](#updating-poudriere-ports-tree-and-packages)
-  + [Keeping an eye on Poudriere builds from other computers](#keeping-an-eye-onpoudriere-builds-from-other-computers)
+  + [Keeping an eye on Poudriere builds from other computers](#keeping-an-eye-on-poudriere-builds-from-other-computers)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 
 ## Install FreeBSD 11
