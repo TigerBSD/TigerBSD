@@ -334,7 +334,7 @@ Reboot.
 
 ## Compile customized system from source
 
-NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources. [Compare changes local to ThinkPad-FreeBSD-src](https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11).
+NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources. [Compare changes local to ThinkPad-FreeBSD-src](https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11). Still, there is the custom kernel config so you might as well do this right away.
 
 First time, do the following. Subsequent times, skip this step.
 
