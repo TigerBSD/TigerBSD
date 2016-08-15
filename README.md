@@ -342,7 +342,8 @@ network={
 }
 ```
 
-Reboot.
+Reboot, then take another snapshot. ZFS snapshots are very cheap
+thanks to COW (copy-on-write). Take lots of snapshots, all the time.
 
 ## Compile customized system from source
 
