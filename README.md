@@ -74,7 +74,23 @@ Press F12 to select temporary startup device.
 
 ### Boot from the FreeBSD 11.0-RC1 install media
 
-TODO: Document choices made.
+From the Boot Menu, select your USB memory stick.
+In my case, it is called "USB HDD".
+
+At the "Welcome to FreeBSD"-screen, press Enter or just wait.
+
+Next, it'll say "Welcome to FreeBSD! Would you like to begin
+an installation or use the live CD?" Select *Install* and press
+Enter.
+
+Make your *Keymap Selection*. I use the *United States of America dvorak*
+keyboard layout (and so should you :). Use the up and down keyboard arrows
+to go through the list and press Enter on the one you want to use.
+Press Enter again to test the keymap. Type in some letters, numbers
+and symbols. Then press Enter, press Enter again to select it and then
+use the up keyboard arrow to continue with the keymap you have selected.
+
+TODO: Remainder.
 
 Finally, set the hostname in file `/etc/rc.conf.local`, e.g.:
 
