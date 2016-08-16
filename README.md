@@ -320,7 +320,7 @@ cd /root/src/github.com/eriknstr/
 
 git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
 
-cd ThinkPad-FreeBSD-setup
+cd ThinkPad-FreeBSD-setup/
 
 ./install.sh
 
@@ -349,11 +349,11 @@ NOTE: At the time of this writing, no changes have yet been made by me to the Fr
 First time, do the following. Subsequent times, skip this step.
 
 ```sh
-cd /usr
+cd /usr/
 
 git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-src.git src
 
-cd src
+cd src/
 
 git remote add upstream git@github.com:freebsd/freebsd.git
 
@@ -367,7 +367,7 @@ in rebuilding everything since you'd end up with the same thing
 you already had.
 
 ```sh
-cd /usr/src
+cd /usr/src/
 
 git pull
 ```
@@ -377,7 +377,7 @@ Reboot into single user mode, then
 ```sh
 /singleuser.sh
 
-cd /usr/src
+cd /usr/src/
 
 make buildworld buildkernel installkernel KERNCONF=T520
 ```
@@ -392,7 +392,7 @@ Reboot into single user mode again and then
 ```sh
 /singleuser.sh
 
-cd /usr/src
+cd /usr/src/
 
 mergemaster -p
 
@@ -439,11 +439,11 @@ cd /usr/local/poudriere/ports/
 
 git clone git@github.com:eriknstr/ThinkPad-FreeBSD-ports.git local
 
-cd local
+cd local/
 
 git remote add upstream git@github.com:freebsd/freebsd-ports.git
 
-mkdir /usr/ports/distfiles
+mkdir /usr/ports/distfiles/
 
 poudriere bulk -j 11amd64 -p local -z python35 \
   -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
@@ -487,7 +487,7 @@ poudriere bulk -j 11amd64 -p local -z python27 \
 ### Keeping an eye on Poudriere builds from other computers
 
 ```sh
-cd /usr/local/poudriere/data/logs/bulk
+cd /usr/local/poudriere/data/logs/bulk/
 doas -u www python3.5 -m http.server
 ```
 
