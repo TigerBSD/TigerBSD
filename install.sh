@@ -108,3 +108,5 @@ link_dir () {
 
 	ln -s "$src" "$tgt"
 }
+
+link_dir usr/local/etc/poudriere.d/11amd64-python35-options
