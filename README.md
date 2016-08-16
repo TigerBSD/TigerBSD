@@ -323,6 +323,8 @@ git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
 cd ThinkPad-FreeBSD-setup
 
 ./install.sh
+
+cap_mkdb /etc/login.conf
 ```
 
 Configure WLAN. Most of it is taken care of by the installed files,
