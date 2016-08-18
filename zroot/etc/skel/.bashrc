@@ -60,10 +60,10 @@ complete -F _swpr swpr
 [[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
         source /usr/local/share/bash-completion/bash_completion.sh
 
-#alias u='sudo freebsd-update fetch install; sudo pkg update && sudo pkg upgrade'
-alias u='sudo pkg update && sudo pkg upgrade'
-alias s='sudo pkg search'
-alias i='sudo pkg install'
+#alias u='doas freebsd-update fetch install; doas pkg update && doas pkg upgrade'
+alias u='doas pkg update && doas pkg upgrade'
+alias s='doas pkg search'
+alias i='doas pkg install'
 
 alias le="git shortlog -s -e"
 alias st="git status"
@@ -91,7 +91,7 @@ ll()
 alias sl='screen -ls'
 alias sr='screen -dUR'
 
-alias www="sudo jexec www0 tcsh"
+alias www="doas jexec www0 tcsh"
 
 #alias no="swpr nordstroem.no && cd /usr/local/jails/thin/no.nordstroem.htservices.www0/usr/local/www/no.nordstroem.www/pub/htdocs/"
 alias non="swpr nordstroem.no"
