@@ -31,7 +31,6 @@ lang/pypy3
 emulators/virtualbox-ose
 databases/pgadmin3
 databases/sqlitebrowser
-www/nginx
 editors/calligra
 multimedia/ffmpeg
 multimedia/aegisub
