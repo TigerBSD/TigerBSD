@@ -1,0 +1,16 @@
+x11/mate-base
+x11/mate-screensaver
+audio/mate-media
+sysutils/mate-power-manager
+deskutils/caja-extensions
+x11/mate-applets
+multimedia/vlc
+devel/py-qt5
+emulators/virtualbox-ose
+editors/calligra
+graphics/gimp-app
+print/scribus
+www/firefox
+www/chromium
+graphics/blender
+www/firefox-esr
