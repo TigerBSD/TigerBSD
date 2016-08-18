@@ -29,6 +29,7 @@ multimedia/vlc
 devel/py-qt5
 lang/pypy3
 emulators/virtualbox-ose
+databases/postgresql95-server
 databases/pgadmin3
 databases/sqlitebrowser
 editors/calligra
