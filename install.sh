@@ -72,6 +72,7 @@ copy_file etc/rc.conf
 copy_file etc/sysctl.conf
 
 copy_file usr/local/etc/doas.conf
+copy_file usr/local/etc/nginx/mime.types
 copy_file usr/local/etc/nginx/nginx.conf
 copy_file usr/local/etc/pkg/repos/custom-python27.conf
 copy_file usr/local/etc/pkg/repos/custom-python34.conf
