@@ -18,6 +18,7 @@ x11-themes/slim-themes
 x11/rxvt-unicode
 x11/mate-base
 x11/mate-screensaver
+multimedia/pwcview
 graphics/eom
 audio/mate-media
 sysutils/mate-power-manager

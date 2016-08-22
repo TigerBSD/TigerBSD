@@ -307,6 +307,10 @@ zfs destroy -r zroot/usr/ports@$snapname
 exit
 ```
 
+## Install cuse4bsd from latest sources
+
+http://www.selasky.org/hans_petter/cuse4bsd/
+
 ## Install custom configuration files
 
 TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
