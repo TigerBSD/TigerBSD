@@ -488,13 +488,6 @@ poudriere bulk -j 11amd64 -p local -z python27 \
   -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
 ```
 
-### Keeping an eye on Poudriere builds from other computers
-
-```sh
-cd /usr/local/poudriere/data/logs/bulk/
-doas -u www python3.5 -m http.server
-```
-
 ### Compare changes local to ThinkPad-FreeBSD-ports
 
 https://github.com/freebsd/freebsd-ports/compare/master...eriknstr:master
