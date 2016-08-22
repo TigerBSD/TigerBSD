@@ -1,14 +1,15 @@
 # ThinkPad-FreeBSD-setup
 
 Setup of Customized FreeBSD 11 for Lenovo ThinkPad T520. Work in progress.
-Please have a look at the list of
-[open issues for this repository](https://github.com/eriknstr/ThinkPad-FreeBSD-setup/issues),
-as well as the lists of
-[open issues for ThinkPad-FreeBSD-ports](https://github.com/eriknstr/ThinkPad-FreeBSD-ports/issues)
-and
-[open issues for ThinkPad-FreeBSD-src](https://github.com/eriknstr/ThinkPad-FreeBSD-src/issues),
-but do also be aware that even if none are open, there could be things
-that are broken or incomplete still.
+Please have a look at the following few links:
+
+
+* [Open issues for this repository](https://github.com/eriknstr/ThinkPad-FreeBSD-setup/issues)
+* [Open issues for ThinkPad-FreeBSD-ports](https://github.com/eriknstr/ThinkPad-FreeBSD-ports/issues)
+* [Open issues for ThinkPad-FreeBSD-src](https://github.com/eriknstr/ThinkPad-FreeBSD-src/issues)
+
+Do also be aware that even if no issues are open for any of these three
+repositories, there could be things that are broken or incomplete still.
 
 This guide assumes that your Lenovo ThinkPad T520 has a minimum of 8GB RAM,
 and that it has a single storage drive; an SSD of at least 120GB in size.
