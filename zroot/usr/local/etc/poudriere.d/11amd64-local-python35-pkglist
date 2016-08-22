@@ -11,6 +11,8 @@ editors/vim
 mail/postfix
 mail/mutt
 x11/nvidia-driver
+x11/nvidia-settings
+x11/nvidia-xconfig
 x11-drivers/xf86-input-keyboard
 x11-drivers/xf86-input-mouse
 x11/slim
