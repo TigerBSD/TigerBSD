@@ -5,8 +5,8 @@ Please have a look at the following few links:
 
 
 * [Open issues for this repository](https://github.com/eriknstr/ThinkPad-FreeBSD-setup/issues)
-* [Open issues for ThinkPad-FreeBSD-ports](https://github.com/eriknstr/ThinkPad-FreeBSD-ports/issues)
 * [Open issues for ThinkPad-FreeBSD-src](https://github.com/eriknstr/ThinkPad-FreeBSD-src/issues)
+* [Open issues for ThinkPad-FreeBSD-ports](https://github.com/eriknstr/ThinkPad-FreeBSD-ports/issues)
 
 Be aware that even if no issues are open for any of these three repositories,
 there could be things that are broken or incomplete still.
