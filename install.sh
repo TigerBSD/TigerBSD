@@ -111,3 +111,5 @@ link_dir () {
 }
 
 link_dir usr/local/etc/poudriere.d/11amd64-python35-options
+link_dir usr/local/etc/poudriere.d/11amd64-python34-options
+link_dir usr/local/etc/poudriere.d/11amd64-python27-options
