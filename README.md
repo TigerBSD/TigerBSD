@@ -1,6 +1,6 @@
 # ThinkPad-FreeBSD-setup
 
-Customized FreeBSD 11 for Lenovo ThinkPad T520. Work in progress.
+Setup of Customized FreeBSD 11 for Lenovo ThinkPad T520. Work in progress.
 Please have a look at the list of
 [open issues for this repository](https://github.com/eriknstr/ThinkPad-FreeBSD-setup/issues),
 as well as the lists of
