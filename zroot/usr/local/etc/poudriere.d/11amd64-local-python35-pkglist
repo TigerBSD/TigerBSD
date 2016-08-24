@@ -8,6 +8,11 @@ sysutils/screen
 sysutils/tree
 devel/git
 editors/vim
+devel/avr-libc
+devel/avr-gcc
+devel/simavr
+cad/gtkwave
+devel/avrdude
 mail/postfix
 mail/mutt
 x11/nvidia-driver
