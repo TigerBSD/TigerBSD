@@ -55,3 +55,6 @@ graphics/blender
 emulators/linux-c6
 www/firefox-esr
 www/nginx-devel
+net-im/pidgin
+net-im/pidgin-skypeweb
+ftp/wget
