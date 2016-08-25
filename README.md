@@ -28,7 +28,7 @@ All commands in this README are to be performed as root unless otherwise noted.
 
 * [Install FreeBSD 11](#install-freebsd-11)
   + [ThinkPad T520 BIOS Setup Utility](#thinkpad-t520-bios-setup-utility)
-  + [Boot from the FreeBSD 11.0-RC1 install media](#boot-from-the-freebsd-110-rc1-install-media)
+  + [Boot from the FreeBSD 11.0-RC2 install media](#boot-from-the-freebsd-110-rc2-install-media)
   + [Initial post-install configuration](#initial-post-install-configuration)
 * [Install custom configuration files](#install-custom-configuration-files)
 * [Compile customized system from source](#compile-customized-system-from-source)
@@ -43,12 +43,12 @@ All commands in this README are to be performed as root unless otherwise noted.
 
 ## Install FreeBSD 11
 
-Download the official FreeBSD 11.0-RC1 memory stick image [FreeBSD-11.0-RC1-amd64-memstick.img.xz](http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC1-amd64-memstick.img.xz) and write it on a USB memory stick. Replace `/dev/xxx` below with the path of the block device for the physical "drive" of your USB memory stick.
+Download the official FreeBSD 11.0-RC2 memory stick image [FreeBSD-11.0-RC2-amd64-memstick.img.xz](http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC2-amd64-memstick.img.xz) and write it on a USB memory stick. Replace `/dev/xxx` below with the path of the block device for the physical "drive" of your USB memory stick.
 
 ```bash
 sudo umount /dev/xxx*
 
-xzcat ~/Downloads/FreeBSD-11.0-RC1-amd64-memstick.img.xz \
+xzcat ~/Downloads/FreeBSD-11.0-RC2-amd64-memstick.img.xz \
   | sudo dd bs=16M of=/dev/xxx
 
 sudo sync
@@ -88,7 +88,7 @@ but I won't list all of them here.
 
 Press F10 to Save and Exit.
 
-### Boot from the FreeBSD 11.0-RC1 install media
+### Boot from the FreeBSD 11.0-RC2 install media
 
 At boot, press the blue "ThinkVantage"-button again.
 
@@ -436,7 +436,7 @@ TODO: Create jail from customized FreeBSD build
 instead of using the official release files.
 
 ```sh
-poudriere jail -c -j 11amd64 -v 11.0-RC1
+poudriere jail -c -j 11amd64 -v 11.0-RC2
 
 poudriere ports -c -F -p local
 
