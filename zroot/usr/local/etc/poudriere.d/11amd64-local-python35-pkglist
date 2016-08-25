@@ -24,6 +24,7 @@ x11/slim
 x11-themes/slim-themes
 x11/rxvt-unicode
 x11/mate-base
+deskutils/mate-utils
 x11/mate-screensaver
 multimedia/webcamd
 multimedia/pwcview
