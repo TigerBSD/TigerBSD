@@ -22,7 +22,7 @@ Things which optimize the usage of a HDD might hurt an SSD and vice versa.
 
 All commands in this README are to be performed as root unless otherwise noted.
 
-![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/freebsd-config/screenshots/screenshot.png)
+![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/screenshots-2016-08-26/screenshot.png)
 
 ## Table of Contents
 
