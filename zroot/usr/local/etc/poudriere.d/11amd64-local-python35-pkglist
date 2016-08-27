@@ -21,6 +21,8 @@ x11/nvidia-xconfig
 graphics/mesa-demos
 x11-drivers/xf86-input-keyboard
 x11-drivers/xf86-input-mouse
+security/fprintd
+security/fprint_demo
 x11/slim
 x11-themes/slim-themes
 x11/rxvt-unicode
