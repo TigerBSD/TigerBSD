@@ -97,6 +97,8 @@ Press F12 to select temporary startup device.
 From the Boot Menu, select your USB memory stick.
 In my case, it is called "USB HDD".
 
+### Perform installation
+
 At the "Welcome to FreeBSD"-screen, press Enter or just wait.
 
 Next, it'll say "Welcome to FreeBSD! Would you like to begin
