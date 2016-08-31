@@ -335,6 +335,9 @@ git remote add upstream git@github.com:freebsd/freebsd.git
 
 ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/usr/src/sys/amd64/conf/T520 \
   sys/amd64/conf/T520
+
+ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/singleuser.sh \
+  /singleuser.sh
 ```
 
 First time, skip this step. Subsequent times, start with this step.
