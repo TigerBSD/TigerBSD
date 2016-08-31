@@ -311,11 +311,8 @@ exit
 ## Clone this repo under `/root/`
 
 ```sh
-mkdir -p /root/src/github.com/eriknstr/
-
-cd /root/src/github.com/eriknstr/
-
-git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
+git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git \
+  /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup
 ```
 
 ## Compile customized system from source
@@ -325,11 +322,10 @@ NOTE: At the time of this writing, no changes have yet been made by me to the Fr
 First time, do the following. Subsequent times, skip this step.
 
 ```sh
-cd /usr/
+git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-src.git \
+  /usr/src
 
-git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-src.git src
-
-cd src/
+cd /usr/src/
 
 git remote add upstream git@github.com:freebsd/freebsd.git
 
@@ -460,11 +456,10 @@ poudriere jail -c -j 11amd64 -v 11.0-RC2
 
 poudriere ports -c -F -p local
 
-cd /usr/local/poudriere/ports/
+git clone git@github.com:eriknstr/ThinkPad-FreeBSD-ports.git \
+  /usr/local/poudriere/ports/local
 
-git clone git@github.com:eriknstr/ThinkPad-FreeBSD-ports.git local
-
-cd local/
+cd /usr/local/poudriere/ports/local/
 
 git remote add upstream git@github.com:freebsd/freebsd-ports.git
 
