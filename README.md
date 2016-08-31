@@ -303,7 +303,13 @@ recordsize=8K on both to avoid expensive partial record writes.
 The OpenZFS wiki goes on to recommend setting logbias=throughput
 on PostgreSQL's data to avoid writing twice.
 
-TODO: Create said ZFS file systems.
+```sh
+zfs create -o mountpoint=/usr/local/pgsql/data -o recordsize=8K -o logbias=throughput zroot/pgdata
+
+zfs create -o mountpoint=/usr/local/pgsql/data/pg_xlog -o recordsize=8K zroot/pgdata/wal
+
+zfs create zroot/var/www
+```
 
 Snapshot your freshly installed system. Download and run the script
 https://raw.githubusercontent.com/eriknstr/utils/master/snap.sh
@@ -431,7 +437,7 @@ https://github.com/eriknstr/ThinkPad-FreeBSD-src/compare/stable/11...freebsd:sta
 
 ## Install cuse4bsd from latest sources
 
-```bash
+```sh
 svnlite --username anonsvn --password anonsvn \
   checkout svn://svn.turbocat.net/i4b/trunk/usbcam/cuse4bsd
 
