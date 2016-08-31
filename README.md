@@ -308,45 +308,6 @@ zfs destroy -r zroot/usr/ports@$snapname
 exit
 ```
 
-## Install cuse4bsd from latest sources
-
-http://www.selasky.org/hans_petter/cuse4bsd/
-
-## Install custom configuration files
-
-TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
-
-TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
-
-```sh
-mkdir -p /root/src/github.com/eriknstr/
-
-cd /root/src/github.com/eriknstr/
-
-git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
-
-cd ThinkPad-FreeBSD-setup/
-
-./install.sh
-
-cap_mkdb /etc/login.conf
-```
-
-Configure WLAN. Most of it is taken care of by the installed files,
-but you'll need to enter information about network SSID and PSK.
-If your SSID was *mysweetwifi* and your PSK was *supersecret*,
-then you'd add the following contents to the file `/etc/wpa_supplicant.conf`:
-
-```
-network={
-	ssid="mysweetwifi"
-	psk="supersecret"
-}
-```
-
-Reboot, then take another snapshot. ZFS snapshots are very cheap
-thanks to COW (copy-on-write). Take lots of snapshots, all the time.
-
 ## Compile customized system from source
 
 NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources. [Compare changes local to ThinkPad-FreeBSD-src](https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11). Still, there is the custom kernel config so you might as well do this right away.
@@ -429,6 +390,54 @@ https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11
 ### Compare changes upstream not yet in ThinkPad-FreeBSD-src
 
 https://github.com/eriknstr/ThinkPad-FreeBSD-src/compare/stable/11...freebsd:stable/11
+
+## Install cuse4bsd from latest sources
+
+```bash
+svnlite --username anonsvn --password anonsvn \
+  checkout svn://svn.turbocat.net/i4b/trunk/usbcam/cuse4bsd
+
+cd cuse4bsd
+
+make all install
+```
+
+See also: http://www.selasky.org/hans_petter/cuse4bsd/
+
+## Install custom configuration files
+
+TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
+
+TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
+
+```sh
+mkdir -p /root/src/github.com/eriknstr/
+
+cd /root/src/github.com/eriknstr/
+
+git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
+
+cd ThinkPad-FreeBSD-setup/
+
+./install.sh
+
+cap_mkdb /etc/login.conf
+```
+
+Configure WLAN. Most of it is taken care of by the installed files,
+but you'll need to enter information about network SSID and PSK.
+If your SSID was *mysweetwifi* and your PSK was *supersecret*,
+then you'd add the following contents to the file `/etc/wpa_supplicant.conf`:
+
+```
+network={
+	ssid="mysweetwifi"
+	psk="supersecret"
+}
+```
+
+Reboot, then take another snapshot. ZFS snapshots are very cheap
+thanks to COW (copy-on-write). Take lots of snapshots, all the time.
 
 ## Custom package builds using Poudriere
 
