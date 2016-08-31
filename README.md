@@ -294,6 +294,8 @@ ZFS native features like `zfs send`, `zfs receive`, `zfs snapshot` and
 `zfs rollback`, secondly, the OpenZFS wiki and other reliable resources
 recommend having PostgreSQL's data and WAL on separate datasets with
 recordsize=8K on both to avoid expensive partial record writes.
+The OpenZFS wiki goes on to recommend setting logbias=throughput
+on PostgreSQL's data to avoid writing twice.
 
 TODO: Create said ZFS file systems.
 
