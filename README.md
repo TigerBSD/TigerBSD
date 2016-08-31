@@ -281,7 +281,7 @@ mv /etc/rc.conf /etc/rc.conf.local
 Install `pkg`, `git` and `poudriere`.
 
 ```sh
-pkg bootstrap
+env ASSUME_ALWAYS_YES=yes pkg bootstrap
 
 pkg install git poudriere
 ```
