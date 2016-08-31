@@ -308,6 +308,16 @@ zfs destroy -r zroot/usr/ports@$snapname
 exit
 ```
 
+## Clone this repo under `/root/`
+
+```sh
+mkdir -p /root/src/github.com/eriknstr/
+
+cd /root/src/github.com/eriknstr/
+
+git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
+```
+
 ## Compile customized system from source
 
 NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources. [Compare changes local to ThinkPad-FreeBSD-src](https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11). Still, there is the custom kernel config so you might as well do this right away.
@@ -411,13 +421,7 @@ TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
 TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
 
 ```sh
-mkdir -p /root/src/github.com/eriknstr/
-
-cd /root/src/github.com/eriknstr/
-
-git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
-
-cd ThinkPad-FreeBSD-setup/
+cd /root/src/github.com/ThinkPad-FreeBSD-setup/
 
 ./install.sh
 
