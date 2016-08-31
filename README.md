@@ -321,6 +321,8 @@ zfs destroy -r zroot/usr/ports@$snapname
 exit
 ```
 
+See also: http://open-zfs.org/wiki/Performance_tuning#PostgreSQL
+
 ## Clone this repo under `/root/`
 
 ```sh
