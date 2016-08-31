@@ -286,6 +286,17 @@ env ASSUME_ALWAYS_YES=yes pkg bootstrap
 pkg install git poudriere
 ```
 
+Create additional ZFS file systems for PostgreSQL data, PostgreSQL WAL
+and Nginx data. The motivation for this is two-fold; firstly, having
+user data on separate file systems makes it easier to backup, snapshot,
+rollback, etc. this data independently from the rest of the system using
+ZFS native features like `zfs send`, `zfs receive`, `zfs snapshot` and
+`zfs rollback`, secondly, the OpenZFS wiki and other reliable resources
+recommend having PostgreSQL's data and WAL on separate datasets with
+recordsize=8K on both to avoid expensive partial record writes.
+
+TODO: Create said ZFS file systems.
+
 Snapshot your freshly installed system. Download and run the script
 https://raw.githubusercontent.com/eriknstr/utils/master/snap.sh
 using `fetch`, or just run `sh` and type in the following manually
