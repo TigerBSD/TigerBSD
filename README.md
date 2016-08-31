@@ -389,6 +389,9 @@ cd /usr/src/
 make delete-old-libs
 ```
 
+Next, take another snapshot. ZFS snapshots are very cheap
+thanks to COW (copy-on-write). Take lots of snapshots, all the time.
+
 TODO: Package rebuilding in relation to delete-old-libs
 
 See also:
@@ -443,8 +446,7 @@ network={
 }
 ```
 
-Reboot, then take another snapshot. ZFS snapshots are very cheap
-thanks to COW (copy-on-write). Take lots of snapshots, all the time.
+With that done, take another snapshot again.
 
 ## Custom package builds using Poudriere
 
