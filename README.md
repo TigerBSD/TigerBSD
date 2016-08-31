@@ -390,7 +390,9 @@ make delete-old-libs
 ```
 
 Finally, take another snapshot. ZFS snapshots are very cheap
-thanks to COW (copy-on-write). Take lots of snapshots, all the time.
+thanks to COW (copy-on-write).
+
+Take lots of snapshots, all the time.
 
 TODO: Package rebuilding in relation to delete-old-libs
 
