@@ -54,8 +54,8 @@ xzcat ~/Downloads/FreeBSD-11.0-RC2-amd64-memstick.img.xz \
 sudo sync
 ```
 
-Unplug the USB memory stick, plug it into your ThinkPad T520 and power on
-the machine.
+Unplug the USB memory stick after the `sync` command has terminated.
+Plug the USB memory stick into your ThinkPad T520 and power on the machine.
 
 ### ThinkPad T520 BIOS Setup Utility
 
