@@ -40,7 +40,6 @@ All commands in this README are to be performed as root unless otherwise noted.
 * [Custom package builds using Poudriere](#custom-package-builds-using-poudriere)
   + [Installing the packages](#installing-the-packages)
   + [Updating Poudriere ports tree and packages](#updating-poudriere-ports-tree-and-packages)
-  + [Keeping an eye on Poudriere builds from other computers](#keeping-an-eye-on-poudriere-builds-from-other-computers)
   + [Compare changes local to ThinkPad-FreeBSD-ports](#compare-changes-local-to-thinkpad-freebsd-ports)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 
