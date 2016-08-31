@@ -382,14 +382,14 @@ mergemaster -iF
 make delete-old
 ```
 
-Finally, reboot into multi user mode and then do
+Now reboot into multi user mode and then do
 
 ```sh
 cd /usr/src/
 make delete-old-libs
 ```
 
-Next, take another snapshot. ZFS snapshots are very cheap
+Finally, take another snapshot. ZFS snapshots are very cheap
 thanks to COW (copy-on-write). Take lots of snapshots, all the time.
 
 TODO: Package rebuilding in relation to delete-old-libs
