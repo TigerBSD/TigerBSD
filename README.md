@@ -233,7 +233,8 @@ When prompted for a Uid, we'll just leave that empty for default.
 
 Login group is named the same as your user, that's what we want.
 
-Would we like to invite our user into other groups? Yes, we'll enter *wheel*.
+Would we like to invite our user into other groups?
+Yes, we'll enter *wheel,operator*.
 
 Login class default is fine.
 
