@@ -8,6 +8,7 @@ sysutils/screen
 sysutils/tree
 devel/git
 editors/vim
+cad/qucs
 devel/avr-libc
 devel/avr-gcc
 devel/simavr
