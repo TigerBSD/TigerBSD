@@ -66,6 +66,7 @@ copy_file () {
 
 copy_file boot/loader.conf
 copy_file etc/devd.conf
+copy_file etc/devfs.rules
 copy_file etc/login.conf
 copy_file etc/pam.d/system
 copy_file etc/rc.conf
