@@ -51,6 +51,8 @@ databases/pgadmin3
 databases/sqlitebrowser
 editors/calligra
 multimedia/ffmpeg
+multimedia/mediainfo
+graphics/GraphicsMagick
 multimedia/aegisub
 print/texlive-base
 editors/libreoffice
