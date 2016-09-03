@@ -8,6 +8,7 @@ sysutils/screen
 sysutils/tree
 devel/git
 editors/vim
+math/py-matplotlib
 cad/qucs
 devel/avr-libc
 devel/avr-gcc
