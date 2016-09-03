@@ -54,6 +54,7 @@ multimedia/ffmpeg
 multimedia/aegisub
 print/texlive-base
 editors/libreoffice
+print/font-amsfonts
 graphics/gimp-app
 graphics/inkscape
 print/scribus
