@@ -560,7 +560,16 @@ https://github.com/eriknstr/ThinkPad-FreeBSD-ports/compare/master...freebsd:mast
 
 ## Troubleshooting
 
-### Mount ZFS root using FreeBSD 11.0 Live CD
+### Unbootable system
+
+In case an upgrade (`make buildworld buildkernel installkernel KERNCONF=T520`,
+`make installworld` and so on) goes bad and renders the system unable to boot,
+try selecting one of the previous boot environments from the beastie boot menu.
+
+Failing that, boot the install media and use the "Live CD" as described below
+to try and fix things.
+
+### Mount ZFS root using FreeBSD 11.0 "Live CD"
 
 First, boot the FreeBSD 11.0 install media and select "Live CD".
 Next, mount the ZFS root on `/mnt`;
@@ -570,3 +579,7 @@ zpool import -R /mnt -f zroot
 zfs mount zroot/ROOT/default
 zfs mount -a
 ```
+
+At this point, probably the first thing you should do is to
+backup your data to a safe location before you continue.
+Remember to verify that your backup is good.
