@@ -378,8 +378,10 @@ cd /usr/src/
 git pull
 ```
 
-Create and activate a new boot environment. The commands below
-assume that you are using a `sh`-compatible shell (e.g. `sh` or `bash`).
+Create and activate a new boot environment. Boot environments allow you
+to easily roll back to the previous version in case the upgrade goes bad.
+The commands below assume that you are using a `sh`-compatible shell,
+such as for example `sh` or `bash`.
 
 ```sh
 cd /usr/src/
