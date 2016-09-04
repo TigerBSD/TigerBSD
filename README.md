@@ -564,10 +564,10 @@ https://github.com/eriknstr/ThinkPad-FreeBSD-ports/compare/master...freebsd:mast
 
 In case an upgrade (`make buildworld buildkernel installkernel KERNCONF=T520`,
 `make installworld` and so on) goes bad and renders the system unable to boot,
-try selecting one of the previous boot environments from the beastie boot menu.
+try selecting your previous boot environment from the beastie boot menu.
 
-Failing that, boot the install media and use the "Live CD" as described below
-to try and fix things.
+If that doesn't help, boot the install media and use the "Live CD" as
+described below to try and fix things yourself.
 
 ### Mount ZFS root using FreeBSD 11.0 "Live CD"
 
