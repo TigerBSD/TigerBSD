@@ -1,6 +1,7 @@
 ports-mgmt/pkg
 ports-mgmt/dialog4ports
 ports-mgmt/poudriere
+sysutils/beadm
 shells/bash
 shells/bash-completion
 security/doas
