@@ -44,7 +44,7 @@ All commands in this README are to be performed as root unless otherwise noted.
 
 See [SYSINSTALL.md](/SYSINSTALL.md). Note that the install guide
 includes several important steps which you need for your setup
-to be correct for the rest of this to work, so don't skip reading it.
+to be correct so that the rest of this to work. Don't skip reading it.
 
 ## Clone this repo under `/root/`
 
