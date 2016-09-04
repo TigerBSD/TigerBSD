@@ -285,12 +285,12 @@ we move our current `/etc/rc.conf` to `/etc/rc.conf.local`.
 mv /etc/rc.conf /etc/rc.conf.local
 ```
 
-Install `pkg`, `git` and `poudriere`.
+Install `pkg`, `git`, `poudriere` and `beadm`.
 
 ```sh
 env ASSUME_ALWAYS_YES=yes pkg bootstrap
 
-pkg install git poudriere
+pkg install git poudriere beadm
 ```
 
 Create additional ZFS file systems for PostgreSQL data, PostgreSQL WAL
@@ -376,6 +376,19 @@ you already had.
 cd /usr/src/
 
 git pull
+```
+
+Create and activate a new boot environment. The commands below
+assume that you are using a `sh`-compatible shell (e.g. `sh` or `bash`).
+
+```sh
+cd /usr/src/
+
+nextenv="11.0-$( date +%Y%m%d )-g$( git rev-parse --short HEAD )"
+
+beadm create $nextenv
+
+beadm activate $nextenv
 ```
 
 Reboot into single user mode, then
