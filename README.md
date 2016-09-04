@@ -543,6 +543,14 @@ https://github.com/freebsd/freebsd-ports/compare/master...eriknstr:master
 
 https://github.com/eriknstr/ThinkPad-FreeBSD-ports/compare/master...freebsd:master
 
+## PulseAudio default sink
+
+As your own user, set default sink to be the built-in speakers.
+
+```sh
+pacmd set-default-sink 2
+```
+
 ## Troubleshooting
 
 ### Mount ZFS root using FreeBSD 11.0 Live CD

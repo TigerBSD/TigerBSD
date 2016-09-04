@@ -87,6 +87,7 @@ copy_file usr/local/etc/poudriere.d/11amd64-local-python34-make.conf
 copy_file usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
 copy_file usr/local/etc/poudriere.d/11amd64-local-python35-make.conf
 copy_file usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
+copy_file usr/local/etc/pulse/daemon.conf
 copy_file usr/local/etc/slim.conf
 copy_file usr/local/etc/X11/xorg.conf.d/10-nvidia.conf
 copy_file usr/local/etc/X11/xorg.conf.d/20-dvorak.conf
