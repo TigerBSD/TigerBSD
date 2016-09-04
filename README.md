@@ -42,7 +42,7 @@ All commands in this README are to be performed as root unless otherwise noted.
 
 ## Install FreeBSD 11
 
-See [SYSINSTALL.md](/eriknstr/ThinkPad-FreeBSD-setup/blob/stable/11/SYSINSTALL.md).
+See [SYSINSTALL.md](/SYSINSTALL.md).
 
 ## Clone this repo under `/root/`
 
