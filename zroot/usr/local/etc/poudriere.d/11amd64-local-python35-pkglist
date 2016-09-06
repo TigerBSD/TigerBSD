@@ -28,6 +28,7 @@ x11-drivers/xf86-input-keyboard
 x11-drivers/xf86-input-mouse
 deskutils/tpb
 x11/xbacklight
+sysutils/acpi_call
 security/fprintd
 security/fprint_demo
 x11/slim
