@@ -8,7 +8,12 @@ Please have a look at the following few links:
 * [Open issues for ThinkPad-FreeBSD-ports](https://github.com/eriknstr/ThinkPad-FreeBSD-ports/issues)
 
 Be aware that even if no issues are open for any of these three repositories,
-there could be things that are broken or incomplete still.
+there could be things that are broken or incomplete still. As [was once
+said](http://marc.info/?l=openbsd-misc&m=145358748924473&w=4);
+
+>Customization breeds bugs and hurts interoperability.
+
+With that out of the way, let's get on with it.
 
 This guide assumes that your Lenovo ThinkPad T520 has a minimum of 8GB RAM,
 and that it has a single storage drive; an SSD of at least 120GB in size.
