@@ -9,7 +9,7 @@ Please have a look at the following few links:
 
 Be aware that even if no issues are open for any of these three repositories,
 there could be things that are broken or incomplete still. As [was once
-said](http://marc.info/?l=openbsd-misc&m=145358748924473&w=4);
+said by someone on the OpenBSD mailing lists](http://marc.info/?l=openbsd-misc&m=145358748924473&w=4);
 
 >Customization breeds bugs and hurts interoperability.
 
