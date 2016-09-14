@@ -9,6 +9,7 @@ sysutils/screen
 sysutils/tree
 devel/git
 editors/vim
+print/texlive-base
 math/py-matplotlib
 cad/qucs
 devel/avr-libc
