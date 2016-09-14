@@ -60,7 +60,6 @@ multimedia/ffmpeg
 multimedia/mediainfo
 graphics/GraphicsMagick
 multimedia/aegisub
-print/texlive-base
 editors/libreoffice
 print/font-amsfonts
 graphics/gimp-app
