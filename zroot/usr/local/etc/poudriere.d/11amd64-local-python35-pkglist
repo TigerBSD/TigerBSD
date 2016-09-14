@@ -10,6 +10,7 @@ sysutils/tree
 devel/git
 editors/vim
 print/texlive-base
+print/tex-dvipdfmx
 print/tex-xetex
 math/py-matplotlib
 cad/qucs
