@@ -211,7 +211,7 @@ TODO: Create jail from customized FreeBSD build
 instead of using the official release files.
 
 ```sh
-poudriere jail -c -j 11amd64 -v 11.0-RC2
+poudriere jail -c -j 11amd64 -v 11.0-RC3
 
 poudriere ports -c -F -p local
 

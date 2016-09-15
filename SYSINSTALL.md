@@ -1,11 +1,11 @@
 # Install FreeBSD 11
 
-Download the official FreeBSD 11.0-RC2 memory stick image [FreeBSD-11.0-RC2-amd64-memstick.img.xz](http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC2-amd64-memstick.img.xz) and write it on a USB memory stick. Replace `/dev/xxx` below with the path of the block device for the physical "drive" of your USB memory stick.
+Download the official FreeBSD 11.0-RC3 memory stick image [FreeBSD-11.0-RC3-amd64-memstick.img.xz](http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC3-amd64-memstick.img.xz) and write it on a USB memory stick. Replace `/dev/xxx` below with the path of the block device for the physical "drive" of your USB memory stick.
 
 ```bash
 sudo umount /dev/xxx*
 
-xzcat ~/Downloads/FreeBSD-11.0-RC2-amd64-memstick.img.xz \
+xzcat ~/Downloads/FreeBSD-11.0-RC3-amd64-memstick.img.xz \
   | sudo dd bs=16M of=/dev/xxx
 
 sudo sync
@@ -17,7 +17,7 @@ Plug the USB memory stick into your ThinkPad T520 and power on the machine.
 ## Table of Contents
 
 * [ThinkPad T520 BIOS Setup Utility](#thinkpad-t520-bios-setup-utility)
-* [Boot from the FreeBSD 11.0-RC2 install media](#boot-from-the-freebsd-110-rc2-install-media)
+* [Boot from the FreeBSD 11.0-RC3 install media](#boot-from-the-freebsd-110-rc2-install-media)
 * [Perform installation](#perform-installation)
 * [Initial post-install configuration](#initial-post-install-configuration)
 
@@ -52,7 +52,7 @@ but I won't list all of them here.
 
 Press F10 to Save and Exit.
 
-## Boot from the FreeBSD 11.0-RC2 install media
+## Boot from the FreeBSD 11.0-RC3 install media
 
 At boot, press the blue "ThinkVantage"-button again.
 
