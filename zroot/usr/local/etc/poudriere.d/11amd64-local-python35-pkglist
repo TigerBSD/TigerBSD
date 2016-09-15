@@ -72,6 +72,7 @@ www/chromium
 graphics/blender
 emulators/linux-c6
 www/nginx-devel
+www/varnish
 net-im/pidgin
 net-im/pidgin-skypeweb
 ftp/wget
