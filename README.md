@@ -61,6 +61,9 @@ git clone -b stable/11 git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git \
 
 ## Compile customized system from source
 
+A fork of the FreeBSD source tree for use with Lenovo ThinkPad T520
+is maintained at https://github.com/eriknstr/ThinkPad-FreeBSD-src
+
 NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources. [Compare changes local to ThinkPad-FreeBSD-src](https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11). Still, there is the custom kernel config so you might as well do this right away.
 
 First time, do the following. Subsequent times, skip this step.
@@ -206,6 +209,9 @@ network={
 With that done, take another snapshot again.
 
 ## Custom package builds using Poudriere
+
+A fork of the FreeBSD ports tree for use with Lenovo ThinkPad T520
+is maintained at https://github.com/eriknstr/ThinkPad-FreeBSD-ports
 
 TODO: Create jail from customized FreeBSD build
 instead of using the official release files.
