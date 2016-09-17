@@ -107,6 +107,9 @@ alias ports='cd /usr/local/poudriere/ports/local/'
 
 alias rp='ping $( echo $SSH_CLIENT | cut -d" " -f1 )'
 
+# Away from home
+alias afh='ssh -o ProxyCommand="ssh -W %h:%p login.nordstroem.no" cubi'
+
 alias HEAD='curl -I'
 
 export PATH=~/bin:$PATH:/usr/local/lib/qt5/bin
@@ -119,3 +122,5 @@ swpr nordstroem.no
 alias ls='ls -GF'
 
 export PROMPT_DIRTRIM=2
+
+source $HOME/.cargo/env
