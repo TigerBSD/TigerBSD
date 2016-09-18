@@ -6,8 +6,6 @@ audio/mate-media
 sysutils/mate-power-manager
 deskutils/caja-extensions
 x11/mate-applets
-multimedia/vlc
-emulators/virtualbox-ose
 editors/calligra
 graphics/gimp-app
 print/scribus
