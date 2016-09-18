@@ -252,6 +252,36 @@ cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
 (We run the install one package at a time so that a missing package
  won't stop the installation of all the other, unrelated packages.)
 
+### Installing pip
+
+```sh
+python3.5 -m ensurepip
+python3.4 -m ensurepip
+python2.7 -m ensurepip
+```
+
+### Installing matplotlib
+
+```sh
+pip3.5 install matplotlib
+```
+
+### Upgrading pip and its packages
+
+```sh
+pip3.5 install -U pip
+pip3.5 freeze --local | grep -v '^\-e' | cut -d = -f 1 \
+  | xargs -n1 pip3.5 install -U
+
+pip3.4 install -U pip
+pip3.4 freeze --local | grep -v '^\-e' | cut -d = -f 1 \
+  | xargs -n1 pip3.4 install -U
+
+pip2.7 install -U pip
+pip2.7 freeze --local | grep -v '^\-e' | cut -d = -f 1 \
+  | xargs -n1 pip2.7 install -U
+```
+
 ### Updating Poudriere ports tree and packages
 
 ```sh
