@@ -49,6 +49,7 @@ sysutils/mate-power-manager
 deskutils/caja-extensions
 x11/mate-applets
 devel/dconf-editor
+finance/electrum
 audio/pavucontrol
 multimedia/vlc
 devel/py-qt5
