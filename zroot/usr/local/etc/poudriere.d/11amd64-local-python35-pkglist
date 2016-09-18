@@ -52,6 +52,7 @@ devel/dconf-editor
 finance/electrum
 audio/pavucontrol
 multimedia/vlc
+audio/tomahawk
 devel/py-qt5
 lang/pypy3
 emulators/virtualbox-ose
