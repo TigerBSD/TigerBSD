@@ -270,15 +270,15 @@ pip3.5 install matplotlib
 
 ```sh
 pip3.5 install -U pip
-pip3.5 freeze --local | grep -v '^\-e' | cut -d = -f 1 \
+pip3.5 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
   | xargs -n1 pip3.5 install -U
 
 pip3.4 install -U pip
-pip3.4 freeze --local | grep -v '^\-e' | cut -d = -f 1 \
+pip3.4 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
   | xargs -n1 pip3.4 install -U
 
 pip2.7 install -U pip
-pip2.7 freeze --local | grep -v '^\-e' | cut -d = -f 1 \
+pip2.7 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
   | xargs -n1 pip2.7 install -U
 ```
 
