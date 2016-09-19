@@ -55,6 +55,7 @@ multimedia/vlc
 www/youtube_dl
 audio/tomahawk
 devel/py-qt5
+graphics/py-opencv
 lang/pypy3
 emulators/virtualbox-ose
 databases/postgresql95-server
