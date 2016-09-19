@@ -46,6 +46,13 @@ link_file etc/skel/.icons/mate/scalable/places/start-here-symbolic.svg
 link_file etc/skel/.vimrc
 link_file etc/skel/.Xdefaults
 
+link_file usr/local/etc/poudriere.d/11amd64-local-python27-make.conf
+link_file usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
+link_file usr/local/etc/poudriere.d/11amd64-local-python34-make.conf
+link_file usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
+link_file usr/local/etc/poudriere.d/11amd64-local-python35-make.conf
+link_file usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
+
 copy_file () {
 	src="$owndir/zroot/$1"
 	tgt="/$1"
@@ -82,12 +89,6 @@ copy_file usr/local/etc/pkg/repos/custom-python35.conf
 copy_file usr/local/etc/pkg/repos/FreeBSD.conf
 copy_file usr/local/etc/pkg.conf
 copy_file usr/local/etc/poudriere.conf
-copy_file usr/local/etc/poudriere.d/11amd64-local-python27-make.conf
-copy_file usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
-copy_file usr/local/etc/poudriere.d/11amd64-local-python34-make.conf
-copy_file usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
-copy_file usr/local/etc/poudriere.d/11amd64-local-python35-make.conf
-copy_file usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
 copy_file usr/local/etc/pulse/client.conf
 copy_file usr/local/etc/pulse/daemon.conf
 copy_file usr/local/etc/slim.conf
