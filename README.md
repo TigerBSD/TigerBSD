@@ -119,10 +119,9 @@ cd /usr/src/
 make buildworld buildkernel installkernel KERNCONF=T520
 ```
 
-A full buildworld buildkernel takes about five hours
-on my ThinkPad T520 at the time of this writing.
-Out of this, the time taken by the buildkernel step
-alone is about 50 minutes.
+At the time of this writing, buildworld takes approximately
+three and a half hours on my ThinkPad T520, and buildkernel
+takes about an hour.
 
 Reboot into single user mode again and then
 
