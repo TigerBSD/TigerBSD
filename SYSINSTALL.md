@@ -40,8 +40,6 @@ keyboard to accept and go back to the previous menu. Under
 *Memory Protection*, ensure *Execution Prevention* is *Enabled*.
 Press Esc on your keyboard to go back to *Security* main menu.
 
-TODO: Make use of the Security Chip. Google FreeBSD ThinkPad Security Chip.
-
 Navigate to *Startup*. Ensure *UEFI/Legacy Boot* is set to *Both*
 and that *UEFI/Legacy Boot Priority* is set to *UEFI First*.
 Ensure *Boot device List F12 Option* is set to *Enabled*.
