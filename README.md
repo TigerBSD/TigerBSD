@@ -16,7 +16,7 @@ said by someone on the OpenBSD mailing lists](http://marc.info/?l=openbsd-misc&m
 With that out of the way, let's get on with it.
 
 This guide assumes that your Lenovo ThinkPad T520 has a minimum of 8GB RAM,
-and that it has a single storage drive; an SSD of at least 120GB in size.
+and that it has a single storage drive; an SSD of at least 240GB in size.
 Note that this is different from the factory configuration which has
 4GB RAM and a 7200-rpm 500GB HDD. The assumption of the storage medium
 being an SSD and not a HDD, in particular, is important, since it will
