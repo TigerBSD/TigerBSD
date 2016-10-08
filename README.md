@@ -201,7 +201,7 @@ TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
 TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
 
 ```sh
-cd /root/src/github.com/ThinkPad-FreeBSD-setup/
+cd /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/
 
 ./install.sh
 
