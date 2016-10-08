@@ -94,12 +94,20 @@ ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/usr/src/sys/amd
 mkdir -p /opt/sbin/
 ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/opt/sbin/singleuser.sh \
   /opt/sbin/singleuser.sh
+cp /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/opt/sbin/snap.sh \
+  /opt/sbin/snap.sh
 ```
 
-First time, skip this step. Subsequent times, start with this step.
-If this step says that you are up to date then there is no point
-in rebuilding everything since you'd end up with the same thing
-you already had.
+Always snapshot the whole system at this point --
+both the first time and any other time.
+
+```sh
+/opt/sbin/snap.sh
+```
+
+First time, skip the following. If this step says that you are up to date
+then there is no point in rebuilding everything since you'd end up with
+the same thing you already had.
 
 ```sh
 cd /usr/src/
@@ -107,7 +115,8 @@ cd /usr/src/
 git pull
 ```
 
-Create and activate a new boot environment. Boot environments allow you
+Always create and activate a new boot environment (though at present,
+this does not work with FDE -- see issue #15). Boot environments allow you
 to easily roll back to the previous version in case the upgrade goes bad.
 The commands below assume that you are using a `sh`-compatible shell,
 such as for example `sh` or `bash`.

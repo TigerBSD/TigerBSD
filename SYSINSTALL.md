@@ -277,31 +277,4 @@ zfs create -o mountpoint=/usr/local/pgsql/data/pg_xlog -o recordsize=8K zroot/pg
 zfs create zroot/var/www
 ```
 
-Snapshot your freshly installed system. Download and run the script
-https://raw.githubusercontent.com/eriknstr/utils/master/snap.sh
-using `fetch`, or just run `sh` and type in the following manually
-or copy-paste it or whatever:
-
-```sh
-# You must use sh for this because the default shell
-# for root on FreeBSD is csh and it has a different
-# syntax for declaring variables.
-
-snapname="$( date +%Y-%m-%d )-$( freebsd-version )-$( date +%s )"
-
-zfs snapshot -r bootpool@$snapname
-
-zfs snapshot -r zroot@$snapname
-
-zfs destroy -r zroot/tmp@$snapname
-zfs destroy -r zroot/usr/ports@$snapname
-zfs destroy -r zroot/usr/src@$snapname
-zfs destroy -r zroot/var/audit@$snapname
-zfs destroy -r zroot/var/crash@$snapname
-zfs destroy -r zroot/var/log@$snapname
-zfs destroy -r zroot/var/tmp@$snapname
-
-exit
-```
-
 See also: http://open-zfs.org/wiki/Performance_tuning#PostgreSQL
