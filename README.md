@@ -44,7 +44,8 @@ All commands in this README are to be performed as root unless otherwise noted.
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 * [Troubleshooting](#troubleshooting)
   + [Unbootable system](#unbootable-system)
-  + [Mount ZFS root using FreeBSD 11.0 Live CD](#mount-zfs-root-using-freebsd-110-live-cd)
+  + [Mount plain ZFS root using FreeBSD 11.0 Live CD](#mount-plain-zfs-root-using-freebsd-110-live-cd)
+  + [Mount encrypted ZFS root using FreeBSD 11.0 Live CD](#mount-encrypted-zfs-root-using-freebsd-110-live-cd)
 
 ## Install FreeBSD 11
 
@@ -319,13 +320,14 @@ try selecting your previous boot environment from the beastie boot menu.
 If that doesn't help, boot the install media and use the "Live CD" as
 described below to try and fix things yourself.
 
-### Mount ZFS root using FreeBSD 11.0 "Live CD"
+### Mount plain ZFS root using FreeBSD 11.0 "Live CD"
 
 First, boot the FreeBSD 11.0 install media and select "Live CD".
 Next, mount the ZFS root on `/mnt`;
 
 ```sh
-zpool import -R /mnt -f zroot
+zpool import
+zpool import -fR /mnt zroot
 zfs mount zroot/ROOT/default
 zfs mount -a
 ```
@@ -333,3 +335,20 @@ zfs mount -a
 At this point, probably the first thing you should do is to
 backup your data to a safe location before you continue.
 Remember to verify that your backup is good.
+
+### Mount encrypted ZFS root using FreeBSD 11.0 "Live CD"
+
+Same as above, except that the following
+set of commands are to be used instead;
+
+```sh
+zpool import
+zpool import -fR /tmp bootpool
+
+geli attach -k /tmp/bootpool/boot/encryption.key /dev/ada0p4
+
+zpool import
+zpool import -fR /mnt zroot
+zfs mount zroot/ROOT/default
+zfs mount -a
+```
