@@ -81,8 +81,9 @@ git remote add upstream git@github.com:freebsd/freebsd.git
 ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/usr/src/sys/amd64/conf/T520 \
   sys/amd64/conf/T520
 
-ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/singleuser.sh \
-  /singleuser.sh
+mkdir -p /opt/sbin/
+ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/opt/sbin/singleuser.sh \
+  /opt/sbin/singleuser.sh
 ```
 
 First time, skip this step. Subsequent times, start with this step.
@@ -114,7 +115,7 @@ beadm activate $nextenv
 Reboot into single user mode, then
 
 ```sh
-/singleuser.sh
+/opt/sbin/singleuser.sh
 
 cd /usr/src/
 
@@ -128,7 +129,7 @@ takes about half an hour.
 Reboot into single user mode again and then
 
 ```sh
-/singleuser.sh
+/opt/sbin/singleuser.sh
 
 cd /usr/src/
 
