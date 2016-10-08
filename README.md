@@ -99,7 +99,7 @@ cp /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/opt/sbin/snap.sh \
 ```
 
 Always snapshot the whole system at this point --
-both the first time and any other time.
+both the first time and all other times.
 
 ```sh
 /opt/sbin/snap.sh
