@@ -396,4 +396,11 @@ zfs mount -a
 
 At this point, probably the first thing you should do is to
 backup your data to a safe location before you continue.
-Remember to verify that your backup is good.
+Remember to verify that your backup is good. From there on,
+what you need to do will depend on what is your problem
+and how recently you last took a snapshot.
+
+If the only changes you've made since last snapshot are
+the kind of changes that don't matter if get lost and
+you are *really* sure that such is the case, probably
+`zfs rollback` (see `zfs(1)`) is the best course of action.
