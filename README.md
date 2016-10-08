@@ -169,6 +169,8 @@ https://github.com/eriknstr/ThinkPad-FreeBSD-src/compare/stable/11...freebsd:sta
 ## Install cuse4bsd from latest sources
 
 ```sh
+cd
+
 svnlite --username anonsvn --password anonsvn \
   checkout svn://svn.turbocat.net/i4b/trunk/usbcam/cuse4bsd
 
