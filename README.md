@@ -210,15 +210,22 @@ cap_mkdb /etc/login.conf
 
 Configure WLAN. Most of it is taken care of by the installed files,
 but you'll need to enter information about network SSID and PSK.
-If your SSID was *mysweetwifi* and your PSK was *supersecret*,
-then you'd add the following contents to the file `/etc/wpa_supplicant.conf`:
+The file `/etc/wpa_supplicant.conf` contains sample entries for
+two networks; *eduroam* and *mysweetwifi*.
 
-```
-network={
-	ssid="mysweetwifi"
-	psk="supersecret"
-}
-```
+If you are a student, a researcher or an educator at an
+eduroam-connected institution, edit the *eduroam* entry substituting
+the values of *identity* and *password* with those provided to you
+by your institution. The *eduroam* network configuration might require
+additional changes depending on how the network is set up at the physical
+location where you are attempting to connect.
+
+If you do not have an account for *eduroam*, you can remove the entry.
+
+Replace the *mysweetwifi* entry providing the *ssid* and *psk*
+of an actual WPA-protected WiFi network if any, otherwise remove it.
+Whenever you need to connect to another WPA-protected network,
+create a new entry for it in `/etc/wpa_supplicant.conf`.
 
 With that done, take another snapshot again.
 
