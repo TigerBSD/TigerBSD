@@ -172,8 +172,6 @@ to adjust CPU frequency dynamically, hoping that my hardware
 is supported. We leave *moused* and *local_unbound* unchecked
 and then press Enter to continue.
 
-TODO: Investigate powerd support for my CPU.
-
 Next up is the security hardening options. The ones we'll enable are:
 
  * *Randomize the PID of newly created processes*
