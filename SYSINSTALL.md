@@ -56,7 +56,7 @@ Press F10 to Save and Exit.
 
 ## Boot from the FreeBSD 11.0-RC3 install media
 
-At boot, press the blue "ThinkVantage"-button again.
+At boot, press the blue "ThinkVantage"-button.
 
 Press F12 to select temporary startup device.
 
