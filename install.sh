@@ -44,6 +44,7 @@ link_file etc/skel/.icons/mate/32x32/places/start-here.png
 link_file etc/skel/.icons/mate/48x48/places/start-here.png
 link_file etc/skel/.icons/mate/scalable/places/start-here-symbolic.svg
 link_file etc/skel/.vimrc
+link_file etc/skel/.xinitrc
 link_file etc/skel/.Xdefaults
 
 link_file usr/local/etc/poudriere.d/11amd64-local-python27-make.conf
