@@ -92,7 +92,7 @@ ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/usr/src/sys/amd
   sys/amd64/conf/T520
 
 mkdir -p /opt/sbin/
-ln -s /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/opt/sbin/singleuser.sh \
+cp /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/opt/sbin/singleuser.sh \
   /opt/sbin/singleuser.sh
 cp /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/opt/sbin/snap.sh \
   /opt/sbin/snap.sh
