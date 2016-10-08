@@ -101,6 +101,10 @@ cp /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/zroot/opt/sbin/snap.sh \
 Always snapshot the whole system at this point --
 both the first time and all other times.
 
+ZFS snapshots are very cheap thanks to COW (copy-on-write).
+
+Take lots of snapshots, all of the time.
+
 ```sh
 /opt/sbin/snap.sh
 ```
@@ -168,10 +172,11 @@ cd /usr/src/
 make delete-old-libs
 ```
 
-Finally, take another snapshot. ZFS snapshots are very cheap
-thanks to COW (copy-on-write).
+Finally, take another snapshot.
 
-Take lots of snapshots, all of the time.
+```sh
+/opt/sbin/snap.sh
+```
 
 TODO: Package rebuilding in relation to delete-old-libs
 
@@ -244,6 +249,10 @@ Whenever you need to connect to another WPA- or WPA2-protected network,
 create a new entry for it in `/etc/wpa_supplicant.conf`.
 
 With that done, take another snapshot again.
+
+```sh
+/opt/sbin/snap.sh
+```
 
 ## Custom package builds using Poudriere
 
