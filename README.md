@@ -42,6 +42,7 @@ All commands in this README are to be performed as root unless otherwise noted.
   + [Updating Poudriere ports tree and packages](#updating-poudriere-ports-tree-and-packages)
   + [Compare changes local to ThinkPad-FreeBSD-ports](#compare-changes-local-to-thinkpad-freebsd-ports)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
+* [User config](#user-config)
 * [Troubleshooting](#troubleshooting)
   + [Unbootable system](#unbootable-system)
   + [Mount plain ZFS root using FreeBSD 11.0 Live CD](#mount-plain-zfs-root-using-freebsd-110-live-cd)
@@ -308,6 +309,14 @@ https://github.com/freebsd/freebsd-ports/compare/master...eriknstr:master
 ### Compare changes upstream not yet in ThinkPad-FreeBSD-ports
 
 https://github.com/eriknstr/ThinkPad-FreeBSD-ports/compare/master...freebsd:master
+
+## User config
+
+Perform the following commands as your own user.
+
+```sh
+doas pw groupmod vboxusers -m $( whoami )
+```
 
 ## Troubleshooting
 
