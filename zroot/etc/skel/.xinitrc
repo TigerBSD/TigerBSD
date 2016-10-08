@@ -1,1 +1,1 @@
-mate-session
+ssh-agent mate-session
