@@ -45,7 +45,6 @@ All commands in this README are to be performed as root unless otherwise noted.
 * [User config](#user-config)
 * [Troubleshooting](#troubleshooting)
   + [Unbootable system](#unbootable-system)
-  + [Mount plain ZFS root using FreeBSD 11.0 Live CD](#mount-plain-zfs-root-using-freebsd-110-live-cd)
   + [Mount encrypted ZFS root using FreeBSD 11.0 Live CD](#mount-encrypted-zfs-root-using-freebsd-110-live-cd)
 
 ## Install FreeBSD 11
