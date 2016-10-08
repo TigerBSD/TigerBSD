@@ -1,6 +1,10 @@
 # Install FreeBSD 11
 
-Download the official FreeBSD 11.0-RC3 memory stick image [FreeBSD-11.0-RC3-amd64-memstick.img.xz](http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC3-amd64-memstick.img.xz) and write it on a USB memory stick. Replace `/dev/xxx` below with the path of the block device for the physical "drive" of your USB memory stick.
+Download the official FreeBSD 11.0-RC3 memory stick image
+[FreeBSD-11.0-RC3-amd64-memstick.img.xz](http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RC3-amd64-memstick.img.xz)
+and write it on a USB memory stick. Replace `/dev/xxx` below
+with the path of the block device for the physical "drive"
+of your USB memory stick.
 
 ```bash
 sudo umount /dev/xxx*
