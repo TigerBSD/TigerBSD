@@ -329,26 +329,9 @@ try selecting your previous boot environment from the beastie boot menu.
 If that doesn't help, boot the install media and use the "Live CD" as
 described below to try and fix things yourself.
 
-### Mount plain ZFS root using FreeBSD 11.0 "Live CD"
-
-First, boot the FreeBSD 11.0 install media and select "Live CD".
-Next, mount the ZFS root on `/mnt`;
-
-```sh
-zpool import
-zpool import -fR /mnt zroot
-zfs mount zroot/ROOT/default
-zfs mount -a
-```
-
-At this point, probably the first thing you should do is to
-backup your data to a safe location before you continue.
-Remember to verify that your backup is good.
-
 ### Mount encrypted ZFS root using FreeBSD 11.0 "Live CD"
 
-Same as above, except that the following
-set of commands are to be used instead;
+Boot the FreeBSD 11.0 install media and select "Live CD", then;
 
 ```sh
 zpool import
@@ -361,3 +344,7 @@ zpool import -fR /mnt zroot
 zfs mount zroot/ROOT/default
 zfs mount -a
 ```
+
+At this point, probably the first thing you should do is to
+backup your data to a safe location before you continue.
+Remember to verify that your backup is good.

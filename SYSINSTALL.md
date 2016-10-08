@@ -92,12 +92,13 @@ we would like to boot using UEFI, so just say *No* here, I guess.
 
 Now it's time to partition our disk. We'll select *Auto (ZFS)*, aka.
 *Guided Root-on-ZFS*. It will tell us the choices it has made for us
-and most of it is good. It has selected not to encrypt disks, which is
-fine with me. It says that the *Partition Scheme* will be *GPT (BIOS+UEFI)*,
-but we don't want that -- we change the *Partition Scheme* to *GPT (UEFI)*.
-For *Swap Size*, we change it from *2g* to *8g* to match our amount of RAM.
-All of the rest looks good for now, so we select *Install* to proceed
-with the installation.
+and most of it is good. It has selected not to encrypt disks. Change
+*Encrypt Disks?* to *YES* . It says that the *Partition Scheme*
+will be *GPT (BIOS+UEFI)*, but we don't want that --
+we change the *Partition Scheme* to *GPT (UEFI)*.
+For *Swap Size*, we change it from *2g* to *8g* to match our amount
+of RAM.  Change *Encrypt Swap?* to *YES*.  All of the rest looks good
+for now, so we select *Install* to proceed with the installation.
 
 For *ZFS Configuration* of *Virtual Device type*, we select *stripe*,
 since we only have one storage drive.
@@ -110,12 +111,16 @@ Finally, it will give us one last chance to change our mind.
 Why would we? Go ahead and destroy the current contents of
 our selected disks. YES!
 
+Enter a strong passphrase, used to protect your encryption keys.
+You will be required to enter this passphrase each time
+the system is booted.
+
+Re-enter password.
+
 Then we wait for a while while it partitions the drive
 and installs base, kernel, doc and lib32.
 
-Next, enter a password for root. Well, our disk is unencrypted
-anyway, so pick something simple like *hest123* and press Enter,
-I guess.  (*Hest* is the Norwegian word for horse.)
+Next, enter a strong password for root.
 
 Enter the password followed by Enter again.
 
