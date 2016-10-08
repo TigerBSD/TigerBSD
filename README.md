@@ -209,9 +209,16 @@ cap_mkdb /etc/login.conf
 ```
 
 Configure WLAN. Most of it is taken care of by the installed files,
-but you'll need to enter information about network SSID and PSK.
-The file `/etc/wpa_supplicant.conf` contains sample entries for
-two networks; *eduroam* and *mysweetwifi*.
+but you'll need to enter SSID and credentials yourself of course.
+
+`/etc/wpa_supplicant.conf.sample` contains sample entries for
+two networks; *eduroam* and *mysweetwifi*. Copy the file sample file
+to `/etc/wpa_supplicant.conf` and edit `/etc/wpa_supplicant.conf`
+as described below.
+
+```sh
+cp /etc/wpa_supplicant.conf.sample /etc/wpa_supplicant.conf
+```
 
 If you are a student, a researcher or an educator at an
 eduroam-connected institution, edit the *eduroam* entry substituting

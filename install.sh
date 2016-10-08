@@ -79,7 +79,7 @@ copy_file etc/login.conf
 copy_file etc/pam.d/system
 copy_file etc/rc.conf
 copy_file etc/sysctl.conf
-copy_file etc/wpa_supplicant.conf
+copy_file etc/wpa_supplicant.conf.sample
 
 copy_file usr/local/etc/doas.conf
 copy_file usr/local/etc/mail/mailer.conf
