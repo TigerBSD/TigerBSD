@@ -372,7 +372,8 @@ doas pw groupmod vboxusers -m $( whoami )
 In case an upgrade (`make buildworld buildkernel installkernel KERNCONF=T520`,
 `make installworld` and so on) goes bad and renders the system unable to boot,
 ~~try selecting your previous boot environment from the beastie boot menu~~
-*until issue #15 has been resolved, use "Live CD" as mentioned described below*.
+*until issue #15 has been resolved, use "Live CD" as mentioned described
+below to try and fix things yourself*.
 
 ~~If that doesn't help, boot the install media and use the "Live CD" as
 described below to try and fix things yourself.~~
