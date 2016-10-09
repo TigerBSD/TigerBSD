@@ -243,9 +243,10 @@ location where you are attempting to connect.
 If you do not have an account for *eduroam*, you can remove the entry.
 
 Replace the *mysweetwifi* entry providing the *ssid* and *psk*
-of an actual WPA-protected WiFi network if any, otherwise remove it.
-Whenever you need to connect to another WPA- or WPA2-protected network,
-create a new entry for it in `/etc/wpa_supplicant.conf`.
+of an actual WPA- or WPA2-protected WiFi network if any, otherwise
+remove it.  Whenever you need to connect to another WPA- or
+WPA2-protected network, create a new entry for it in
+`/etc/wpa_supplicant.conf`.
 
 With that done, take another snapshot again.
 
