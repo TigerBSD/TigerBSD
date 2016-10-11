@@ -145,7 +145,7 @@ make buildworld buildkernel installkernel KERNCONF=T520
 ```
 
 At the time of this writing, buildworld takes approximately
-three and a half hours on my ThinkPad T520, and buildkernel
+four and a half hours on my ThinkPad T520, and buildkernel
 takes about half an hour.
 
 Reboot into single user mode again and then
