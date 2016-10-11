@@ -5,7 +5,7 @@ ident T520
 #
 # https://wiki.freebsd.org/DefaultDebuggingKnobs
 #
-# The WITNESS option is not enabled in stable/11
+# The WITNESS option is not enabled in releng/11.0
 # but it is enabled in HEAD, so adding it to list
 # of nooptions.
 #

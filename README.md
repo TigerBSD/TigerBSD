@@ -56,7 +56,7 @@ to be correct so that the rest of this to work. Don't skip reading it.
 ## Clone this repo under `/root/`
 
 ```sh
-git clone -b stable/11 https://github.com/eriknstr/ThinkPad-FreeBSD-setup.git \
+git clone -b releng/11.0 https://github.com/eriknstr/ThinkPad-FreeBSD-setup.git \
   /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup
 
 cd /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/
@@ -71,12 +71,12 @@ git remote add origin git@github.com:eriknstr/ThinkPad-FreeBSD-setup.git
 A fork of the FreeBSD source tree for use with Lenovo ThinkPad T520
 is maintained at https://github.com/eriknstr/ThinkPad-FreeBSD-src
 
-NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources. [Compare changes local to ThinkPad-FreeBSD-src](https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11). Still, there is the custom kernel config so you might as well do this right away.
+NOTE: At the time of this writing, no changes have yet been made by me to the FreeBSD sources. [Compare changes local to ThinkPad-FreeBSD-src](https://github.com/freebsd/freebsd/compare/releng/11.0...eriknstr:releng/11.0). Still, there is the custom kernel config so you might as well do this right away.
 
 First time, do the following. Subsequent times, skip this step.
 
 ```sh
-git clone -b stable/11 https://github.com/eriknstr/ThinkPad-FreeBSD-src.git \
+git clone -b releng/11.0 https://github.com/eriknstr/ThinkPad-FreeBSD-src.git \
   /usr/src
 
 cd /usr/src/
@@ -186,11 +186,11 @@ See also:
 
 ### Compare changes local to ThinkPad-FreeBSD-src
 
-https://github.com/freebsd/freebsd/compare/stable/11...eriknstr:stable/11
+https://github.com/freebsd/freebsd/compare/releng/11.0...eriknstr:releng/11.0
 
 ### Compare changes upstream not yet in ThinkPad-FreeBSD-src
 
-https://github.com/eriknstr/ThinkPad-FreeBSD-src/compare/stable/11...freebsd:stable/11
+https://github.com/eriknstr/ThinkPad-FreeBSD-src/compare/releng/11.0...freebsd:releng/11.0
 
 ## Install cuse4bsd from latest sources
 
@@ -209,7 +209,7 @@ See also: http://www.selasky.org/hans_petter/cuse4bsd/
 
 ## Install custom configuration files
 
-TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch stable/11.
+TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch releng/11.0.
 
 TODO: Maintain most package options in repo ThinkPad-FreeBSD-ports on branch master.
 
