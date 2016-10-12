@@ -2,6 +2,7 @@ ports-mgmt/pkg
 ports-mgmt/dialog4ports
 ports-mgmt/poudriere
 sysutils/beadm
+benchmarks/iozone
 shells/bash
 shells/bash-completion
 security/doas
