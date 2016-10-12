@@ -1,0 +1,216 @@
+	Iozone: Performance Test of File I/O
+	        Version $Revision: 3.457 $
+		Compiled for 64 bit mode.
+		Build: freebsd 
+
+	Contributors:William Norcott, Don Capps, Isom Crawford, Kirby Collins
+	             Al Slater, Scott Rhine, Mike Wisner, Ken Goss
+	             Steve Landherr, Brad Smith, Mark Kelly, Dr. Alain CYR,
+	             Randy Dunlap, Mark Montague, Dan Million, Gavin Brebner,
+	             Jean-Marc Zucconi, Jeff Blomberg, Benny Halevy, Dave Boone,
+	             Erik Habbinga, Kris Strecker, Walter Wong, Joshua Root,
+	             Fabrice Bacchella, Zhenghua Xue, Qin Li, Darren Sawyer,
+	             Vangel Bojaxhi, Ben England, Vikentsi Lapa,
+	             Alexey Skidanov.
+
+	Run began: Thu Oct 13 00:35:54 2016
+
+	Excel chart generation enabled
+	Record Size 128 kB
+	File size set to 25165824 kB
+	CPU utilization Resolution = 0.000 seconds.
+	CPU utilization Excel chart enabled
+	Command line used: iozone -R -l 4 -u 4 -r 128k -s 24g -+u -F /benchmark/0 /benchmark/1 /benchmark/2 /benchmark/3
+	Output is in kBytes/sec
+	Time Resolution = 0.000001 seconds.
+	Processor cache size set to 1024 kBytes.
+	Processor cache line size set to 32 bytes.
+	File stride size set to 17 * record size.
+	Min process = 4 
+	Max process = 4 
+	Throughput test with 4 processes
+	Each process writes a 25165824 kByte file in 128 kByte records
+
+	Children see throughput for  4 initial writers 	= 3832849.69 kB/sec
+	Parent sees throughput for  4 initial writers 	= 3762882.76 kB/sec
+	Min throughput per process 			=  943448.19 kB/sec 
+	Max throughput per process 			=  970647.00 kB/sec
+	Avg throughput per process 			=  958212.42 kB/sec
+	Min xfer 					= 24460672.00 kB
+	CPU Utilization: Wall time   26.309    CPU time   42.392    CPU utilization 161.13 %
+
+
+	Children see throughput for  4 rewriters 	= 3321417.75 kB/sec
+	Parent sees throughput for  4 rewriters 	= 3305160.77 kB/sec
+	Min throughput per process 			=  808598.19 kB/sec 
+	Max throughput per process 			=  851050.31 kB/sec
+	Avg throughput per process 			=  830354.44 kB/sec
+	Min xfer 					= 23910528.00 kB
+	CPU utilization: Wall time   29.570    CPU time   44.341    CPU utilization 149.95 %
+
+
+	Children see throughput for  4 readers 		= 3943866.88 kB/sec
+	Parent sees throughput for  4 readers 		= 3943616.10 kB/sec
+	Min throughput per process 			=  981811.62 kB/sec 
+	Max throughput per process 			=  993495.94 kB/sec
+	Avg throughput per process 			=  985966.72 kB/sec
+	Min xfer 					= 24870912.00 kB
+	CPU utilization: Wall time   25.332    CPU time   45.146    CPU utilization 178.22 %
+
+
+	Children see throughput for 4 re-readers 	= 4076940.56 kB/sec
+	Parent sees throughput for 4 re-readers 	= 4076078.40 kB/sec
+	Min throughput per process 			= 1014089.44 kB/sec 
+	Max throughput per process 			= 1022603.44 kB/sec
+	Avg throughput per process 			= 1019235.14 kB/sec
+	Min xfer 					= 24956416.00 kB
+	CPU utilization: Wall time   24.610    CPU time   46.381    CPU utilization 188.47 %
+
+
+	Children see throughput for 4 reverse readers 	=  951154.92 kB/sec
+	Parent sees throughput for 4 reverse readers 	=  951146.93 kB/sec
+	Min throughput per process 			=  236982.80 kB/sec 
+	Max throughput per process 			=  239486.58 kB/sec
+	Avg throughput per process 			=  237788.73 kB/sec
+	Min xfer 					= 24902784.00 kB
+	CPU utilization: Wall time  105.083    CPU time   22.026    CPU utilization  20.96 %
+
+
+	Children see throughput for 4 stride readers 	=  893650.88 kB/sec
+	Parent sees throughput for 4 stride readers 	=  893630.50 kB/sec
+	Min throughput per process 			=  223352.94 kB/sec 
+	Max throughput per process 			=  223498.97 kB/sec
+	Avg throughput per process 			=  223412.72 kB/sec
+	Min xfer 					= 25149440.00 kB
+	CPU utilization: Wall time  112.600    CPU time   22.316    CPU utilization  19.82 %
+
+
+	Children see throughput for 4 random readers 	=  941252.44 kB/sec
+	Parent sees throughput for 4 random readers 	=  941243.93 kB/sec
+	Min throughput per process 			=  233521.83 kB/sec 
+	Max throughput per process 			=  237980.39 kB/sec
+	Avg throughput per process 			=  235313.11 kB/sec
+	Min xfer 					= 24694400.00 kB
+	CPU utilization: Wall time  105.748    CPU time   22.165    CPU utilization  20.96 %
+
+
+	Children see throughput for 4 mixed workload 	=  930305.99 kB/sec
+	Parent sees throughput for 4 mixed workload 	=  579766.07 kB/sec
+	Min throughput per process 			=   12706.30 kB/sec 
+	Max throughput per process 			=  677647.12 kB/sec
+	Avg throughput per process 			=  232576.50 kB/sec
+	Min xfer 					=  498560.00 kB
+	CPU utilization: Wall time   59.366    CPU time   23.863    CPU utilization  40.20 %
+
+
+	Children see throughput for 4 random writers 	=  820013.64 kB/sec
+	Parent sees throughput for 4 random writers 	=  814247.96 kB/sec
+	Min throughput per process 			=  204142.56 kB/sec 
+	Max throughput per process 			=  206643.02 kB/sec
+	Avg throughput per process 			=  205003.41 kB/sec
+	Min xfer 					= 24861312.00 kB
+	CPU utilization: Wall time  122.504    CPU time   57.743    CPU utilization  47.14 %
+
+
+	Children see throughput for 4 pwrite writers 	= 1931950.28 kB/sec
+	Parent sees throughput for 4 pwrite writers 	= 1915416.99 kB/sec
+	Min throughput per process 			=  476817.47 kB/sec 
+	Max throughput per process 			=  488495.03 kB/sec
+	Avg throughput per process 			=  482987.57 kB/sec
+	Min xfer 					= 24564352.00 kB
+	CPU utilization: Wall time   51.906    CPU time   45.548    CPU utilization  87.75 %
+
+
+	Children see throughput for 4 pread readers 	= 4051246.06 kB/sec
+	Parent sees throughput for 4 pread readers 	= 4050576.66 kB/sec
+	Min throughput per process 			= 1008218.19 kB/sec 
+	Max throughput per process 			= 1017476.25 kB/sec
+	Avg throughput per process 			= 1012811.52 kB/sec
+	Min xfer 					= 24938880.00 kB
+	CPU utilization: Wall time   24.738    CPU time   45.453    CPU utilization 183.74 %
+
+
+	Children see throughput for  4 fwriters 	= 3222842.94 kB/sec
+	Parent sees throughput for  4 fwriters 		= 3200070.30 kB/sec
+	Min throughput per process 			=  803098.81 kB/sec 
+	Max throughput per process 			=  811134.44 kB/sec
+	Avg throughput per process 			=  805710.73 kB/sec
+	Min xfer 					= 25165824.00 kB
+	CPU utilization: Wall time   31.336    CPU time   46.688    CPU utilization 148.99 %
+
+
+	Children see throughput for  4 freaders 	= 3378988.12 kB/sec
+	Parent sees throughput for  4 freaders 		= 3373313.20 kB/sec
+	Min throughput per process 			=  843366.44 kB/sec 
+	Max throughput per process 			=  847984.25 kB/sec
+	Avg throughput per process 			=  844747.03 kB/sec
+	Min xfer 					= 25165824.00 kB
+	CPU utilization: Wall time   29.840    CPU time   63.437    CPU utilization 212.59 %
+
+
+
+
+"Throughput report Y-axis is type of test X-axis is number of processes"
+"Record size = 128 kBytes "
+"Output is in kBytes/sec"
+
+"  Initial write " 3832849.69 
+
+"        Rewrite " 3321417.75 
+
+"           Read " 3943866.88 
+
+"        Re-read " 4076940.56 
+
+"   Reverse Read "  951154.92 
+
+"    Stride read "  893650.88 
+
+"    Random read "  941252.44 
+
+" Mixed workload "  930305.99 
+
+"   Random write "  820013.64 
+
+"         Pwrite " 1931950.28 
+
+"          Pread " 4051246.06 
+
+"         Fwrite " 3222842.94 
+
+"          Fread " 3378988.12 
+
+
+"CPU utilization report Y-axis is type of test X-axis is number of processes"
+"Record size = 128 kBytes "
+"Output is in CPU%"
+
+"  Initial write "     161.13 
+
+"        Rewrite "     149.95 
+
+"           Read "     178.22 
+
+"        Re-read "     188.47 
+
+"   Reverse Read "      20.96 
+
+"    Stride read "      19.82 
+
+"    Random read "      20.96 
+
+" Mixed workload "      40.20 
+
+"   Random write "      47.14 
+
+"         Pwrite "      87.75 
+
+"          Pread "     183.74 
+
+"         Fwrite "     148.99 
+
+"          Fread "     212.59 
+
+
+iozone test complete.
+      796.23 real        30.66 user       499.75 sys
