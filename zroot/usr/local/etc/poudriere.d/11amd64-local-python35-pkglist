@@ -3,6 +3,7 @@ ports-mgmt/dialog4ports
 ports-mgmt/poudriere
 sysutils/beadm
 benchmarks/iozone
+sysutils/htop
 shells/bash
 shells/bash-completion
 security/doas
