@@ -1,0 +1,16 @@
+root = /home/erikn/
+root = ssh://10.42.0.1//home/erikn/
+
+path = NTNU
+path = Documents
+path = backup
+path = src
+path = MOOC
+path = Pictures
+path = Productions
+path = Projects
+path = Real_Art_Photos
+path = Storage
+path = 3d
+path = Audio4Lyfe
+path = Downloads
