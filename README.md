@@ -118,22 +118,6 @@ cd /usr/src/
 git pull
 ```
 
-Always create and activate a new boot environment (though at present,
-this does not work with FDE -- see issue #15). Boot environments allow you
-to easily roll back to the previous version in case the upgrade goes bad.
-The commands below assume that you are using a `sh`-compatible shell,
-such as for example `sh` or `bash`.
-
-```sh
-cd /usr/src/
-
-nextenv="11.0-$( date +%Y%m%d )-g$( git rev-parse --short HEAD )"
-
-beadm create $nextenv
-
-beadm activate $nextenv
-```
-
 Reboot into single user mode, then
 
 ```sh
