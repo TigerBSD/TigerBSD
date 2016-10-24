@@ -11,6 +11,7 @@ sysutils/screen
 sysutils/tree
 devel/git
 editors/vim
+ftp/lftp
 print/texlive-base
 print/tex-dvipdfmx
 print/tex-xetex
