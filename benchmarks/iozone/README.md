@@ -14,6 +14,47 @@ For this benchmark, the following configuration was in effect:
 * Benchmarking on ZFS filesystem zroot/benchmark
 
 ```sh
+$ diskinfo -v /dev/ada0
+/dev/ada0
+	512         	# sectorsize
+	240057409536	# mediasize in bytes (224G)
+	468862128   	# mediasize in sectors
+	0           	# stripesize
+	0           	# stripeoffset
+	465141      	# Cylinders according to firmware.
+	16          	# Heads according to firmware.
+	63          	# Sectors according to firmware.
+	(REMOVED)	# Disk ident.
+	Not_Zoned   	# Zone Mode
+```
+
+```sh
+$ diskinfo -v /dev/ada0p4
+	512         	# sectorsize
+	229318328320	# mediasize in bytes (214G)
+	447887360   	# mediasize in sectors
+	0           	# stripesize
+	2148532224  	# stripeoffset
+	444332      	# Cylinders according to firmware.
+	16          	# Heads according to firmware.
+	63          	# Sectors according to firmware.
+	(REMOVED)	# Disk ident.
+```
+
+```sh
+$ diskinfo -v /dev/ada0p4.eli
+	4096        	# sectorsize
+	229318324224	# mediasize in bytes (214G)
+	55985919    	# mediasize in sectors
+	0           	# stripesize
+	0           	# stripeoffset
+	55541       	# Cylinders according to firmware.
+	16          	# Heads according to firmware.
+	63          	# Sectors according to firmware.
+	(REMOVED)	# Disk ident.
+```
+
+```sh
 $ zfs get all zroot/benchmark
 NAME             PROPERTY              VALUE                  SOURCE
 zroot/benchmark  type                  filesystem             -
@@ -92,4 +133,33 @@ ada1p1 added
 $ doas newfs -U /dev/ada1p1
 [...]
 $ doas mount /dev/ada1p1 /benchmark/
+```
+
+```sh
+$ diskinfo -v /dev/ada1
+/dev/ada1
+	512         	# sectorsize
+	240057409536	# mediasize in bytes (224G)
+	468862128   	# mediasize in sectors
+	4096        	# stripesize
+	0           	# stripeoffset
+	465141      	# Cylinders according to firmware.
+	16          	# Heads according to firmware.
+	63          	# Sectors according to firmware.
+	(REMOVED)	# Disk ident.
+	Not_Zoned   	# Zone Mode
+```
+
+```sh
+$ diskinfo -v /dev/ada1p1
+/dev/ada1p1
+	512         	# sectorsize
+	240057364480	# mediasize in bytes (224G)
+	468862040   	# mediasize in sectors
+	4096        	# stripesize
+	0           	# stripeoffset
+	465140      	# Cylinders according to firmware.
+	16          	# Heads according to firmware.
+	63          	# Sectors according to firmware.
+	(REMOVED)	# Disk ident.
 ```
