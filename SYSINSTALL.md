@@ -33,7 +33,7 @@ a menu of options (it might also beep at this point).
 Press F1 to enter the BIOS Setup Utility.
 
 Navigate to the *Security* menu using the left and right arrow keys
-of your keyborad. Select *Virtualization*. Ensure that
+of your keyboard. Select *Virtualization*. Ensure that
 *Intel (R) Virtualization Technology* is set to *Enabled* and that
 *Intel (R) VT-d Feature* is set to *Enabled*. Press Esc on your
 keyboard to accept and go back to the previous menu. Under
