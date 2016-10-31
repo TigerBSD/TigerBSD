@@ -126,7 +126,7 @@ zroot/benchmark  redundant_metadata    all                    default
 * Benchmarking on UFS filesystem /dev/ada1p1
 
 ```sh
-$ doas gpart create -s GPT ada1
+$ gpart create -s GPT ada1
 ada1 created
 $ gpart add -t freebsd-ufs -a 4k ada1
 ada1p1 added
