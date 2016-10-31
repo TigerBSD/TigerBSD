@@ -171,3 +171,61 @@ ada1p1 deleted
 $ gpart destroy ada1
 ada1 destoyed
 ```
+
+## 2016-10-31 Tray SSD 1m UFS Plain
+
+* ThinkPad UEFI BIOS SATA Controller Mode Option: Compatibility
+* Encrypted ZFS root pool consisting of:
+  - ada0p4.eli
+* ada0 at ata0 bus 0 scbus0 target 0 lun 0
+  - ada0: Corsair Force LE SSD SAFC12.2
+* ada1 at ata1 bus 0 scbus1 target 0 lun 0
+  - ada1: INTEL SSDSC2BW240A4 DC32
+* Benchmarking on UFS filesystem /dev/ada1p1
+
+```sh
+$ gpart create -s GPT ada1
+ada1 created
+$ gpart add -t freebsd-ufs -a 1m ada1
+ada1p1 added
+$ doas newfs -U /dev/ada1p1
+[...]
+$ doas mount /dev/ada1p1 /benchmark/
+```
+
+```sh
+$ diskinfo -v /dev/ada1
+/dev/ada1
+	512         	# sectorsize
+	240057409536	# mediasize in bytes (224G)
+	468862128   	# mediasize in sectors
+	4096        	# stripesize
+	0           	# stripeoffset
+	465141      	# Cylinders according to firmware.
+	16          	# Heads according to firmware.
+	63          	# Sectors according to firmware.
+	(REMOVED)	# Disk ident.
+	Not_Zoned   	# Zone Mode
+```
+
+```sh
+$ diskinfo -v /dev/ada1p1
+/dev/ada1p1
+	512         	# sectorsize
+	240055746560	# mediasize in bytes (224G)
+	468858880   	# mediasize in sectors
+	4096        	# stripesize
+	0           	# stripeoffset
+	465137      	# Cylinders according to firmware.
+	16          	# Heads according to firmware.
+	63          	# Sectors according to firmware.
+	(REMOVED)	# Disk ident.
+```
+
+```sh
+$ doas umount /dev/ada1p1
+$ gpart delete -i 1 ada1
+ada1p1 deleted
+$ gpart destroy ada1
+ada1 destoyed
+```
