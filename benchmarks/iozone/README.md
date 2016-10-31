@@ -105,9 +105,11 @@ Host Protected Area (HPA)      yes      no      468862128/468862128
 HPA - Security                 no
 ```
 
-## 2016-10-13 Single SSD FDE
+## Benchmark runs
 
-For this benchmark, the following configuration was in effect:
+### 2016-10-13 Single SSD FDE
+
+For this benchmark run, the following configuration was in effect:
 
 * ThinkPad UEFI BIOS SATA Controller Mode Option: Compatibility
 * Encrypted ZFS root pool consisting of:
@@ -217,7 +219,7 @@ zroot/benchmark  snapshot_count        none                   default
 zroot/benchmark  redundant_metadata    all                    default
 ```
 
-## 2016-10-31 Tray SSD 4k UFS Plain
+### 2016-10-31 Tray SSD 4k UFS Plain
 
 * ThinkPad UEFI BIOS SATA Controller Mode Option: Compatibility
 * Encrypted ZFS root pool consisting of:
@@ -275,7 +277,7 @@ $ gpart destroy ada1
 ada1 destoyed
 ```
 
-## 2016-10-31 Tray SSD 1m UFS Plain
+### 2016-10-31 Tray SSD 1m UFS Plain
 
 * ThinkPad UEFI BIOS SATA Controller Mode Option: Compatibility
 * Encrypted ZFS root pool consisting of:
