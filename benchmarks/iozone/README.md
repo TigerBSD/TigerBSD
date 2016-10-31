@@ -163,3 +163,11 @@ $ diskinfo -v /dev/ada1p1
 	63          	# Sectors according to firmware.
 	(REMOVED)	# Disk ident.
 ```
+
+```sh
+$ doas umount /dev/ada1p1
+$ gpart delete -i 1 ada1
+ada1p1 deleted
+$ gpart destroy ada1
+ada1 destoyed
+```
