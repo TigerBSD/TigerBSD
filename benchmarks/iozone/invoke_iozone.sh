@@ -4,7 +4,7 @@
 
 time iozone -R -l 4 -u 4 -r 128k -s 24g -+u \
   -F /benchmark/0 /benchmark/1 /benchmark/2 /benchmark/3 2>&1 \
-  | tee four-proc-result
+  | tee four-proc-results
 
 time iozone -R -l 1 -u 1 -r 128k -s 24g -+u -F /benchmark/0 2>&1 \
-  | tee one-proc-result
+  | tee one-proc-results
