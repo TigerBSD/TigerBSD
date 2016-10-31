@@ -24,7 +24,7 @@ $ diskinfo -v /dev/ada0
 	465141      	# Cylinders according to firmware.
 	16          	# Heads according to firmware.
 	63          	# Sectors according to firmware.
-	(REMOVED)	# Disk ident.
+	CVDA615500SP2403GN	# Disk ident.
 	Not_Zoned   	# Zone Mode
 ```
 
@@ -38,7 +38,7 @@ $ diskinfo -v /dev/ada0p4
 	444332      	# Cylinders according to firmware.
 	16          	# Heads according to firmware.
 	63          	# Sectors according to firmware.
-	(REMOVED)	# Disk ident.
+	1631801900010416034F	# Disk ident.
 ```
 
 ```sh
@@ -51,7 +51,7 @@ $ diskinfo -v /dev/ada0p4.eli
 	55541       	# Cylinders according to firmware.
 	16          	# Heads according to firmware.
 	63          	# Sectors according to firmware.
-	(REMOVED)	# Disk ident.
+	1631801900010416034F	# Disk ident.
 ```
 
 ```sh
@@ -146,7 +146,7 @@ $ diskinfo -v /dev/ada1
 	465141      	# Cylinders according to firmware.
 	16          	# Heads according to firmware.
 	63          	# Sectors according to firmware.
-	(REMOVED)	# Disk ident.
+	1631801900010416034F	# Disk ident.
 	Not_Zoned   	# Zone Mode
 ```
 
@@ -161,7 +161,7 @@ $ diskinfo -v /dev/ada1p1
 	465140      	# Cylinders according to firmware.
 	16          	# Heads according to firmware.
 	63          	# Sectors according to firmware.
-	(REMOVED)	# Disk ident.
+	CVDA615500SP2403GN	# Disk ident.
 ```
 
 ```sh
@@ -204,7 +204,7 @@ $ diskinfo -v /dev/ada1
 	465141      	# Cylinders according to firmware.
 	16          	# Heads according to firmware.
 	63          	# Sectors according to firmware.
-	(REMOVED)	# Disk ident.
+	CVDA615500SP2403GN	# Disk ident.
 	Not_Zoned   	# Zone Mode
 ```
 
@@ -219,7 +219,7 @@ $ diskinfo -v /dev/ada1p1
 	465137      	# Cylinders according to firmware.
 	16          	# Heads according to firmware.
 	63          	# Sectors according to firmware.
-	(REMOVED)	# Disk ident.
+	CVDA615500SP2403GN	# Disk ident.
 ```
 
 ```sh
