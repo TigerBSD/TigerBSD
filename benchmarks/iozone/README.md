@@ -12,6 +12,7 @@ ada1 on scbus1 corresponds to the CD/DVD tray adapter bay.
   - [2016-10-13 Single SSD FDE](#2016-10-13-single-ssd-fde)
   - [2016-10-31 Tray SSD 4k UFS Plain](#2016-10-31-tray-ssd-4k-ufs-plain)
   - [2016-10-31 Tray SSD 1m UFS Plain](#2016-10-31-tray-ssd-1m-ufs-plain)
+  - [2016-11-01 Tray SSD ZFS Plain](#2016-11-01-tray-ssd-zfs-plain)
 
 ## Drive info
 
@@ -318,4 +319,23 @@ $ gpart delete -i 1 ada1
 ada1p1 deleted
 $ gpart destroy ada1
 ada1 destoyed
+```
+
+### 2016-11-01 Tray SSD ZFS Plain
+
+* ThinkPad UEFI BIOS SATA Controller Mode Option: Compatibility
+* Encrypted ZFS root pool consisting of:
+  - ada0p4.eli
+* ada0 at ata0 bus 0 scbus0 target 0 lun 0
+  - ada0: Corsair Force LE SSD SAFC12.2
+* ada1 at ata1 bus 0 scbus1 target 0 lun 0
+  - ada1: INTEL SSDSC2BW240A4 DC32
+* Benchmarking on ZFS pool benchmark
+
+```sh
+doas zpool create benchmark /dev/ada1
+```
+
+```sh
+doas ./invoke_iozone.sh
 ```
