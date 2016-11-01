@@ -390,3 +390,12 @@ If the only changes you've made since last snapshot are
 the kind of changes that don't matter if get lost and
 you are *really* sure that such is the case, probably
 `zfs rollback` (see `zfs(1)`) is the best course of action.
+
+Once done, export the pools and then reboot.
+
+```sh
+cd
+zpool export zroot
+zpool export bootpool
+reboot
+```
