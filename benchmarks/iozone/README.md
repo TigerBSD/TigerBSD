@@ -126,44 +126,52 @@ For this benchmark run, the following configuration was in effect:
 
 ```sh
 $ diskinfo -v /dev/ada0
-/dev/ada0
-	512         	# sectorsize
-	240057409536	# mediasize in bytes (224G)
-	468862128   	# mediasize in sectors
-	0           	# stripesize
-	0           	# stripeoffset
-	465141      	# Cylinders according to firmware.
-	16          	# Heads according to firmware.
-	63          	# Sectors according to firmware.
-	1631801900010416034F	# Disk ident.
-	Not_Zoned   	# Zone Mode
 ```
+
+Property                  | Value
+------------------------- | --------------------
+Sectorsize                | 512
+Mediasize in bytes        | 240057409536
+Mediasize in sectors      | 468862128
+Stripesize                | 0
+Stripeoffset              | 0
+Cylinders according to fw | 465141
+Heads according to fw     | 16
+Sectors according to fw   | 63
+Disk ident                | 1631801900010416034F
+Zone Mode                 | Not\_Zoned
 
 ```sh
 $ diskinfo -v /dev/ada0p4
-	512         	# sectorsize
-	229318328320	# mediasize in bytes (214G)
-	447887360   	# mediasize in sectors
-	0           	# stripesize
-	2148532224  	# stripeoffset
-	444332      	# Cylinders according to firmware.
-	16          	# Heads according to firmware.
-	63          	# Sectors according to firmware.
-	1631801900010416034F	# Disk ident.
 ```
+
+Property                  | Value
+------------------------- | --------------------
+Sectorsize                | 512
+Mediasize in bytes        | 229318328320
+Mediasize in sectors      | 447887360
+Stripesize                | 0
+Stripeoffset              | 2148532224
+Cylinders according to fw | 444332
+Heads according to fw     | 16
+Sectors according to fw   | 63
+Disk ident                | 1631801900010416034F
 
 ```sh
 $ diskinfo -v /dev/ada0p4.eli
-	4096        	# sectorsize
-	229318324224	# mediasize in bytes (214G)
-	55985919    	# mediasize in sectors
-	0           	# stripesize
-	0           	# stripeoffset
-	55541       	# Cylinders according to firmware.
-	16          	# Heads according to firmware.
-	63          	# Sectors according to firmware.
-	1631801900010416034F	# Disk ident.
 ```
+
+Property                  | Value
+------------------------- | --------------------
+Sectorsize                | 4096
+Mediasize in bytes        | 229318324224
+Mediasize in sectors      | 55985919
+Stripesize                | 0
+Stripeoffset              | 0
+Cylinders according to fw | 55541
+Heads according to fw     | 16
+Sectors according to fw   | 63
+Disk ident                | 1631801900010416034F
 
 ```sh
 $ zfs get all zroot/benchmark
@@ -248,32 +256,36 @@ $ doas mount /dev/ada1p1 /benchmark/
 
 ```sh
 $ diskinfo -v /dev/ada1
-/dev/ada1
-	512         	# sectorsize
-	240057409536	# mediasize in bytes (224G)
-	468862128   	# mediasize in sectors
-	4096        	# stripesize
-	0           	# stripeoffset
-	465141      	# Cylinders according to firmware.
-	16          	# Heads according to firmware.
-	63          	# Sectors according to firmware.
-	CVDA615500SP2403GN	# Disk ident.
-	Not_Zoned   	# Zone Mode
 ```
+
+Property                  | Value
+------------------------- | ------------------
+Sectorsize                | 512
+Mediasize in bytes        | 240057409536
+Mediasize in sectors      | 468862128
+Stripesize                | 4096
+Stripeoffset              | 0
+Cylinders according to fw | 465141
+Heads according to fw     | 16
+Sectors according to fw   | 63
+Disk ident                | CVDA615500SP2403GN
+Zone Mode                 | Not\_Zoned
 
 ```sh
 $ diskinfo -v /dev/ada1p1
-/dev/ada1p1
-	512         	# sectorsize
-	240057364480	# mediasize in bytes (224G)
-	468862040   	# mediasize in sectors
-	4096        	# stripesize
-	0           	# stripeoffset
-	465140      	# Cylinders according to firmware.
-	16          	# Heads according to firmware.
-	63          	# Sectors according to firmware.
-	CVDA615500SP2403GN	# Disk ident.
 ```
+
+Property                  | Value
+------------------------- | ------------------
+Sectorsize                | 512
+Mediasize in bytes        | 240057364480
+Mediasize in sectors      | 468862040
+Stripesize                | 4096
+Stripeoffset              | 0
+Cylinders according to fw | 465140
+Heads according to fw     | 16
+Sectors according to fw   | 63
+Disk ident                | CVDA615500SP2403GN
 
 ```sh
 $ doas umount /dev/ada1p1
@@ -306,32 +318,36 @@ $ doas mount /dev/ada1p1 /benchmark/
 
 ```sh
 $ diskinfo -v /dev/ada1
-/dev/ada1
-	512         	# sectorsize
-	240057409536	# mediasize in bytes (224G)
-	468862128   	# mediasize in sectors
-	4096        	# stripesize
-	0           	# stripeoffset
-	465141      	# Cylinders according to firmware.
-	16          	# Heads according to firmware.
-	63          	# Sectors according to firmware.
-	CVDA615500SP2403GN	# Disk ident.
-	Not_Zoned   	# Zone Mode
 ```
+
+Property                  | Value
+------------------------- | ------------------
+Sectorsize                | 512
+Mediasize in bytes        | 240057409536
+Mediasize in sectors      | 468862128
+Stripesize                | 4096
+Stripeoffset              | 0
+Cylinders according to fw | 465141
+Heads according to fw     | 16
+Sectors according to fw   | 63
+Disk ident                | CVDA615500SP2403GN
+Zone Mode                 | Not\_Zoned
 
 ```sh
 $ diskinfo -v /dev/ada1p1
-/dev/ada1p1
-	512         	# sectorsize
-	240055746560	# mediasize in bytes (224G)
-	468858880   	# mediasize in sectors
-	4096        	# stripesize
-	0           	# stripeoffset
-	465137      	# Cylinders according to firmware.
-	16          	# Heads according to firmware.
-	63          	# Sectors according to firmware.
-	CVDA615500SP2403GN	# Disk ident.
 ```
+
+Property                  | Value
+------------------------- | ------------------
+Sectorsize                | 512
+Mediasize in bytes        | 240055746560
+Mediasize in sectors      | 468858880
+Stripesize                | 4096
+Stripeoffset              | 0
+Cylinders according to fw | 465137
+Heads according to fw     | 16
+Sectors according to fw   | 63
+Disk ident                | CVDA615500SP2403GN
 
 ```sh
 $ doas umount /dev/ada1p1
