@@ -308,4 +308,4 @@ zfs create -o mountpoint=/benchmark zroot/benchmark
 
 ## Next steps
 
-[Continue](/#clone-this-repo-under-root).
+[Continue](/README.md#clone-this-repo-under-root).
