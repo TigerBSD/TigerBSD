@@ -24,6 +24,7 @@ Plug the USB memory stick into your ThinkPad T520 and power on the machine.
 * [Boot from the FreeBSD 11.0-RELEASE install media](#boot-from-the-freebsd-110-release-install-media)
 * [Perform installation](#perform-installation)
 * [Initial post-install configuration](#initial-post-install-configuration)
+* [Next steps](#next-steps)
 
 ## ThinkPad T520 BIOS Setup Utility
 
