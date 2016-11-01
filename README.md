@@ -285,6 +285,8 @@ git remote add origin git@github.com:eriknstr/ThinkPad-FreeBSD-ports.git
 git remote add upstream git@github.com:freebsd/freebsd-ports.git
 
 mkdir /usr/ports/distfiles/
+
+/opt/sbin/snap.sh
 ```
 
 See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
