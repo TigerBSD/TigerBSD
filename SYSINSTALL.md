@@ -32,13 +32,16 @@ a menu of options (it might also beep at this point).
 
 Press F1 to enter the BIOS Setup Utility.
 
-Navigate to the *Security* menu using the left and right arrow keys
-of your keyboard. Select *Virtualization*. Ensure that
+Navigate to the *Config* menu using the left and right arrow keys
+of your keyboard. Select *Serial ATA (SATA)* and set *SATA Controller
+Mode Option* to *AHCI mode*. Press Esc on your keyboard to accept
+and go back to the previous menu.
+
+Navigate to *Security*. Select *Virtualization*. Ensure that
 *Intel (R) Virtualization Technology* is set to *Enabled* and that
-*Intel (R) VT-d Feature* is set to *Enabled*. Press Esc on your
-keyboard to accept and go back to the previous menu. Under
-*Memory Protection*, ensure *Execution Prevention* is *Enabled*.
-Press Esc on your keyboard to go back to *Security* main menu.
+*Intel (R) VT-d Feature* is set to *Enabled*. Go back to the previous
+menu. Under *Memory Protection*, ensure *Execution Prevention* is
+*Enabled*. Go back to the *Security* main menu.
 
 Navigate to *Startup*. Ensure *UEFI/Legacy Boot* is set to *Both*
 and that *UEFI/Legacy Boot Priority* is set to *UEFI First*.
