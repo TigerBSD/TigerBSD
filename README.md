@@ -1,6 +1,6 @@
 # ThinkPad-FreeBSD-setup
 
-![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/screenshots-2016-10-11/screenshot.png)
+![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/screenshots-2016-11-02/screenshot.png)
 
 Setup of customized FreeBSD 11 for Lenovo ThinkPad T520. Work in progress.
 Please have a look at the following few links:
