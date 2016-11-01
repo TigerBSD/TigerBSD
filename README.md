@@ -372,6 +372,7 @@ zpool import
 zpool import -fR /tmp bootpool
 
 geli attach -k /tmp/bootpool/boot/encryption.key /dev/ada0p4
+geli attach -k /tmp/bootpool/boot/encryption.key /dev/ada1p4
 
 zpool import
 zpool import -fR /mnt zroot
