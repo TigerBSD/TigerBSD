@@ -175,63 +175,65 @@ Disk ident                | 1631801900010416034F
 
 ```sh
 $ zfs get all zroot/benchmark
-NAME             PROPERTY              VALUE                  SOURCE
-zroot/benchmark  type                  filesystem             -
-zroot/benchmark  creation              Thu Oct 13  0:33 2016  -
-zroot/benchmark  used                  96K                    -
-zroot/benchmark  available             108G                   -
-zroot/benchmark  referenced            96K                    -
-zroot/benchmark  compressratio         1.00x                  -
-zroot/benchmark  mounted               yes                    -
-zroot/benchmark  quota                 none                   default
-zroot/benchmark  reservation           none                   default
-zroot/benchmark  recordsize            128K                   default
-zroot/benchmark  mountpoint            /benchmark             local
-zroot/benchmark  sharenfs              off                    default
-zroot/benchmark  checksum              on                     default
-zroot/benchmark  compression           lz4                    inherited from zroot
-zroot/benchmark  atime                 off                    inherited from zroot
-zroot/benchmark  devices               on                     default
-zroot/benchmark  exec                  on                     default
-zroot/benchmark  setuid                on                     default
-zroot/benchmark  readonly              off                    inherited from zroot
-zroot/benchmark  jailed                off                    default
-zroot/benchmark  snapdir               hidden                 default
-zroot/benchmark  aclmode               discard                default
-zroot/benchmark  aclinherit            restricted             default
-zroot/benchmark  canmount              on                     default
-zroot/benchmark  xattr                 off                    temporary
-zroot/benchmark  copies                1                      default
-zroot/benchmark  version               5                      -
-zroot/benchmark  utf8only              off                    -
-zroot/benchmark  normalization         none                   -
-zroot/benchmark  casesensitivity       sensitive              -
-zroot/benchmark  vscan                 off                    default
-zroot/benchmark  nbmand                off                    default
-zroot/benchmark  sharesmb              off                    default
-zroot/benchmark  refquota              none                   default
-zroot/benchmark  refreservation        none                   default
-zroot/benchmark  primarycache          all                    default
-zroot/benchmark  secondarycache        all                    default
-zroot/benchmark  usedbysnapshots       0                      -
-zroot/benchmark  usedbydataset         96K                    -
-zroot/benchmark  usedbychildren        0                      -
-zroot/benchmark  usedbyrefreservation  0                      -
-zroot/benchmark  logbias               latency                default
-zroot/benchmark  dedup                 off                    default
-zroot/benchmark  mlslabel                                     -
-zroot/benchmark  sync                  standard               default
-zroot/benchmark  refcompressratio      1.00x                  -
-zroot/benchmark  written               96K                    -
-zroot/benchmark  logicalused           40.5K                  -
-zroot/benchmark  logicalreferenced     40.5K                  -
-zroot/benchmark  volmode               default                default
-zroot/benchmark  filesystem_limit      none                   default
-zroot/benchmark  snapshot_limit        none                   default
-zroot/benchmark  filesystem_count      none                   default
-zroot/benchmark  snapshot_count        none                   default
-zroot/benchmark  redundant_metadata    all                    default
 ```
+
+PROPERTY             | VALUE                 | SOURCE
+-------------------- | --------------------- | --------------------
+type                 | filesystem            | -
+creation             | Thu Oct 13  0:33 2016 | -
+used                 | 96K                   | -
+available            | 108G                  | -
+referenced           | 96K                   | -
+compressratio        | 1.00x                 | -
+mounted              | yes                   | -
+quota                | none                  | default
+reservation          | none                  | default
+recordsize           | 128K                  | default
+mountpoint           | /benchmark            | local
+sharenfs             | off                   | default
+checksum             | on                    | default
+compression          | lz4                   | inherited from zroot
+atime                | off                   | inherited from zroot
+devices              | on                    | default
+exec                 | on                    | default
+setuid               | on                    | default
+readonly             | off                   | inherited from zroot
+jailed               | off                   | default
+snapdir              | hidden                | default
+aclmode              | discard               | default
+aclinherit           | restricted            | default
+canmount             | on                    | default
+xattr                | off                   | temporary
+copies               | 1                     | default
+version              | 5                     | -
+utf8only             | off                   | -
+normalization        | none                  | -
+casesensitivity      | sensitive             | -
+vscan                | off                   | default
+nbmand               | off                   | default
+sharesmb             | off                   | default
+refquota             | none                  | default
+refreservation       | none                  | default
+primarycache         | all                   | default
+secondarycache       | all                   | default
+usedbysnapshots      | 0                     | -
+usedbydataset        | 96K                   | -
+usedbychildren       | 0                     | -
+usedbyrefreservation | 0                     | -
+logbias              | latency               | default
+dedup                | off                   | default
+mlslabel             |                       | -
+sync                 | standard              | default
+refcompressratio     | 1.00x                 | -
+written              | 96K                   | -
+logicalused          | 40.5K                 | -
+logicalreferenced    | 40.5K                 | -
+volmode              | default               | default
+filesystem\_limit    | none                  | default
+snapshot\_limit      | none                  | default
+filesystem\_count    | none                  | default
+snapshot\_count      | none                  | default
+redundant\_metadata  | all                   | default
 
 ### 2016-10-31 Tray SSD 4k UFS Plain
 
