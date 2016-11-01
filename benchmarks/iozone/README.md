@@ -184,6 +184,10 @@ Heads according to fw     | 16
 Sectors according to fw   | 63
 Disk ident                | 1631801900010416034F
 
+```sh
+doas ./invoke_iozone.sh
+```
+
 ### 2016-10-31 Tray SSD 4k UFS Plain
 
 * ThinkPad UEFI BIOS SATA Controller Mode Option: Compatibility
@@ -237,6 +241,10 @@ Cylinders according to fw | 465140
 Heads according to fw     | 16
 Sectors according to fw   | 63
 Disk ident                | CVDA615500SP2403GN
+
+```sh
+doas ./invoke_iozone.sh
+```
 
 ```sh
 $ doas umount /dev/ada1p1
@@ -299,6 +307,10 @@ Cylinders according to fw | 465137
 Heads according to fw     | 16
 Sectors according to fw   | 63
 Disk ident                | CVDA615500SP2403GN
+
+```sh
+doas ./invoke_iozone.sh
+```
 
 ```sh
 $ doas umount /dev/ada1p1
