@@ -22,10 +22,10 @@ and that it has two storage drives; each an SSD of at least 240GB in size.
 Having two SSDs in the T520 is possible thanks to the [Caddy Adapter for T520
 found on eBay](http://www.ebay.com/sch/i.html?_nkw=Caddy+Adapter+T520). Note
 that this is quite different from the factory configuration which has
-4GB RAM and a 7200-rpm 500GB HDD. The assumption of the storage medium
-being an SSD and not a HDD, in particular, is important, since it will
-affect choices about how the OS is to treat the drive. Things which
-make sense for a HDD might be slow for a SSD and vice versa.
+4GB RAM, a 7200-rpm 500GB HDD and a CD/DVD station. The assumption of the
+storage medium being SSDs and not a HDD, in particular, is important,
+since it will affect choices about how the OS is to treat the drive.
+Things which make sense for a HDD might be slow for a SSD and vice versa.
 Things which optimize the usage of a HDD might hurt an SSD and vice versa.
 
 All commands in this README are to be performed as root unless otherwise noted.
