@@ -258,7 +258,10 @@ When you see the ThinkPad logo, unplug your install media.
 
 ## Initial post-install configuration
 
-The system reboots. Log in as `root` using the password you selected.
+The system reboots. Enter the FDE passphrase, but keep in mind that if you
+selected a keyboard layout other than the one used by your hardware, said
+keyboard layout will not be in effect until after the disk has been decrypted.
+Once booted, log in as `root` using the passphrase you selected for root.
 
 We are eventually going to overwrite `/etc/rc.conf` but would like
 to preserve the options we selected during bsdinstall. In order to do this,
