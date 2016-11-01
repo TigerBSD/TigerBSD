@@ -148,12 +148,14 @@ cd /usr/src/
 
 mergemaster -p
 
-make installworld
+time make installworld
 
 mergemaster -iF
 
 make delete-old
 ```
+
+Installworld takes a little over a minute to complete.
 
 Now reboot into multi user mode and then do
 
