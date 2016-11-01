@@ -46,11 +46,21 @@ menu. Under *Memory Protection*, ensure *Execution Prevention* is
 Navigate to *Startup*. Ensure *UEFI/Legacy Boot* is set to *Both*
 and that *UEFI/Legacy Boot Priority* is set to *UEFI First*.
 Ensure *Boot device List F12 Option* is set to *Enabled*.
-Next, go into the *Boot* section and ensure that the
-*Boot Priority Order* list includes *USB FDD*, *USB HDD*
-and *USB CD* somewhere in the list, as well as
-*ATA HDD0* and *ATAPI CD0*. Any of these not in the list
-must be moved up from *Excluded from boot priority order*.
+Next, go into the *Boot* section and set the *Boot Priority Order*
+as follows:
+
+  1. USB FDD
+  2. USB HDD
+  3. USB CD
+  4. ATA HDD0
+  5. ATA HDD1
+  6. PCI LAN
+
+Exclude any other devices from the boot priority order list using "!".
+Likewise, if any of the devices mentioned above are not in the boot
+priority list, use the down-arrow to go down to the list named
+*Excluded from boot priority order* and move the device(s) in question
+up to the boot priority order list using "!".
 
 There are a bunch of other settings worth checking out as well
 but I won't list all of them here.
