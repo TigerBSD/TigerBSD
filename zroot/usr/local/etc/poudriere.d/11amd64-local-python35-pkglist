@@ -2,6 +2,7 @@ ports-mgmt/pkg
 ports-mgmt/dialog4ports
 ports-mgmt/poudriere
 sysutils/beadm
+net/unison240
 benchmarks/iozone
 sysutils/htop
 shells/bash
