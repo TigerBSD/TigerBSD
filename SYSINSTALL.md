@@ -124,7 +124,8 @@ Finally, it will give us one last chance to change our mind.
 Why would we? Go ahead and destroy the current contents of
 our selected disks. YES!
 
-Wait a little while.
+After a little bit of waiting with seemingly nothing happening,
+it will fetch and extract distribution files.
 
 Enter a strong passphrase, used to protect your encryption keys.
 You will be required to enter this passphrase each time
