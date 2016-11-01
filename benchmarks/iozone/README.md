@@ -135,55 +135,6 @@ For this benchmark run, the following configuration was in effect:
 * Benchmarking on ZFS filesystem zroot/benchmark
 
 ```sh
-$ diskinfo -v /dev/ada0
-```
-
-Property                  | Value
-------------------------- | --------------------
-Sectorsize                | 512
-Mediasize in bytes        | 240057409536
-Mediasize in sectors      | 468862128
-Stripesize                | 0
-Stripeoffset              | 0
-Cylinders according to fw | 465141
-Heads according to fw     | 16
-Sectors according to fw   | 63
-Disk ident                | 1631801900010416034F
-Zone Mode                 | Not\_Zoned
-
-```sh
-$ diskinfo -v /dev/ada0p4
-```
-
-Property                  | Value
-------------------------- | --------------------
-Sectorsize                | 512
-Mediasize in bytes        | 229318328320
-Mediasize in sectors      | 447887360
-Stripesize                | 0
-Stripeoffset              | 2148532224
-Cylinders according to fw | 444332
-Heads according to fw     | 16
-Sectors according to fw   | 63
-Disk ident                | 1631801900010416034F
-
-```sh
-$ diskinfo -v /dev/ada0p4.eli
-```
-
-Property                  | Value
-------------------------- | --------------------
-Sectorsize                | 4096
-Mediasize in bytes        | 229318324224
-Mediasize in sectors      | 55985919
-Stripesize                | 0
-Stripeoffset              | 0
-Cylinders according to fw | 55541
-Heads according to fw     | 16
-Sectors according to fw   | 63
-Disk ident                | 1631801900010416034F
-
-```sh
 doas ./invoke_iozone.sh
 ```
 
