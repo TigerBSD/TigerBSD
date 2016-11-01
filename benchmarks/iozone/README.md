@@ -205,3 +205,7 @@ doas zpool create -O atime=off -O compression=lz4 benchmark /dev/ada1
 ```sh
 doas ./invoke_iozone.sh
 ```
+
+```sh
+doas zpool destroy benchmark
+```
