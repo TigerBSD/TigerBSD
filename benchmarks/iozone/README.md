@@ -173,68 +173,6 @@ Heads according to fw     | 16
 Sectors according to fw   | 63
 Disk ident                | 1631801900010416034F
 
-```sh
-$ zfs get all zroot/benchmark
-```
-
-PROPERTY             | VALUE                 | SOURCE
--------------------- | --------------------- | --------------------
-type                 | filesystem            | -
-creation             | Thu Oct 13  0:33 2016 | -
-used                 | 96K                   | -
-available            | 108G                  | -
-referenced           | 96K                   | -
-compressratio        | 1.00x                 | -
-mounted              | yes                   | -
-quota                | none                  | default
-reservation          | none                  | default
-recordsize           | 128K                  | default
-mountpoint           | /benchmark            | local
-sharenfs             | off                   | default
-checksum             | on                    | default
-compression          | lz4                   | inherited from zroot
-atime                | off                   | inherited from zroot
-devices              | on                    | default
-exec                 | on                    | default
-setuid               | on                    | default
-readonly             | off                   | inherited from zroot
-jailed               | off                   | default
-snapdir              | hidden                | default
-aclmode              | discard               | default
-aclinherit           | restricted            | default
-canmount             | on                    | default
-xattr                | off                   | temporary
-copies               | 1                     | default
-version              | 5                     | -
-utf8only             | off                   | -
-normalization        | none                  | -
-casesensitivity      | sensitive             | -
-vscan                | off                   | default
-nbmand               | off                   | default
-sharesmb             | off                   | default
-refquota             | none                  | default
-refreservation       | none                  | default
-primarycache         | all                   | default
-secondarycache       | all                   | default
-usedbysnapshots      | 0                     | -
-usedbydataset        | 96K                   | -
-usedbychildren       | 0                     | -
-usedbyrefreservation | 0                     | -
-logbias              | latency               | default
-dedup                | off                   | default
-mlslabel             |                       | -
-sync                 | standard              | default
-refcompressratio     | 1.00x                 | -
-written              | 96K                   | -
-logicalused          | 40.5K                 | -
-logicalreferenced    | 40.5K                 | -
-volmode              | default               | default
-filesystem\_limit    | none                  | default
-snapshot\_limit      | none                  | default
-filesystem\_count    | none                  | default
-snapshot\_count      | none                  | default
-redundant\_metadata  | all                   | default
-
 ### 2016-10-31 Tray SSD 4k UFS Plain
 
 * ThinkPad UEFI BIOS SATA Controller Mode Option: Compatibility
