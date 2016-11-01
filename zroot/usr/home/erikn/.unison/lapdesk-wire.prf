@@ -7,6 +7,7 @@ path = backup
 path = src
 path = MOOC
 path = Pictures
+path = Videos
 path = Productions
 path = Projects
 path = Real_Art_Photos
