@@ -9,7 +9,7 @@ of your USB memory stick.
 ```bash
 sudo umount /dev/xxx*
 
-xzcat ~/Downloads/FreeBSD-11.0-RELEASE-amd64-memstick.img.xz \
+xzcat --verbose ~/Downloads/FreeBSD-11.0-RELEASE-amd64-memstick.img.xz \
   | sudo dd bs=16M of=/dev/xxx
 
 sudo sync
