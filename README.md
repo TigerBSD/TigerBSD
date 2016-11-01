@@ -208,6 +208,8 @@ cd /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/
 cut -d'/' -f2 zroot/usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
   | env ASSUME_ALWAYS_YES=yes xargs -L1 pkg install
 
+/opt/sbin/snap.sh
+
 reboot
 ```
 
