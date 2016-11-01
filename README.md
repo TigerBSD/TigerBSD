@@ -125,7 +125,9 @@ Reboot into single user mode, then
 
 cd /usr/src/
 
-make buildworld buildkernel installkernel KERNCONF=T520
+time make buildworld
+time make buildkernel KERNCONF=T520
+time make installkernel KERNCONF=T520
 ```
 
 At the time of this writing, buildworld takes approximately
