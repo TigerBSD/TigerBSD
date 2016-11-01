@@ -333,7 +333,7 @@ ada1 destoyed
 * Benchmarking on ZFS pool benchmark
 
 ```sh
-doas zpool create benchmark /dev/ada1
+doas zpool create -O atime=off -O compression=lz4 benchmark /dev/ada1
 ```
 
 ```sh
