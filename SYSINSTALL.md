@@ -69,12 +69,8 @@ Press F10 to Save and Exit.
 
 ## Boot from the FreeBSD 11.0-RELEASE install media
 
-At boot, press the blue "ThinkVantage"-button.
-
-Press F12 to select temporary startup device.
-
-From the Boot Menu, select your USB memory stick.
-In my case, it is called "USB HDD".
+With the boot priority order configured as above, your machine should
+automatically boot from install media if it is present at boot.
 
 ## Perform installation
 
