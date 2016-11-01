@@ -1,6 +1,7 @@
 # iozone benchmarks
 
-scbus0 corresponds to the HDD/SSD bay. scbus1 corresponds to the CD/DVD tray.
+ada0 on scbus0 corresponds to the HDD/SSD bay.
+ada1 on scbus1 corresponds to the CD/DVD tray.
 
 ## Table of Contents
 
