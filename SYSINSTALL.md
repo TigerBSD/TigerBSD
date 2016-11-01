@@ -100,25 +100,31 @@ like the installer to apply a workaround for you?" Actually, most of all
 we would like to boot using UEFI, so just say *No* here, I guess.
 
 Now it's time to partition our disk. We'll select *Auto (ZFS)*, aka.
-*Guided Root-on-ZFS*. It will tell us the choices it has made for us
-and most of it is good. It has selected not to encrypt disks. Change
-*Encrypt Disks?* to *YES* . It says that the *Partition Scheme*
-will be *GPT (BIOS+UEFI)*, but we don't want that --
-we change the *Partition Scheme* to *GPT (UEFI)*.
-For *Swap Size*, we change it from *2g* to *8g* to match our amount
-of RAM.  Change *Encrypt Swap?* to *YES*.  All of the rest looks good
-for now, so we select *Install* to proceed with the installation.
+*Guided Root-on-ZFS*. It will tell us the choices it has made for us.
+We adapt the settings to be like shown below.
 
-For *ZFS Configuration* of *Virtual Device type*, we select *stripe*,
-since we only have one storage drive.
+Property          | Value           | Default?
+----------------- | --------------- | --------
+Pool Type/Disks   | mirror: 2 disks | **Modified**
+Rescan Devices    | \*              | Default
+Disk Info         | \*              | Default
+Pool Name         | zroot           | Default
+Force 4K Sectors? | YES             | Default
+Encrypt Disks?    | YES             | **Modified**
+Partition Scheme  | GPT (UEFI)      | **Modified**
+Swap Size         | 8g              | **Modified**
+Mirror Swap?      | YES             | **Modified**
+Encrypt Swap?     | YES             | **Modified**
 
-Next for *ZFS Configuration* it will ask for the devices to use.
-Here we select our SSD. For me, it is named *ada0*. Use space to
-select it and then press Enter to OK it.
+When configuring *Pool Type/Disks*, it'll eventually ask which disks
+to use. Tell it to use `ada0` and `ada1`. Select *Install* to proceed
+with the installation.
 
 Finally, it will give us one last chance to change our mind.
 Why would we? Go ahead and destroy the current contents of
 our selected disks. YES!
+
+Wait a little while.
 
 Enter a strong passphrase, used to protect your encryption keys.
 You will be required to enter this passphrase each time
