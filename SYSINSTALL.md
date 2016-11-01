@@ -138,7 +138,7 @@ Next, it will fetch and extract distribution files.
 
 Enter a strong passphrase for root.
 
-Re-enter passphrase for FDE.
+Re-enter passphrase for root.
 
 Next, it wants us to configure a network interface.
 I usually just go with a wired connection during installs,
