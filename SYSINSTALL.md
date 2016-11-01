@@ -254,6 +254,8 @@ live system after reboot.
 Installation of FreeBSD complete! Would we like to reboot
 into the installed system now? Yes, please :)
 
+When you see the ThinkPad logo, unplug your install media.
+
 ## Initial post-install configuration
 
 The system reboots. Log in as `root` using the password you selected.
