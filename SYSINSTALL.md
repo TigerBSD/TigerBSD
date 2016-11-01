@@ -169,7 +169,7 @@ since the country I live in is so small. I select *Europe*
 and then *Norway*.
 
 It will ask if some time zone abbreviation looks reasonable.
-For me at the current time of the year, this is *CEST*.
+For me at the current time of the year, this is *CET*.
 Yes, it looks reasonable.
 
 Next, *Time & Date*, date part. The date is already set correctly
