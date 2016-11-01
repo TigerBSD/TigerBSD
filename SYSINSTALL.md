@@ -124,21 +124,21 @@ Finally, it will give us one last chance to change our mind.
 Why would we? Go ahead and destroy the current contents of
 our selected disks. YES!
 
-After a little bit of waiting with seemingly nothing happening,
-it will fetch and extract distribution files.
+Wait a little bit.
 
 Enter a strong passphrase, used to protect your encryption keys.
 You will be required to enter this passphrase each time
 the system is booted.
 
-Re-enter password.
+Re-enter passphrase for FDE.
 
-Then we wait for a while while it partitions the drive
-and installs base, kernel, doc and lib32.
+Encryption is initialized. This will take a little while.
 
-Next, enter a strong password for root.
+Next, it will fetch and extract distribution files.
 
-Enter the password followed by Enter again.
+Enter a strong passphrase for root.
+
+Re-enter passphrase for FDE.
 
 Next, it wants us to configure a network interface.
 I usually just go with a wired connection during installs,
