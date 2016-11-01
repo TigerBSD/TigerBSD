@@ -42,8 +42,8 @@ All commands in this README are to be performed as root unless otherwise noted.
 * [Install cuse4bsd from latest sources](#install-cuse4bsd-from-latest-sources)
 * [Install custom configuration files](#install-custom-configuration-files)
 * [Custom package builds using Poudriere](#custom-package-builds-using-poudriere)
-  + [Installing the packages](#installing-the-packages)
-  + [Updating Poudriere ports tree and packages](#updating-poudriere-ports-tree-and-packages)
+  + [Build packages](#build-packages)
+  + [Install packages](#install-packages)
   + [Compare changes local to ThinkPad-FreeBSD-ports](#compare-changes-local-to-thinkpad-freebsd-ports)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 * [User config](#user-config)
@@ -285,6 +285,18 @@ git remote add origin git@github.com:eriknstr/ThinkPad-FreeBSD-ports.git
 git remote add upstream git@github.com:freebsd/freebsd-ports.git
 
 mkdir /usr/ports/distfiles/
+```
+
+See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
+
+### Build packages
+
+This step is not of interest to most people until issue #20 has been resolved.
+
+```sh
+cd /usr/local/poudriere/ports/local/
+
+git pull
 
 poudriere bulk -j 11amd64 -p local -z python35 \
   -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
@@ -295,8 +307,6 @@ poudriere bulk -j 11amd64 -p local -z python34 \
 poudriere bulk -j 11amd64 -p local -z python27 \
   -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
 ```
-
-See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
 
 ### Installing the packages
 
@@ -330,23 +340,6 @@ pip3.4 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
 pip2.7 install -U pip
 pip2.7 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
   | xargs -n1 pip2.7 install -U
-```
-
-### Updating Poudriere ports tree and packages
-
-```sh
-cd /usr/local/poudriere/ports/local/
-
-git pull
-
-poudriere bulk -j 11amd64 -p local -z python35 \
-  -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
-
-poudriere bulk -j 11amd64 -p local -z python34 \
-  -f /usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
-
-poudriere bulk -j 11amd64 -p local -z python27 \
-  -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
 ```
 
 ### Compare changes local to ThinkPad-FreeBSD-ports
