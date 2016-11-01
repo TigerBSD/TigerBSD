@@ -1,5 +1,7 @@
 # ThinkPad-FreeBSD-setup
 
+![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/screenshots-2016-10-11/screenshot.png)
+
 Setup of customized FreeBSD 11 for Lenovo ThinkPad T520. Work in progress.
 Please have a look at the following few links:
 
@@ -25,8 +27,6 @@ make sense for a HDD might be slow for a SSD and vice versa.
 Things which optimize the usage of a HDD might hurt an SSD and vice versa.
 
 All commands in this README are to be performed as root unless otherwise noted.
-
-![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/screenshots-2016-10-11/screenshot.png)
 
 ## Table of Contents
 
