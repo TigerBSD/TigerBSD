@@ -200,6 +200,17 @@ make all install
 
 See also: http://www.selasky.org/hans_petter/cuse4bsd/
 
+## Install packages from FreeBSD repositories
+
+```sh
+cd /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/
+
+cut -d'/' -f2 zroot/usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
+  | env ASSUME_ALWAYS_YES=yes xargs -L1 pkg install
+
+reboot
+```
+
 ## Install custom configuration files
 
 TODO: Maintain system configs in repo ThinkPad-FreeBSD-src on branch releng/11.0.
@@ -287,13 +298,7 @@ See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
 
 ### Installing the packages
 
-```sh
-cut -d'/' -f2 /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
-  | xargs -L1 pkg install
-```
-
-(We run the install one package at a time so that a missing package
- won't stop the installation of all the other, unrelated packages.)
+This step has been temporarily removed until issue #20 has been resolved.
 
 ### Installing pip
 
