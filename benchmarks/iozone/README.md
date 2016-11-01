@@ -10,7 +10,7 @@ ada1 on scbus1 corresponds to the CD/DVD tray adapter bay.
   - [INTEL SSDSC2BW240A4, S/N CVDA615500SP2403GN](#intel-ssdsc2bw240a4-sn-cvda615500sp2403gn)
 * [Benchmark runs](#benchmark-runs)
   - [2016-10-13 Single SSD FDE](#2016-10-13-single-ssd-fde)
-  - [2016-11-01 Tray SSD ZFS Plain](#2016-11-01-tray-ssd-zfs-plain)
+  - [2016-11-01 Tray SSD Plain](#2016-11-01-tray-ssd-plain)
 
 ## Drive info
 
@@ -138,7 +138,7 @@ For this benchmark run, the following configuration was in effect:
 doas ./invoke_iozone.sh
 ```
 
-### 2016-11-01 Tray SSD ZFS Plain
+### 2016-11-01 Tray SSD Plain
 
 * ThinkPad UEFI BIOS SATA Controller Mode Option: Compatibility
 * Encrypted ZFS root pool consisting of:
