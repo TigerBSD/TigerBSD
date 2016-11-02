@@ -232,6 +232,12 @@ cd /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/
 cap_mkdb /etc/login.conf
 ```
 
+Create swapfile directory for vim.
+
+```sh
+mkdir -p ~/.vim/swapfiles/
+```
+
 Configure WLAN. Most of it is taken care of by the installed files,
 but you'll need to enter SSID and credentials yourself of course.
 
