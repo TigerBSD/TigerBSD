@@ -322,21 +322,16 @@ With that done, take another snapshot again.
 /opt/sbin/snap.sh
 ```
 
-Note: Currently you'll need to run
+Note: Until issue #22 has been resolved, you will
+need to run the following two commands
 
 ```sh
+service dhclient restart lagg0
 service netif restart lagg0
 ```
 
 when connection state changes if wireless and wired are
-on different networks or routers. Furthermore you might
-also need to run
-
-```sh
-service dhclient restart lagg0
-```
-
-in such situations.
+on different networks or routers.
 
 ## Custom package builds using Poudriere
 
