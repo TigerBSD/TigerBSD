@@ -45,6 +45,7 @@ All commands in this README are to be performed as root unless otherwise noted.
 * [Custom package builds using Poudriere](#custom-package-builds-using-poudriere)
   + [Build packages](#build-packages)
   + [Install packages](#install-packages)
+  + [Install Rust](#install-rust)
   + [Install pip](#install-pip)
   + [Install matplotlib](#install-matplotlib)
   + [Upgrading pip and its packages](#upgrading-pip-and-its-packages)
@@ -317,6 +318,10 @@ poudriere bulk -j 11amd64 -p local -z python27 \
 ### Install packages
 
 This step has been temporarily removed until issue #20 has been resolved.
+
+### Install Rust
+
+https://rustup.rs/
 
 ### Install pip
 
