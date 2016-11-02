@@ -160,3 +160,19 @@ doas ./invoke_iozone.sh
 ```sh
 doas zpool destroy benchmark
 ```
+
+### 2016-11-03 Mirror SSD FDE
+
+* ThinkPad UEFI BIOS SATA Controller Mode Option: AHCI mode
+* Encrypted ZFS root pool consisting of:
+  - ada0p4.eli
+  - ada1p4.eli
+* ada0 at ata0 bus 0 scbus0 target 0 lun 0
+  - ada0: Corsair Force LE SSD SAFC12.2
+* ada1 at ata1 bus 0 scbus1 target 0 lun 0
+  - ada1: INTEL SSDSC2BW240A4 DC32
+* Benchmarking on ZFS filesystem zroot/benchmark
+
+```sh
+doas ./invoke_iozone.sh
+```
