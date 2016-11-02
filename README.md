@@ -238,8 +238,59 @@ Create swapfile directory for vim.
 mkdir -p ~/.vim/swapfiles/
 ```
 
-Configure WLAN. Most of it is taken care of by the installed files,
-but you'll need to enter SSID and credentials yourself of course.
+Enable failover link aggregation;
+
+1. Remove the following from `/etc/rc.conf.local`:
+
+   ```
+   ifconfig_em0="DHCP"
+   ifconfig_em0_ipv6="inet6 accept_rtadv"
+   ```
+
+2. Replace the following in `/etc/rc.conf`:
+
+   ```
+   wlans_iwn0="wlan0"
+   ifconfig_wlan0="DHCP WPA country NO"
+   
+   #
+   ##  em0 real MAC: aa:aa:aa:aa:aa:aa
+   ## iwn0 real MAC: bb:bb:bb:bb:bb:bb
+   #
+   #ifconfig_em0="ether bb:bb:bb:bb:bb:bb up"
+   #wlans_iwn0="wlan0"
+   #ifconfig_wlan0="WPA country NO"
+   #cloned_interfaces="lagg0"
+   #ifconfig_lagg0="laggproto failover laggport em0 laggport wlan0 DHCP"
+   #
+   ```
+
+   with:
+
+   ```
+   #wlans_iwn0="wlan0"
+   #ifconfig_wlan0="DHCP WPA country NO"
+   
+   
+   #  em0 real MAC: aa:aa:aa:aa:aa:aa
+   # iwn0 real MAC: bb:bb:bb:bb:bb:bb
+   
+   ifconfig_em0="ether bb:bb:bb:bb:bb:bb up"
+   wlans_iwn0="wlan0"
+   ifconfig_wlan0="WPA country NO"
+   cloned_interfaces="lagg0"
+   ifconfig_lagg0="laggproto failover laggport em0 laggport wlan0 DHCP"
+   
+   ```
+
+   while at the same time also replacing the values of
+   aa:aa:aa:aa:aa:aa and bb:bb:bb:bb:bb:bb with the actual
+   values reported by ifconfig for each of em0 and iwn0.
+
+   Also, replace the country code set for wlan0 with
+   that of your country.
+
+Finalize WLAN configuration. You'll need to enter SSID and credentials.
 
 `/etc/wpa_supplicant.conf.sample` contains sample entries for
 two networks; *eduroam* and *mysweetwifi*. Copy the file sample file
@@ -270,6 +321,22 @@ With that done, take another snapshot again.
 ```sh
 /opt/sbin/snap.sh
 ```
+
+Note: Currently you'll need to run
+
+```sh
+service netif restart lagg0
+```
+
+when connection state changes if wireless and wired are
+on different networks or routers. Furthermore you might
+also need to run
+
+```sh
+service dhclient restart lagg0
+```
+
+in such situations.
 
 ## Custom package builds using Poudriere
 
