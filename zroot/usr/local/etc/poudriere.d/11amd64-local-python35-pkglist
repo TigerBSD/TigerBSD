@@ -17,6 +17,7 @@ ftp/lftp
 print/texlive-base
 print/tex-dvipdfmx
 print/tex-xetex
+textproc/hs-pandoc
 math/py-matplotlib
 cad/qucs
 devel/avr-libc
