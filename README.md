@@ -40,10 +40,14 @@ All commands in this README are to be performed as root unless otherwise noted.
   + [Compare changes local to ThinkPad-FreeBSD-src](#compare-changes-local-to-thinkpad-freebsd-src)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-src](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-src)
 * [Install cuse4bsd from latest sources](#install-cuse4bsd-from-latest-sources)
+* [Install packages from FreeBSD repositories](#install-packages-from-freebsd-repositories)
 * [Install custom configuration files](#install-custom-configuration-files)
 * [Custom package builds using Poudriere](#custom-package-builds-using-poudriere)
   + [Build packages](#build-packages)
   + [Install packages](#install-packages)
+  + [Install pip](#install-pip)
+  + [Install matplotlib](#install-matplotlib)
+  + [Upgrading pip and its packages](#upgrading-pip-and-its-packages)
   + [Compare changes local to ThinkPad-FreeBSD-ports](#compare-changes-local-to-thinkpad-freebsd-ports)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 * [User config](#user-config)
@@ -310,17 +314,17 @@ poudriere bulk -j 11amd64 -p local -z python27 \
   -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
 ```
 
-### Installing the packages
+### Install packages
 
 This step has been temporarily removed until issue #20 has been resolved.
 
-### Installing pip
+### Install pip
 
 ```sh
 python3.5 -m ensurepip
 ```
 
-### Installing matplotlib
+### Install matplotlib
 
 ```sh
 pip3.5 install matplotlib
