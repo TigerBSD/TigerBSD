@@ -11,6 +11,7 @@ ada1 on scbus1 corresponds to the CD/DVD tray adapter bay.
 * [Benchmark runs](#benchmark-runs)
   - [2016-10-13 Single SSD FDE](#2016-10-13-single-ssd-fde)
   - [2016-11-01 Tray SSD Plain](#2016-11-01-tray-ssd-plain)
+  - [2016-11-03 Mirror SSD FDE](#2016-11-03-mirror-ssd-fde)
 
 ## Drive info
 
