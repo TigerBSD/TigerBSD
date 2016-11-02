@@ -12,6 +12,7 @@ sysutils/screen
 sysutils/tree
 devel/git
 editors/vim
+archivers/p7zip
 textproc/jq
 ftp/lftp
 print/texlive-base
