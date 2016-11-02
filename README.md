@@ -284,7 +284,7 @@ Enable failover link aggregation;
    ```
 
    while at the same time also replacing the values of
-   aa:aa:aa:aa:aa:aa and bb:bb:bb:bb:bb:bb with the actual
+   `aa:aa:aa:aa:aa:aa` and `bb:bb:bb:bb:bb:bb` with the actual
    values reported by ifconfig for each of em0 and iwn0.
 
    Also, replace the country code set for wlan0 with
