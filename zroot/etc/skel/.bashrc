@@ -60,7 +60,6 @@ complete -F _swpr swpr
 [[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
         source /usr/local/share/bash-completion/bash_completion.sh
 
-#alias u='doas freebsd-update fetch install; doas pkg update && doas pkg upgrade'
 alias u='doas pkg update && doas pkg upgrade'
 alias s='doas pkg search'
 alias i='doas pkg install'
@@ -91,15 +90,8 @@ ll()
 alias sl='screen -ls'
 alias sr='screen -dUR'
 
-alias www="doas jexec www0 tcsh"
-
-#alias no="swpr nordstroem.no && cd /usr/local/jails/thin/no.nordstroem.htservices.www0/usr/local/www/no.nordstroem.www/pub/htdocs/"
 alias non="swpr nordstroem.no"
-alias jc="swpr ict-infer.no && cd ~/src/int/jail-conf/"
-alias dof="swpr nordstroem.no && cd ~/src/config/dotfiles/"
 alias bsd='swpr LoBSD.org && cd ~/src/github.com/LoBSD/LoBSD/'
-
-alias ports='cd /usr/local/poudriere/ports/local/'
 
 alias rp='ping $( echo $SSH_CLIENT | cut -d" " -f1 )'
 
