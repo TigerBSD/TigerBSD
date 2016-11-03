@@ -97,10 +97,6 @@ alias www="doas jexec www0 tcsh"
 alias non="swpr nordstroem.no"
 alias jc="swpr ict-infer.no && cd ~/src/int/jail-conf/"
 alias dof="swpr nordstroem.no && cd ~/src/config/dotfiles/"
-alias ntnu='swpr ntnu.no && cd ~/NTNU/'
-alias rea='swpr ntnu.no && cd ~/NTNU/REA2101/'
-alias ele1='swpr ntnu.no && cd ~/NTNU/ELE1051/'
-alias ele2='swpr ntnu.no && cd ~/NTNU/ELE2131/'
 alias bsd='swpr LoBSD.org && cd ~/src/github.com/LoBSD/LoBSD/'
 
 alias ports='cd /usr/local/poudriere/ports/local/'
