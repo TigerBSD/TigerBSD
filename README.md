@@ -52,6 +52,8 @@ All commands in this README are to be performed as root unless otherwise noted.
   + [Compare changes local to ThinkPad-FreeBSD-ports](#compare-changes-local-to-thinkpad-freebsd-ports)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 * [User config](#user-config)
+* [Connect external hardware](#connect-external-hardware)
+  + [Apple iPod Touch](#apple-ipod-touch)
 * [Troubleshooting](#troubleshooting)
   + [Unbootable system](#unbootable-system)
   + [Mount encrypted ZFS root using FreeBSD 11.0 Live CD](#mount-encrypted-zfs-root-using-freebsd-110-live-cd)
@@ -434,7 +436,7 @@ Perform the following commands as your own user.
 doas pw groupmod vboxusers -m $( whoami )
 ```
 
-## Peripheral hardware
+## Connect external hardware
 
 ### Apple iPod Touch
 
