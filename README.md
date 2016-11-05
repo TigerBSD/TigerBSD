@@ -455,6 +455,19 @@ In another terminal.
 ifuse -o allow_other /media/ipod
 ```
 
+If you get "input/output error" at some point, unmount and remount.
+
+```sh
+umount /media/ipod
+ifuse -o allow_other /media/ipod
+```
+
+Once done, unmount.
+
+```sh
+umount /media/ipod
+```
+
 ## Troubleshooting
 
 ### Unbootable system
