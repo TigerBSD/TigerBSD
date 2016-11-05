@@ -440,22 +440,19 @@ doas pw groupmod vboxusers -m $( whoami )
 
 ### Apple iPod Touch
 
-Perform the following as your own user.
-
 ```sh
-doas mkdir -p /media/ipod
-doas chown $USER:$USER /media/ipod
-doas usbmuxd -f
+mkdir -p /media/ipod
+usbmuxd -f
 ```
 
 Connect your iPod Touch using the USB cable.
 
 Confirm the pop-up on the iPod asking to trust computer.
 
-In another terminal as your own user.
+In another terminal.
 
 ```sh
-doas ifuse -o allow_other /media/ipod
+ifuse -o allow_other /media/ipod
 ```
 
 ## Troubleshooting
