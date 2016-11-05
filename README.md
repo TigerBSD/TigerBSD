@@ -433,7 +433,7 @@ https://github.com/eriknstr/ThinkPad-FreeBSD-ports/compare/master...freebsd:mast
 Perform the following commands as your own user.
 
 ```sh
-doas pw groupmod vboxusers -m $( whoami )
+doas pw groupmod vboxusers -m $USER
 ```
 
 ## Connect external hardware
