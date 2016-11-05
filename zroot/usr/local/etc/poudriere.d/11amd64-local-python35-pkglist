@@ -28,6 +28,7 @@ cad/gtkwave
 devel/avrdude
 science/sigrok-cli
 sysutils/fusefs-ifuse
+graphics/feh
 mail/postfix
 mail/mutt
 sysutils/intel-pcm
