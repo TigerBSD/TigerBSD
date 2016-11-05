@@ -52,6 +52,7 @@ All commands in this README are to be performed as root unless otherwise noted.
   + [Compare changes local to ThinkPad-FreeBSD-ports](#compare-changes-local-to-thinkpad-freebsd-ports)
   + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 * [User config](#user-config)
+* [Install font files](#install-font-files)
 * [Connect external hardware](#connect-external-hardware)
   + [Apple iPod Touch](#apple-ipod-touch)
 * [Troubleshooting](#troubleshooting)
@@ -434,6 +435,20 @@ Perform the following commands as your own user.
 
 ```sh
 doas pw groupmod vboxusers -m $USER
+```
+
+## Install font files
+
+Perform the following commands as your own user.
+
+```sh
+mkdir ~/.fonts
+```
+
+Place TTF files in `~/.fonts/`, then build fontconfig cache files.
+
+```sh
+fc-cache -f
 ```
 
 ## Connect external hardware
