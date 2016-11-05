@@ -82,6 +82,8 @@ copy_file etc/rc.conf
 copy_file etc/sysctl.conf
 copy_file etc/wpa_supplicant.conf.sample
 
+copy_file opt/bin/tp-tag.sh
+
 copy_file usr/local/etc/doas.conf
 copy_file usr/local/etc/mail/mailer.conf
 copy_file usr/local/etc/nginx/mime.types
