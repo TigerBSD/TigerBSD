@@ -27,7 +27,6 @@ devel/simavr
 cad/gtkwave
 devel/avrdude
 science/sigrok-cli
-audio/mixxx
 sysutils/fusefs-ifuse
 graphics/feh
 mail/postfix
