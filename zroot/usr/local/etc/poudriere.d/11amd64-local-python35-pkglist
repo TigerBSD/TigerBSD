@@ -38,6 +38,7 @@ x11/nvidia-xconfig
 graphics/mesa-demos
 x11-drivers/xf86-input-keyboard
 x11-drivers/xf86-input-mouse
+x11/setxkbmap
 deskutils/tpb
 x11/xbacklight
 sysutils/acpi_call
