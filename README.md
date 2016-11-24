@@ -435,6 +435,16 @@ Perform the following commands as your own user.
 
 ```sh
 doas pw groupmod vboxusers -m $USER
+
+dconf write /org/mate/desktop/applications/terminal/exec terminology
+dconf write /org/mate/desktop/applications/terminal/exec-arg -e
+
+dconf write /org/mate/caja-open-terminal/desktop-opens-home-dir true
+
+dconf write /org/mate/caja/desktop/computer-icon-visible false
+dconf write /org/mate/caja/desktop/home-icon-visible false
+dconf write /org/mate/caja/desktop/trash-icon-visible false
+dconf write /org/mate/caja/desktop/volumes-visible false
 ```
 
 ## Install font files
