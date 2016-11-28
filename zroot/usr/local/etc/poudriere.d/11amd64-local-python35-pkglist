@@ -66,6 +66,7 @@ audio/pavucontrol
 www/youtube_dl
 audio/tomahawk
 multimedia/vlc
+multimedia/umplayer
 devel/py-qt5
 graphics/py-opencv
 lang/pypy3
