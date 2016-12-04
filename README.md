@@ -404,6 +404,7 @@ python2.7 -m ensurepip
 ### Install matplotlib
 
 ```sh
+pkg install py35-tkinter
 pip3.5 install matplotlib
 ```
 
