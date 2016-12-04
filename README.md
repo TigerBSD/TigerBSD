@@ -456,7 +456,15 @@ Perform the following commands as your own user.
 mkdir ~/.fonts
 ```
 
-Place TTF files in `~/.fonts/`, then build fontconfig cache files.
+Manually place TTF and OTF files in `~/.fonts/`.
+
+Symlink LaTeX font directory in under `~/.fonts/`.
+
+```sh
+ln -s /usr/local/share/texmf-dist/fonts/ ~/.fonts/texmf
+```
+
+Build fontconfig cache files. This will take a while.
 
 ```sh
 fc-cache -f
