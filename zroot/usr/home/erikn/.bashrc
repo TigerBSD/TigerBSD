@@ -106,6 +106,16 @@ swpr nordstroem.no
 
 alias ls='ls -GF'
 
+examples ()
+{
+  man $1 | less +/^EXAMPLES
+}
+
+usage ()
+{
+  man $1 | less +/^USAGE
+}
+
 export PROMPT_DIRTRIM=2
 
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
