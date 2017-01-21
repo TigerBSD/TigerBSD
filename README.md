@@ -42,15 +42,12 @@ All commands in this README are to be performed as root unless otherwise noted.
 * [Install cuse4bsd from latest sources](#install-cuse4bsd-from-latest-sources)
 * [Install packages from FreeBSD repositories](#install-packages-from-freebsd-repositories)
 * [Install custom configuration files](#install-custom-configuration-files)
-* [Custom package builds using Poudriere](#custom-package-builds-using-poudriere)
-  + [Build packages](#build-packages)
+* [Install additional software](#install-additional-software)
   + [Install packages](#install-packages)
   + [Install Rust](#install-rust)
   + [Install pip](#install-pip)
   + [Install matplotlib](#install-matplotlib)
   + [Upgrading pip and its packages](#upgrading-pip-and-its-packages)
-  + [Compare changes local to ThinkPad-FreeBSD-ports](#compare-changes-local-to-thinkpad-freebsd-ports)
-  + [Compare changes upstream not yet in ThinkPad-FreeBSD-ports](#compare-changes-upstream-not-yet-in-thinkpad-freebsd-ports)
 * [User config](#user-config)
 * [Install font files](#install-font-files)
 * [Connect external hardware](#connect-external-hardware)
@@ -213,8 +210,7 @@ See also: http://www.selasky.org/hans_petter/cuse4bsd/
 ```sh
 cd /root/src/github.com/eriknstr/ThinkPad-FreeBSD-setup/
 
-cut -d'/' -f2 zroot/usr/local/etc/poudriere.d/11amd64-local-python35-pkglist \
-  | env ASSUME_ALWAYS_YES=yes xargs -L1 pkg install
+cut -d'/' -f2 pkglist | env ASSUME_ALWAYS_YES=yes xargs -L1 pkg install
 
 /opt/sbin/snap.sh
 
@@ -336,59 +332,13 @@ service netif restart lagg0
 when connection state changes if wireless and wired are
 on different networks or routers.
 
-## Custom package builds using Poudriere
-
-A fork of the FreeBSD ports tree for use with Lenovo ThinkPad T520
-is maintained at https://github.com/eriknstr/ThinkPad-FreeBSD-ports
-
-TODO: Create jail from customized FreeBSD build
-instead of using the official release files.
-
-```sh
-poudriere jail -c -j 11amd64 -v 11.0-RELEASE
-
-poudriere ports -c -F -p local
-
-git clone https://github.com/eriknstr/ThinkPad-FreeBSD-ports.git \
-  /usr/local/poudriere/ports/local
-
-cd /usr/local/poudriere/ports/local/
-
-git remote remove origin
-
-git remote add origin git@github.com:eriknstr/ThinkPad-FreeBSD-ports.git
-
-git remote add upstream git@github.com:freebsd/freebsd-ports.git
-
-mkdir /usr/ports/distfiles/
-
-/opt/sbin/snap.sh
-```
-
-See also: https://www.freebsd.org/doc/handbook/ports-poudriere.html
-
-### Build packages
-
-This step is not of interest to most people until issue #20 has been resolved.
-
-```sh
-cd /usr/local/poudriere/ports/local/
-
-git pull
-
-poudriere bulk -j 11amd64 -p local -z python35 \
-  -f /usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
-
-poudriere bulk -j 11amd64 -p local -z python34 \
-  -f /usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
-
-poudriere bulk -j 11amd64 -p local -z python27 \
-  -f /usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
-```
+## Install additional software
 
 ### Install packages
 
-This step has been temporarily removed until issue #20 has been resolved.
+```sh
+cut -d'/' -f2 pkglist | xargs -L1 pkg install
+```
 
 ### Install Rust
 
@@ -421,14 +371,6 @@ pip2.7 install -U pip
 pip2.7 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
   | xargs -n1 pip2.7 install -U
 ```
-
-### Compare changes local to ThinkPad-FreeBSD-ports
-
-https://github.com/freebsd/freebsd-ports/compare/master...eriknstr:master
-
-### Compare changes upstream not yet in ThinkPad-FreeBSD-ports
-
-https://github.com/eriknstr/ThinkPad-FreeBSD-ports/compare/master...freebsd:master
 
 ## User config
 

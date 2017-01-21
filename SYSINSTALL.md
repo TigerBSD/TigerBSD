@@ -272,12 +272,12 @@ we move our current `/etc/rc.conf` to `/etc/rc.conf.local`.
 mv /etc/rc.conf /etc/rc.conf.local
 ```
 
-Install `pkg`, `git`, `poudriere` and `beadm`.
+Install `pkg`, `git` and `beadm`.
 
 ```sh
 env ASSUME_ALWAYS_YES=yes pkg bootstrap
 
-pkg install git poudriere beadm
+pkg install git beadm
 ```
 
 Create additional ZFS file systems for PostgreSQL data, PostgreSQL WAL

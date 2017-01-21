@@ -47,13 +47,6 @@ link_file etc/skel/.vimrc
 link_file etc/skel/.xinitrc
 link_file etc/skel/.Xdefaults
 
-link_file usr/local/etc/poudriere.d/11amd64-local-python27-make.conf
-link_file usr/local/etc/poudriere.d/11amd64-local-python27-pkglist
-link_file usr/local/etc/poudriere.d/11amd64-local-python34-make.conf
-link_file usr/local/etc/poudriere.d/11amd64-local-python34-pkglist
-link_file usr/local/etc/poudriere.d/11amd64-local-python35-make.conf
-link_file usr/local/etc/poudriere.d/11amd64-local-python35-pkglist
-
 copy_file () {
 	src="$owndir/zroot/$1"
 	tgt="/$1"
@@ -87,14 +80,11 @@ copy_file opt/sbin/dsnap.sh
 
 copy_file usr/local/etc/doas.conf
 copy_file usr/local/etc/mail/mailer.conf
-copy_file usr/local/etc/nginx/mime.types
-copy_file usr/local/etc/nginx/nginx.conf
 copy_file usr/local/etc/pkg/repos/custom-python27.conf
 copy_file usr/local/etc/pkg/repos/custom-python34.conf
 copy_file usr/local/etc/pkg/repos/custom-python35.conf
 copy_file usr/local/etc/pkg/repos/FreeBSD.conf
 copy_file usr/local/etc/pkg.conf
-copy_file usr/local/etc/poudriere.conf
 copy_file usr/local/etc/pulse/client.conf
 copy_file usr/local/etc/pulse/daemon.conf
 copy_file usr/local/etc/slim.conf
@@ -121,7 +111,3 @@ link_dir () {
 
 	ln -s "$src" "$tgt"
 }
-
-link_dir usr/local/etc/poudriere.d/11amd64-python35-options
-link_dir usr/local/etc/poudriere.d/11amd64-python34-options
-link_dir usr/local/etc/poudriere.d/11amd64-python27-options

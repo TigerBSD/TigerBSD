@@ -6,7 +6,6 @@ zfs snapshot -r bootpool@$snapname
 zfs snapshot -r zroot@$snapname
 
 zfs destroy -r zroot/benchmark@$snapname
-zfs destroy -r zroot/poudriere@$snapname
 zfs destroy -r zroot/tmp@$snapname
 zfs destroy -r zroot/usr/ports@$snapname
 zfs destroy -r zroot/usr/src@$snapname
