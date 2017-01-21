@@ -43,7 +43,6 @@ All commands in this README are to be performed as root unless otherwise noted.
 * [Install packages from FreeBSD repositories](#install-packages-from-freebsd-repositories)
 * [Install custom configuration files](#install-custom-configuration-files)
 * [Install additional software](#install-additional-software)
-  + [Install packages](#install-packages)
   + [Install Rust](#install-rust)
   + [Install pip](#install-pip)
   + [Install matplotlib](#install-matplotlib)
@@ -333,12 +332,6 @@ when connection state changes if wireless and wired are
 on different networks or routers.
 
 ## Install additional software
-
-### Install packages
-
-```sh
-cut -d'/' -f2 pkglist | xargs -L1 pkg install
-```
 
 ### Install Rust
 
