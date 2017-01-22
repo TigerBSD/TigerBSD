@@ -2,7 +2,7 @@
 
 ![Screenshot of my desktop](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/screenshots-2017-01-22/screenshot.png)
 
-![Photo of my laptop and external monitor standing on the desk in my room.](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/photos-2017-01-22/desk.jpg)
+![Photo of my laptop and external monitor standing on the desk in my room.](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/photos-2017-01-22u1/desk.jpg)
 
 Setup of customized FreeBSD 11 for Lenovo ThinkPad T520. Work in progress.
 Please have a look at the following few links:
@@ -32,7 +32,7 @@ Things which optimize the usage of a HDD might hurt an SSD and vice versa.
 
 All commands in this README are to be performed as root unless otherwise noted.
 
-![Photo of my caddy adapter next to the CD/DVD drive it replaced](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/photos-2017-01-22/caddy.jpg)
+![Photo of my caddy adapter next to the CD/DVD drive it replaced](https://raw.githubusercontent.com/eriknstr/ThinkPad-FreeBSD-setup/photos-2017-01-22u1/caddy.jpg)
 
 ## Table of Contents
 
