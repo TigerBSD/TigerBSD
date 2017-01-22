@@ -126,11 +126,9 @@ cd /usr/src/
 git pull
 ```
 
-Reboot into single user mode, then
+Reboot, then
 
 ```sh
-/opt/sbin/singleuser.sh
-
 cd /usr/src/
 
 time make buildworld
@@ -143,7 +141,7 @@ four hours and twentyfive minutes on my ThinkPad T520,
 buildkernel takes about 30 minutes, and finally, installkernel
 takes on the order of seconds to complete.
 
-Reboot into single user mode again and then
+Reboot into single user mode and then
 
 ```sh
 /opt/sbin/singleuser.sh
@@ -161,7 +159,7 @@ make delete-old
 
 Installworld takes a little over a minute to complete.
 
-Now reboot into multi user mode and then do
+Now reboot into multi user mode again and then do
 
 ```sh
 cd /usr/src/
