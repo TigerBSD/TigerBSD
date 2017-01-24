@@ -105,6 +105,7 @@ export PAGER=less
 swpr nordstroem.no
 
 alias ls='ls -GF'
+alias open='xdg-open'
 
 examples ()
 {
