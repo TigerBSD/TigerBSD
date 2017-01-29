@@ -1,3 +1,4 @@
 [localrules=10]
 add path 'usb' mode 0770 group operator
 add path 'usb/*' mode 0660 group operator
+add path 'video*' mode 0660 group webcamd

@@ -370,6 +370,7 @@ pip2.7 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
 Perform the following commands as your own user.
 
 ```sh
+doas pw groupmod webcamd -m $USER
 doas pw groupmod vboxusers -m $USER
 
 dconf write /org/mate/desktop/applications/terminal/exec terminology
