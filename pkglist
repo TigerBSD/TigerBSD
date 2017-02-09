@@ -31,6 +31,7 @@ devel/scons
 devel/simavr
 editors/libreoffice
 editors/vim
+editors/neovim
 emulators/linux-c6
 emulators/virtualbox-ose
 finance/electrum

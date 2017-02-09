@@ -95,11 +95,13 @@ alias bsd='swpr LoBSD.org && cd ~/src/github.com/LoBSD/LoBSD/'
 
 alias rp='ping $( echo $SSH_CLIENT | cut -d" " -f1 )'
 
+alias vim=nvim
+
 alias HEAD='curl -I'
 
 export PATH=~/bin:$PATH:/usr/local/lib/qt5/bin
 export TZ=Europe/Oslo
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 
 swpr nordstroem.no
