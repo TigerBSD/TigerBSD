@@ -30,8 +30,8 @@ devel/qt4-moc
 devel/scons
 devel/simavr
 editors/libreoffice
-editors/vim
 editors/neovim
+editors/vim
 emulators/linux-c6
 emulators/virtualbox-ose
 finance/electrum
@@ -96,6 +96,7 @@ sysutils/cdrdao
 sysutils/coreutils
 sysutils/dvdbackup
 sysutils/fusefs-ifuse
+sysutils/fusefs-sshfs
 sysutils/htop
 sysutils/intel-pcm
 sysutils/mate-power-manager
