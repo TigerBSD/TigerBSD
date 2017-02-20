@@ -112,7 +112,6 @@ textproc/vbindiff
 www/chromium
 www/firefox
 www/varnish
-www/youtube_dl
 x11-drivers/xf86-input-keyboard
 x11-drivers/xf86-input-mouse
 x11-fonts/bitstream-vera

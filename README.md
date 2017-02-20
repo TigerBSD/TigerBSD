@@ -47,7 +47,7 @@ All commands in this README are to be performed as root unless otherwise noted.
 * [Install additional software](#install-additional-software)
   + [Install Rust](#install-rust)
   + [Install pip](#install-pip)
-  + [Install matplotlib](#install-matplotlib)
+  + [Install pip packages](#install-pip-packages)
   + [Upgrading pip and its packages](#upgrading-pip-and-its-packages)
 * [User config](#user-config)
 * [Install font files](#install-font-files)
@@ -340,29 +340,30 @@ https://rustup.rs/
 ### Install pip
 
 ```sh
-python3.5 -m ensurepip
-python2.7 -m ensurepip
+python3 -m ensurepip
+python2 -m ensurepip
 ```
 
-### Install matplotlib
+### Install pip packages
 
 ```sh
-pkg install py35-tkinter
-pip3.5 install matplotlib
+xargs python3 -m pip install < pip3list
 ```
 
 ### Upgrading pip and its packages
 
 ```sh
-pip3.5 install -U pip
-pip3.5 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
-  | xargs -n1 pip3.5 install -U
+python3 -m pip install -U pip
+python3 -m pip freeze --local \
+  | grep -v '^\-e' \ | cut -d'=' -f1 \
+  | xargs -n1 python3 -m pip install -U
 ```
 
 ```sh
-pip2.7 install -U pip
-pip2.7 freeze --local | grep -v '^\-e' | cut -d'=' -f1 \
-  | xargs -n1 pip2.7 install -U
+python2 -m pip install -U pip
+python2 -m pip freeze --local \
+  | grep -v '^\-e' \ | cut -d'=' -f1 \
+  | xargs -n1 python2 -m pip install -U
 ```
 
 ## User config
