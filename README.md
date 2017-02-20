@@ -355,14 +355,14 @@ xargs python3 -m pip install < pip3list
 ```sh
 python3 -m pip install -U pip
 python3 -m pip freeze --local \
-  | grep -v '^\-e' \ | cut -d'=' -f1 \
+  | grep -v '^\-e' | cut -d'=' -f1 \
   | xargs -n1 python3 -m pip install -U
 ```
 
 ```sh
 python2 -m pip install -U pip
 python2 -m pip freeze --local \
-  | grep -v '^\-e' \ | cut -d'=' -f1 \
+  | grep -v '^\-e' | cut -d'=' -f1 \
   | xargs -n1 python2 -m pip install -U
 ```
 
