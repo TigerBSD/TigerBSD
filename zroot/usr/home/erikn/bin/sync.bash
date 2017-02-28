@@ -8,9 +8,13 @@ usage ()
 all=
 if [ $# -gt 1 ] ; then
   usage
+  exit 1
 elif [ $# -eq 1 ] ; then
   if [ "$1" == "-a" ] ; then
     all=true
+  else
+    usage
+    exit 1
   fi
 fi
 
