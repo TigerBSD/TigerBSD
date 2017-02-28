@@ -93,7 +93,7 @@ I think one is supposed to enter only the hostname here,
 not the fully qualified domain name. I enter just the hostname.
 
 Next it's time to select which optional system components to install.
-Select *doc* and unselect *ports*. We'll be using my custom ports tree later.
+Select *doc*.
 
 Next it'll tell us that "Your model of Lenovo is known to have a BIOS
 bug that prevents it booting from GPT partitions without UEFI. Would you
