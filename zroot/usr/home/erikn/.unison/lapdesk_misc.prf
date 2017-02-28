@@ -1,17 +1,18 @@
 root = /home/erikn/
-root = ssh://10.42.0.1//home/erikn/
+root = ssh://cubi//home/erikn/
 
-path = NTNU
+path = bin
+path = Vanagandr
+path = SN
 path = Documents
 path = backup
 path = src
 path = MOOC
 path = Pictures
-path = Videos
 path = Productions
 path = Projects
+path = Mixxx
 path = Real_Art_Photos
-path = Storage
 path = 3d
 path = Audio4Lyfe
 path = Downloads
