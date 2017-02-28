@@ -2,7 +2,7 @@
 
 usage ()
 {
-  echo 'Usage: $0 [-a]'
+  echo "Usage: $0 [-a]"
 }
 
 all=
