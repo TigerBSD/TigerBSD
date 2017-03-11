@@ -84,6 +84,7 @@ print/font-amsfonts
 print/foomatic-db
 print/foomatic-db-engine
 print/gutenprint-foomatic
+print/hplip
 print/latex-biber
 print/pdftk
 print/scribus
