@@ -1,4 +1,0 @@
-root = /var/lol/
-root = ssh://cubi//var/lol/
-
-path = NTNU
