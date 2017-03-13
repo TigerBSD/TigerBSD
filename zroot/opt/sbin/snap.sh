@@ -15,3 +15,5 @@ zfs destroy -r zroot/var/log@$snapname
 zfs destroy -r zroot/var/tmp@$snapname
 
 zfs snapshot -r zcarry@$snapname
+
+zfs snapshot -r zboss@$snapname
