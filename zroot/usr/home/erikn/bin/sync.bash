@@ -23,5 +23,4 @@ unison240-text -auto -batch lapdesk_misc
 
 if [ ! -z "$all" ] ; then
   unison240-text -auto -batch lapdesk_stor
-  unison240-text -auto -batch lapdesk_lol
 fi
