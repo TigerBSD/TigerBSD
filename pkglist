@@ -8,7 +8,6 @@ audio/mate-media
 audio/pavucontrol
 audio/sdl2_mixer
 audio/tosha
-benchmarks/iozone
 cad/gtkwave
 cad/qucs
 converters/unix2dos

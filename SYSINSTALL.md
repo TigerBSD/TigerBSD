@@ -301,12 +301,6 @@ zfs create zroot/var/www
 
 See also: http://open-zfs.org/wiki/Performance_tuning#PostgreSQL
 
-Create a dataset for IO benchmarking.
-
-```sh
-zfs create -o mountpoint=/benchmark zroot/benchmark
-```
-
 ## Next steps
 
 [Continue](/README.md#clone-this-repo-under-root).
