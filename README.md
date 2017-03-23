@@ -21,7 +21,7 @@ Not ready for the general public.
   - https://support.lenovo.com/us/en/solutions/pd015761
 
 * Lenovo ThinkPad X220 Tablet
-  - http://www.thinkwiki.org/wiki/Category:X220\_Tablet
+  - http://www.thinkwiki.org/wiki/Category:X220_Tablet
   - https://support.lenovo.com/us/en/solutions/pd015807
 
 ## Installation procedure
