@@ -35,8 +35,8 @@ Not ready for the general public.
 
 The FreeBSD source tree which is included in this repository as a subtree
 under the `FreeBSD` directory under the root of this repository
-has it's copyright and license information available in the file `COPYRIGHT`
-in the root of the `FreeBSD` directory.
+has it's copyright and license information available in the `COPYRIGHT`
+file in the root of the `FreeBSD` directory.
 
 Everything else in this repository outside of the above metioned directory
 has it's copyright and license information available in the file `LICENSE`
