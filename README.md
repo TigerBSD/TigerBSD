@@ -35,11 +35,17 @@ Not ready for the general public.
 
 The FreeBSD source tree which is included in this repository as a subtree
 under the `FreeBSD` directory under the root of this repository
-has it's copyright and license information available in the `COPYRIGHT`
+has it's copyright and license details available in the `COPYRIGHT`
 file in the root of the `FreeBSD` directory.
 
+Subportions of the FreeBSD source tree have copyright and license details
+that differ from the information given in the above mentioned `COPYRIGHT`
+file. In such cases the files in question are marked with the relevant
+copyright and license details either inside of the files themselves
+or in license files in a parent directory.
+
 Everything else in this repository outside of the above metioned directory
-has it's copyright and license information available in the file `LICENSE`
+has it's copyright and license details available in the file `LICENSE`
 in the root of the repository.
 
 [msimgdl]: https://github.com/eriknstr/FreeBSD-Custom-ThinkPad/releases/download/v0.0.0/msimgdl.png
