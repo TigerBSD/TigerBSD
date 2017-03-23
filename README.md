@@ -1,6 +1,6 @@
 # FreeBSD-Custom-ThinkPad
 
-Customized FreeBSD 11 for ThinkPad laptops.
+Customized FreeBSD 11 for ThinkPad laptops 🐅
 
 As was [once said by someone on the OpenBSD mailing lists](http://marc.info/?l=openbsd-misc&m=145358748924473&w=4);
 
