@@ -45,8 +45,8 @@ copyright and license details either inside of the files themselves
 or in license files in a parent directory.
 
 Everything else in this repository outside of the above metioned directory
-has it's copyright and license details available in the file `LICENSE`
-in the root of the repository.
+has it's copyright and license details available in the `LICENSE`
+file in the root of the repository.
 
 [msimgdl]: https://github.com/eriknstr/FreeBSD-Custom-ThinkPad/releases/download/v0.0.0/msimgdl.png
 [msimg]: https://github.com/eriknstr/FreeBSD-Custom-ThinkPad/releases/download/v0.0.0/eriknstr-bsd-0.0.0-memstick.img
