@@ -31,5 +31,16 @@ Not ready for the general public.
 3. Boot your ThinkPad from the memory stick.
 4. The installer will guide you through the rest. Further documentation on the installation process is [available should you need it](docs/guided_install.md).
 
+## Copyright and license
+
+The FreeBSD source tree which is included in this repository as a subtree
+under the `FreeBSD` directory under the root of this repository
+has it's copyright and license information available in the file `COPYRIGHT`
+in the root of the `FreeBSD` directory.
+
+Everything else in this repository outside of the above metioned directory
+has it's copyright and license information available in the file `LICENSE`
+in the root of the repository.
+
 [msimgdl]: https://github.com/eriknstr/FreeBSD-Custom-ThinkPad/releases/download/v0.0.0/msimgdl.png
 [msimg]: https://github.com/eriknstr/FreeBSD-Custom-ThinkPad/releases/download/v0.0.0/eriknstr-bsd-0.0.0-memstick.img
