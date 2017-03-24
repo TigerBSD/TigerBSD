@@ -3,3 +3,5 @@
 ident BAREMIN
 
 cpu HAMMER
+
+device		pci
