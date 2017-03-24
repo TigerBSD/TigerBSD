@@ -1,4 +1,4 @@
-# FreeBSD-Custom-ThinkPad
+# TigerBSD
 
 Customized FreeBSD 11 for ThinkPad laptops 🐅
 
@@ -27,7 +27,7 @@ Not ready for the general public.
 ## Installation procedure
 
 1. [Download custom memstick image][msimg], or [build the custom memstick image from source yourself](docs/build.md).
-2. Write custom memstick image to memory stick using e.g. `dd if=eriknstr-bsd-0.0.0-memstick.img of=/dev/xxx bs=16m`, where `xxx` is the device id of your memory stick as found by for example `gpart show` on FreeBSD.
+2. Write custom memstick image to memory stick using e.g. `dd if=TigerBSD-v0.0.0-memstick.img of=/dev/xxx bs=16m`, where `xxx` is the device id of your memory stick as found by for example `gpart show` on FreeBSD.
 3. Boot your ThinkPad from the memory stick.
 4. The installer will guide you through the rest. Further documentation on the installation process is [available should you need it](docs/guided_install.md).
 
@@ -48,5 +48,5 @@ Everything else in this repository outside of the above metioned directory
 has it's copyright and license details available in the `LICENSE`
 file in the root of the repository.
 
-[msimgdl]: https://github.com/eriknstr/FreeBSD-Custom-ThinkPad/releases/download/v0.0.0/msimgdl.png
-[msimg]: https://github.com/eriknstr/FreeBSD-Custom-ThinkPad/releases/download/v0.0.0/eriknstr-bsd-0.0.0-memstick.img
+[msimgdl]: https://github.com/TigerBSD/TigerBSD/releases/download/v0.0.0/msimgdl.png
+[msimg]: https://github.com/TigerBSD/TigerBSD/releases/download/v0.0.0/TigerBSD-v0.0.0-memstick.img
