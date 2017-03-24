@@ -7,3 +7,4 @@ cpu HAMMER
 device		pci
 options		SCHED_ULE
 options		INET6
+device		loop
