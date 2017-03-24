@@ -1,4 +1,4 @@
-# Bare minimum configuration required for a kernel that boots
+# Bare minimum configuration required for a kernel that boots amd64
 
 ident		BAREMIN
 
