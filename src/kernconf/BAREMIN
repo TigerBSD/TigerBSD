@@ -1,8 +1,8 @@
 # Bare minimum configuration required for a kernel that boots
 
-ident BAREMIN
+ident		BAREMIN
 
-cpu HAMMER
+cpu		HAMMER
 
 device		pci
 options		SCHED_ULE
