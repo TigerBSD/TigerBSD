@@ -37,6 +37,7 @@ makeargs=
 vars+=" MAKEOBJDIRPREFIX=\"$dir/build/\""
 vars+=" DESTDIR=\"$dir/out/\""
 
+makeargs+=" -DNO_CLEAN"
 makeargs+=" KERNCONF=THINKPAD"
 
 kernconfsrcdir="src/kernconf/"
