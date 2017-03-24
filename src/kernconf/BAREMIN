@@ -1,3 +1,5 @@
 # Bare minimum configuration required for a kernel that boots
 
 ident BAREMIN
+
+cpu HAMMER
