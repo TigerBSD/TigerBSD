@@ -1,0 +1,6 @@
+# Include the options of all thinkpad models targeted.
+# This kernel is intended for the installer.
+
+include T520
+include X220TABLET
+ident THINKPAD
