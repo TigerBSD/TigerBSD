@@ -42,6 +42,7 @@ fi
 
 case "$fs" in
   bootpool)
+    ;&
   zroot)
     dest="zboss/dupli/pool/$HOSTNAME/$fs"
     ;;
