@@ -16,19 +16,61 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #
 
-set -eu
+set -euo pipefail
 
-if [ $# -eq 0 ] ; then
+if [ $# -eq 1 ] ; then
   snapname="$( /opt/bin/snapname.sh )"
-elif [ $# -eq 1 ] ; then
+  fs="$1"
+elif [ $# -eq 2 ] ; then
   snapname="$1"
+  fs="$2"
 else
-  echo "Usage: $0 [snapname]" 1>&2
+  echo "Usage: $0 [snapname] filesystem" 1>&2
   exit 1
 fi
 
-prev_snap="$( zfs list -H -t snapshot | egrep '^zboss/dupli/lul@' | tail -n1 | cut -f1 | cut -b17- )"
+if [ "${snapname%%@*}" != "$snapname" ] ; then
+  echo "Snapname \`$snapname' contains illegal character \`@'." 1>&2
+  exit 1
+elif [ "${fs%%@*}" != "$fs" ] ; then
+  echo "Filesystem name \`$fs' contains illegal character \`@'." 1>&2
+  exit 1
+elif [ "${HOSTNAME%%@*}" != "$HOSTNAME" ] ; then
+  echo "Hostname \`$HOSTNAME' contains illegal character \`@'." 1>&2
+  exit 1
+fi
 
-zfs snapshot -r "zcarry@$snapname"
+case "$fs" in
+  bootpool)
+  zroot)
+    dest="zboss/dupli/pool/$HOSTNAME/$fs"
+    ;;
+  zcarry)
+    dest="zboss/dupli/pool/external/$fs"
+    ;;
+  *)
+    echo "Filesystem \`$fs' not in whitelist." 1>&2
+    exit 1
+    ;;
+esac
 
-zfs send -i "$prev_snap" "zcarry@$snapname" | zfs recv zboss/dupli/lul
+prev_snap="$( zfs list -H -t snapshot | egrep "^${dest}@" | tail -n1 | cut -f1 )"
+
+if [ $( echo "$prev_snap" | wc -l ) -ne 1 ] ; then
+  echo "Failed to get a unique match for most recent" \
+       "replication of \`$fs'." 1>&2
+  exit 1
+fi
+
+prev_snap_fs="${prev_snap%%@*}"
+prev_snap_name="${prev_snap##*@}"
+
+if [ "${prev_snap_fs}@$prev_snap_name" != "${prev_snap}" ] ; then
+  echo "Encountered illegal character \`@' in previous" \
+       "snapshot name \`${prev_snap#*@} of \`${prev_snap}'." 1>&2
+  exit 1
+fi
+
+zfs snapshot -r "${fs}@$snapname"
+
+zfs send -i "$prev_snap_name" "${fs}@$snapname" | zfs recv "$dest"
