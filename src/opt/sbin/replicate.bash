@@ -74,4 +74,4 @@ fi
 
 zfs snapshot -r "${fs}@$snapname"
 
-zfs send -Ri "@$prev_snap_name" "${fs}@$snapname" | zfs recv "$dest"
+zfs send -Ri "@$prev_snap_name" "${fs}@$snapname" | zfs recv -u "$dest"
