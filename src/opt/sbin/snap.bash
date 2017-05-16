@@ -83,7 +83,11 @@ replicate ()
 
   dest="$( dest "$fs" )"
   prev_snap="$( zfs list -Ht snapshot | cut -f1 | egrep "^${dest}@" | tail -n1 || true )"
-  n_match_prev="$( echo -n "$prev_snap" | wc -l )"
+  if [ -z "$prev_snap" ] ; then
+    n_match_prev=0
+  else
+    n_match_prev="$( echo "$prev_snap" | wc -l )"
+  fi
 
   if [ "$n_match_prev" -eq 0 ] ; then
     zfs send -R "${fs}@$snapname" | zfs recv -u "$dest"
