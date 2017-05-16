@@ -16,7 +16,7 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #
 
-set -eu
+set -euo pipefail
 
 if [ $# -eq 0 ] ; then
   snapname="$( /opt/bin/snapname.sh )"
@@ -27,17 +27,120 @@ else
   exit 1
 fi
 
-zfs snapshot -r "bootpool@$snapname"
-zfs snapshot -r "zroot@$snapname"
+if [ "${snapname%%@*}" != "$snapname" ] ; then
+  echo "Snapname \`$snapname' contains illegal character \`@'." 1>&2
+  exit 1
+elif [ "${HOSTNAME%%@*}" != "$HOSTNAME" ] ; then
+  echo "Hostname \`$HOSTNAME' contains illegal character \`@'." 1>&2
+  exit 1
+fi
 
-zfs destroy -r "zroot/tmp@$snapname"
-zfs destroy -r "zroot/usr/ports@$snapname"
-zfs destroy -r "zroot/usr/src@$snapname"
-zfs destroy -r "zroot/var/audit@$snapname"
-zfs destroy -r "zroot/var/crash@$snapname"
-zfs destroy -r "zroot/var/log@$snapname"
-zfs destroy -r "zroot/var/tmp@$snapname"
+dest ()
+{
+  case "$fs" in
+    bootpool)
+      ;&
+    zroot)
+      dest="zboss/dupli/pool/$HOSTNAME/$fs"
+      ;;
+    zcarry)
+      dest="zboss/dupli/pool/external/$fs"
+      ;;
+    *)
+      echo "Filesystem \`$fs' not in whitelist." 1>&2
+      exit 1
+      ;;
+  esac
 
-#zfs snapshot "zboss@$snapname"
+  echo "$dest"
+}
 
-#zfs snapshot "zcarry@$snapname"
+replicate ()
+{
+  if [ $# -eq 2 ] ; then
+    flags=""
+    snapname="$1"
+    fs="$2"
+  elif [ $# -eq 3 ] ; then
+    flags="$1"
+    snapname="$2"
+    fs="$3"
+  else
+    echo "Function \`destroy_prev_snaps' recieved bad number of arguments." 1>&2
+    exit 1
+  fi
+
+  if [ "${fs%%@*}" != "$fs" ] ; then
+    echo "Filesystem name \`$fs' contains illegal character \`@'." 1>&2
+    exit 1
+  fi
+  
+  if [ -z "$flags" ] ; then
+    zfs snapshot "${fs}@$snapname"
+  else
+    zfs snapshot "$flags" "${fs}@$snapname"
+  fi
+
+  dest="$( dest "$fs" )"
+  prev_snap="$( zfs list -Ht snapshot | cut -f1 | egrep "^${dest}@" | tail -n1 || true )"
+  n_match_prev="$( echo -n "$prev_snap" | wc -l )"
+
+  if [ "$n_match_prev" -eq 0 ] ; then
+    zfs send -R "${fs}@$snapname" | zfs recv -u "$dest"
+  elif [ "$n_match_prev" -eq 1 ] ; then
+    prev_snap_fs="${prev_snap%%@*}"
+    prev_snap_name="${prev_snap##*@}"
+    
+    if [ "${prev_snap_fs}@$prev_snap_name" != "${prev_snap}" ] ; then
+      echo "Encountered illegal character \`@' in previous" \
+           "snapshot name \`${prev_snap#*@}' of \`${prev_snap}'." 1>&2
+      exit 1
+    fi
+
+    zfs send -Ri "@$prev_snap_name" "${fs}@$snapname" | zfs recv -u "$dest"
+  else
+    echo "Failed to get a unique match for most recent" \
+         "replication of \`$fs'." 1>&2
+    exit 1
+  fi
+}
+
+destroy_prev_snaps ()
+{
+  if [ $# -eq 1 ] ; then
+    flags=""
+    fs="$1"
+  elif [ $# -eq 2 ] ; then
+    flags="$1"
+    fs="$2"
+  else
+    echo "Function \`destroy_prev_snaps' recieved bad number of arguments." 1>&2
+    exit 1
+  fi
+
+  if [ "${fs%%@*}" != "$fs" ] ; then
+    echo "Filesystem name \`$fs' contains illegal character \`@'." 1>&2
+    exit 1
+  fi
+
+  if [ -z "$flags" ] ; then
+    zfs list -Ht snapshot | cut -f1 | egrep "^${fs}@" | sed '$d' | xargs -L1 zfs destroy
+  else
+    zfs list -Ht snapshot | cut -f1 | egrep "^${fs}@" | sed '$d' | xargs -L1 zfs destroy "$flags"
+  fi
+}
+
+zfs snapshot "zboss@$snapname"
+destroy_prev_snaps zboss
+
+replicate -r "$snapname" zroot
+destroy_prev_snaps -r zroot
+destroy_prev_snaps -r "$( dest zroot )"
+
+replicate "$snapname" bootpool
+destroy_prev_snaps bootpool
+destroy_prev_snaps "$( dest bootpool )"
+
+replicate "$snapname" zcarry
+destroy_prev_snaps zcarry
+destroy_prev_snaps "$( dest zcarry )"
