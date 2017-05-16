@@ -107,6 +107,8 @@ replicate ()
          "replication of \`$fs'." 1>&2
     exit 1
   fi
+
+  sync
 }
 
 destroy_prev_snaps ()
@@ -134,7 +136,7 @@ destroy_prev_snaps ()
   fi
 }
 
-zfs snapshot "zboss@$snapname"
+zfs snapshot "zboss@$snapname" ; sync
 destroy_prev_snaps zboss
 
 replicate -r "$snapname" zroot
