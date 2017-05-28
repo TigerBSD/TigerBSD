@@ -25,4 +25,6 @@ pkg install mate
 pkg install xorg
 
 pkg install xf86-video-intel
+
+pkg install terminology
 ```
