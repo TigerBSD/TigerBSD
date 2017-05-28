@@ -27,4 +27,7 @@ pkg install xorg
 pkg install xf86-video-intel
 
 pkg install terminology
+
+pkg install slim
+echo slim_enable=yes >> /etc/rc.conf
 ```
