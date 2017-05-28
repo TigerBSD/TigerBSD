@@ -17,10 +17,15 @@ pkg install htop
 
 pkg install xf86-video-intel
 
+pkg install nvidia-driver
+
 pkg install xorg
+echo 'i915kms_load="YES"' >> /boot/loader.conf
+reboot
 Xorg -configure
 #Xorg -config /root/xorg.conf.new
-mv xorg.conf.new /usr/local/etc/X11/xorg.conf.d/0-xorg.conf
+#vim xorg.conf.new
+#mv xorg.conf.new /usr/local/etc/X11/xorg.conf.d/0-xorg.conf
 cat > /usr/local/etc/X11/xorg.conf.d/20-dvorak.conf <<EOF
 Section "ServerFlags"
 	Option  "AutoAddDevices" "Off"
