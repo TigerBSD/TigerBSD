@@ -4,6 +4,7 @@
 pkg-static delete -f pkg
 portsnap fetch extract
 cd /usr/ports/ports-mgmt/pkg && make install clean
+echo "DEFAULT_ALWAYS_YES = true;" >> /usr/local/etc/pkg.conf
 
 pkg install doas
 cat >/usr/local/etc/doas.conf <<EOF
