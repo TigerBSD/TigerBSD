@@ -21,6 +21,20 @@ pkg install htop
 pkg install mate
 
 pkg install xorg
+Xorg -configure
+#Xorg -config /root/xorg.conf.new
+mv xorg.conf.new /usr/local/etc/X11/xorg.conf.d/0-xorg.conf
+cat > /usr/local/etc/X11/xorg.conf.d/20-dvorak.conf <<EOF
+Section "ServerFlags"
+	Option  "AutoAddDevices" "Off"
+EndSection
+
+Section "InputDevice"
+	Identifier "Keyboard0"
+	Driver  "kbd"
+	Option  "XkbLayout" "dvorak"
+EndSection
+EOF
 
 pkg install xf86-video-intel
 
