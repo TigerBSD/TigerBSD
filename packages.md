@@ -15,7 +15,7 @@ pkg install git
 
 pkg install htop
 
-pkg install mate
+pkg install xf86-video-intel
 
 pkg install xorg
 Xorg -configure
@@ -36,7 +36,7 @@ echo "ssh-agent mate-session" > ~erikn/.xinitrc
 chown erikn:erikn ~erikn/.xinitrc
 chmod 755 ~erikn/.xinitrc
 
-pkg install xf86-video-intel
+pkg install mate
 
 pkg install terminology
 
