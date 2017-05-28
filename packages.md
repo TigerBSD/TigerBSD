@@ -15,5 +15,9 @@ pkg install bash
 pkg install neovim
 ln -s /usr/local/bin/nvim /usr/local/bin/vim
 
+pkg install git
+
+pkg install htop
+
 pkg install mate
 ```
