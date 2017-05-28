@@ -21,4 +21,8 @@ pkg install git
 pkg install htop
 
 pkg install mate
+
+pkg install xorg
+
+pkg install xf86-video-intel
 ```
