@@ -35,6 +35,9 @@ Section "InputDevice"
 	Option  "XkbLayout" "dvorak"
 EndSection
 EOF
+echo "ssh-agent mate-session" > ~erikn/.xinitrc
+chown erikn:erikn ~erikn/.xinitrc
+chmod 755 ~erikn/.xinitrc
 
 pkg install xf86-video-intel
 
