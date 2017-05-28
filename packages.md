@@ -7,9 +7,7 @@ cd /usr/ports/ports-mgmt/pkg && make install clean
 echo "DEFAULT_ALWAYS_YES = true;" >> /usr/local/etc/pkg.conf
 
 pkg install doas
-cat >/usr/local/etc/doas.conf <<EOF
-permit nopass :wheel
-EOF
+echo "permit nopass :wheel" >> /usr/local/etc/doas.conf
 
 pkg install bash
 
