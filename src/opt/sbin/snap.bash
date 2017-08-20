@@ -147,6 +147,6 @@ replicate "$snapname" bootpool
 destroy_prev_snaps bootpool
 destroy_prev_snaps "$( dest bootpool )"
 
-replicate "$snapname" zcarry
-destroy_prev_snaps zcarry
-destroy_prev_snaps "$( dest zcarry )"
+#replicate "$snapname" zcarry
+#destroy_prev_snaps zcarry
+#destroy_prev_snaps "$( dest zcarry )"
