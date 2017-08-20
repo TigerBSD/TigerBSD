@@ -137,15 +137,15 @@ destroy_prev_snaps ()
 }
 
 zfs snapshot "zboss@$snapname"
-destroy_prev_snaps zboss
+#destroy_prev_snaps zboss
 
 replicate -r "$snapname" zroot
 destroy_prev_snaps -r zroot
-destroy_prev_snaps -r "$( dest zroot )"
+#destroy_prev_snaps -r "$( dest zroot )"
 
 replicate "$snapname" bootpool
 destroy_prev_snaps bootpool
-destroy_prev_snaps "$( dest bootpool )"
+#destroy_prev_snaps "$( dest bootpool )"
 
 #replicate "$snapname" zcarry
 #destroy_prev_snaps zcarry
