@@ -90,7 +90,7 @@ replicate ()
   fi
 
   if [ "$n_match_prev" -eq 0 ] ; then
-    zfs send -R "${fs}@$snapname" | zfs recv -u "$dest"
+    zfs send -vR "${fs}@$snapname" | zfs recv -u "$dest"
   elif [ "$n_match_prev" -eq 1 ] ; then
     prev_snap_fs="${prev_snap%%@*}"
     prev_snap_name="${prev_snap##*@}"
@@ -101,7 +101,7 @@ replicate ()
       exit 1
     fi
 
-    zfs send -Ri "@$prev_snap_name" "${fs}@$snapname" | zfs recv -u "$dest"
+    zfs send -vRi "@$prev_snap_name" "${fs}@$snapname" | zfs recv -u "$dest"
   else
     echo "Failed to get a unique match for most recent" \
          "replication of \`$fs'." 1>&2
